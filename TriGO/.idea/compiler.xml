@@ -9,5 +9,8 @@
         <module name="TriGO" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TriGO" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>
