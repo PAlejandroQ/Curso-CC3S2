@@ -14,6 +14,8 @@
 
 3. Si este diagrama es correcto, no se puede crear una instancia de SuperFastList dentro de SuperAwesomeApp, pero se puede pasar un objeto de tipo SuperFastList a SuperAwesomeApp.
 
+   Es correcto, dado que el diagrama indica una **NO** dependencia entre las clases por el desacoplamiento, entonces no de podría crear una instancia del objeto SuperFastList dentro de SuperAwesomeApp porque se estaría creando dependencia y contradiciendo este principio SOLID. Sin embargo, si puede tener métodos que reciba como parámetros a objetos SuperFastList ya instanciados, de manera que no se crearía dependencia.
+
 ### Jessica quiere tu opinión
 
 1. Sería deseable reemplazar SuperFastCollection por java.util.List si es posible.
