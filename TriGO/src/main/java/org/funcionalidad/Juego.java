@@ -1,6 +1,7 @@
 package org.funcionalidad;
 
 public class Juego {
+    public static final int NUM_FICHAS = 9;
     protected static final int TOTALROWS = 7;
     protected static final int TOTALCOLUMNS = 7;
 
@@ -98,5 +99,6 @@ public class Juego {
     public GameState getGameState() {
         return currentGameState;
     }
+
 
 }

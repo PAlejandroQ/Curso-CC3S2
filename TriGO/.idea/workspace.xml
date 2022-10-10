@@ -4,13 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f173408-2da7-4c57-9a3a-24cb04e26ab7" name="Changes" comment="">
+    <list default="true" id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/PracticaEntrada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/PracticaEntrada.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta6.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Fennec.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Fennec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Macaw.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Macaw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Howler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Howler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Climber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Climber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TriGO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TriGO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/checkButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/checkButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,29 +84,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ppaab/Documents/Repos/Curso-CC3S2/TriGO",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ppaab/Documents/Repos/Curso-CC3S2/TriGO&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ppaab\Documents\Repos\Curso-CC3S2" />
     </key>
   </component>
+  <component name="RunManager" selected="Application.TableroGUI">
+    <configuration name="Jugador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.Jugador" />
+      <module name="TriGO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.funcionalidad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TableroGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.TableroGUI" />
+      <module name="TriGO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.funcionalidad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TableroGUI" />
+        <item itemvalue="Application.Jugador" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3f173408-2da7-4c57-9a3a-24cb04e26ab7" name="Changes" comment="" />
+      <changelist id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="" />
       <created>1664776154398</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664776154398</updated>
+      <workItem from="1664808718484" duration="1627000" />
+      <workItem from="1664851539779" duration="679000" />
+      <workItem from="1664854405101" duration="2992000" />
+      <workItem from="1665357919390" duration="6127000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
