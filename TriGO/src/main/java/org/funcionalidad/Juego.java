@@ -6,7 +6,7 @@ public class Juego {
     protected static final int TOTALCOLUMNS = 7;
 
     public enum Cell {
-        EMPTY, CROSS, NOUGHT
+        EMPTY, CROSS, NOUGHT, DISABLE
     }
 
     protected Cell[][] grid;
@@ -21,6 +21,7 @@ public class Juego {
     public Juego() {
         grid = new Cell[TOTALROWS][TOTALCOLUMNS];
         initGame();
+        preparePositions();
     }
 
     private void initGame() {
@@ -31,6 +32,34 @@ public class Juego {
         }
         currentGameState = GameState.PLAYING;
         turn = 'X';
+    }
+    private void preparePositions()
+    {
+        grid[0][1] = Cell.DISABLE;
+        grid[0][2] = Cell.DISABLE;
+        grid[0][4] = Cell.DISABLE;
+        grid[0][5] = Cell.DISABLE;
+        grid[1][0] = Cell.DISABLE;
+        grid[1][2] = Cell.DISABLE;
+        grid[1][4] = Cell.DISABLE;
+        grid[1][6] = Cell.DISABLE;
+        grid[2][0] = Cell.DISABLE;
+        grid[2][1] = Cell.DISABLE;
+        grid[2][5] = Cell.DISABLE;
+        grid[2][6] = Cell.DISABLE;
+        grid[3][3] = Cell.DISABLE;//
+        grid[6][1] = Cell.DISABLE;
+        grid[6][2] = Cell.DISABLE;
+        grid[6][4] = Cell.DISABLE;
+        grid[6][5] = Cell.DISABLE;
+        grid[5][0] = Cell.DISABLE;
+        grid[5][2] = Cell.DISABLE;
+        grid[5][4] = Cell.DISABLE;
+        grid[5][6] = Cell.DISABLE;
+        grid[4][0] = Cell.DISABLE;
+        grid[4][1] = Cell.DISABLE;
+        grid[4][5] = Cell.DISABLE;
+        grid[4][6] = Cell.DISABLE;
     }
 
     public void resetGame() {
@@ -76,7 +105,7 @@ public class Juego {
     private boolean isDraw() {
         for (int row = 0; row < TOTALROWS; ++row) {
             for (int col = 0; col < TOTALCOLUMNS; ++col) {
-                if (grid[row][col] == Cell.EMPTY) {
+                if (grid[row][col] == Cell.EMPTY && grid[row][col]!=Cell.DISABLE) {
                     return false;
                 }
             }
