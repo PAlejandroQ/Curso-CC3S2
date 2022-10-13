@@ -1,5 +1,6 @@
 package org.funcionalidad;
 
+import java.awt.*;
 import java.util.Stack;
 
 import static org.funcionalidad.Juego.*;
@@ -18,7 +19,7 @@ public class Jugador {
         this.FICHAS_TABLERO = 0;
         for(int i = 0; i< FICHAS_LEFT; ++i)
         {
-            fichas.add(i, new Ficha(color));
+            fichas.add(i, new Ficha(color,new Point(1,1)));
         }
     }
 

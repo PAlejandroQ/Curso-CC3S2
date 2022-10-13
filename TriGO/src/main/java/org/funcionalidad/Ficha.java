@@ -4,11 +4,16 @@ import java.awt.*;
 
 public class Ficha {
     int color;
-    int POS_X, POS_Y;
+    Juego.Cell state;
+    Point coordenada;
+    Ficha[] vecinos;
     boolean Bdisponible;
-    public Ficha(int color){
+    public Ficha(int color, Point coordenada){
         this.color=color;
         this.Bdisponible = true;
+        this.vecinos = new Ficha[4];
+        this.coordenada = coordenada;
+        this.state = Juego.Cell.EMPTY;
     }
 
     public void setColor(int i, Tablero tableroJuego)
@@ -27,19 +32,18 @@ public class Ficha {
         return this.Bdisponible;
     }
 
-    public boolean esVecino() {
-        return false;
-    }
-    public boolean esLinea()
+    public boolean esLinea(Ficha finTri)
     {
-        return false;
+        double distancia = Math.pow(Math.pow((finTri.coordenada.x-this.coordenada.x),2)+Math.pow((finTri.coordenada.y-this.coordenada.y),2),.5);
+        return distancia % 1 == 0;
     }
-    public boolean esEquipo()
+    public boolean esEquipo(Ficha fActual)
     {
-        return false;
+        if(fActual.color == this.color) return true;
+        else return false;
     }
-    public Ficha findVecinoTeam()
-    {
-        return new Ficha(1);
-    }
+//    public Ficha findVecinoTeam()
+//    {
+//        return new Ficha(1,new Point(1,1));
+//    }
 }

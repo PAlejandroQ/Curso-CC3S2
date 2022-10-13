@@ -1,9 +1,12 @@
 package org.funcionalidad;
 
+import java.awt.*;
+
 public class Juego {
     public static final int NUM_FICHAS = 9;
     protected static final int TOTALROWS = 7;
     protected static final int TOTALCOLUMNS = 7;
+    protected Ficha[][] piezasTablero;
 
     public enum Cell {
         EMPTY, CROSS, NOUGHT, DISABLE
@@ -20,6 +23,7 @@ public class Juego {
 
     public Juego() {
         grid = new Cell[TOTALROWS][TOTALCOLUMNS];
+        this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
         initGame();
         preparePositions();
     }
@@ -28,6 +32,7 @@ public class Juego {
         for (int row = 0; row < TOTALROWS; ++row) {
             for (int col = 0; col < TOTALCOLUMNS; ++col) {
                 grid[row][col] = Cell.EMPTY;
+                this.piezasTablero[row][col] = new Ficha(1,new Point(row,col));
             }
         }
         currentGameState = GameState.PLAYING;
@@ -91,6 +96,7 @@ public class Juego {
             grid[row][column] = (turn == 'X') ? Cell.CROSS : Cell.NOUGHT;
             updateGameState(turn, row, column);
             turn = (turn == 'X') ? 'O' : 'X';
+
         }
     }
 
@@ -123,6 +129,28 @@ public class Juego {
                 && grid[0][0] == token && grid[1][1] == token && grid[2][2] == token
                 || row + column == 2
                 && grid[0][2] == token && grid[1][1] == token && grid[2][0] == token);
+    }
+    private boolean isTri(Ficha ultimoMove)
+    {
+        for(Ficha intermedio : ultimoMove.vecinos)
+        {
+            if(ultimoMove.esEquipo(intermedio))
+            {
+                for(Ficha extremo : intermedio.vecinos)
+                {
+                    if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(ultimoMove.coordenada) && ultimoMove.esLinea(extremo))
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    public void quitarPieza(Point p,Ficha ultimoMov)
+    {
+        if(isTri(ultimoMov))
+            this.grid[p.x][p.y] = Cell.DISABLE;
     }
 
     public GameState getGameState() {

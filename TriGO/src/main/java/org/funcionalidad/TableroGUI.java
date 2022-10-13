@@ -14,7 +14,7 @@ public class TableroGUI extends JFrame {
     public static final int GRID_WIDTH = 8;
     public static final int GRID_WIDHT_HALF = GRID_WIDTH / 2;
 
-    public static final int CELL_PADDING = CELL_SIZE / 3;  // iba 6
+    public static final int CELL_PADDING = CELL_SIZE / 3;  // iba 6e
     public static final int SYMBOL_SIZE = CELL_SIZE - CELL_PADDING * 2;
     public static final int SYMBOL_STROKE_WIDTH = 8;
 
@@ -58,6 +58,7 @@ public class TableroGUI extends JFrame {
                         int rowSelected = e.getY() / CELL_SIZE;
                         int colSelected = e.getX() / CELL_SIZE;
                         game.makeMove(rowSelected, colSelected);
+
                     } else {
                         game.resetGame();
                     }
@@ -119,10 +120,6 @@ public class TableroGUI extends JFrame {
                     if (game.getCell(row, col) == Cell.CROSS) {
                         g2d.setColor(Color.RED);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
-//                        int x2 = (col + 1) * CELL_SIZE - CELL_PADDING;
-//                        int y2 = (row + 1) * CELL_SIZE - CELL_PADDING;
-//                        g2d.drawLine(x1, y1, x2, y2);
-//                        g2d.drawLine(x2, y1, x1, y2);
                     } else if (game.getCell(row, col) == Cell.NOUGHT) {
                         g2d.setColor(Color.BLUE);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
