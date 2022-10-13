@@ -10,3 +10,6 @@ https://docs.google.com/document/d/1JCenXZf7J7nStB9DaYAXkKAPHTzVpZjVzahx3RSI8m8/
 
 *Link de video de la presentación:
 https://drive.google.com/file/d/1DQwT4DDmv0W6xTER_9fxtZP-TnfDZ4Rj/view?usp=sharing
+
+*Link del Trello del proyecto:
+https://trello.com/invite/b/4wG2ZH3h/4463a62a02440b55b709304bdb892925/trigo
