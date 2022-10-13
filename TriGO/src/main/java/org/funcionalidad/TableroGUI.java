@@ -60,7 +60,6 @@ public class TableroGUI extends JFrame {
                         game.makeMove(rowSelected, colSelected);
                     } else {
                         game.resetGame();
-                        ;
                     }
                     repaint();
                 }

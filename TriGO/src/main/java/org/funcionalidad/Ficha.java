@@ -26,4 +26,20 @@ public class Ficha {
         this.Bdisponible = !this.Bdisponible;
         return this.Bdisponible;
     }
+
+    public boolean esVecino() {
+        return false;
+    }
+    public boolean esLinea()
+    {
+        return false;
+    }
+    public boolean esEquipo()
+    {
+        return false;
+    }
+    public Ficha findVecinoTeam()
+    {
+        return new Ficha(1);
+    }
 }
