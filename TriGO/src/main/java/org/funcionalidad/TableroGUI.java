@@ -118,14 +118,14 @@ public class TableroGUI extends JFrame {
 
                     if (game.getCell(row, col) == Cell.CROSS) {
                         g2d.setColor(Color.RED);
-                        g2d.drawOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
+                        g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
 //                        int x2 = (col + 1) * CELL_SIZE - CELL_PADDING;
 //                        int y2 = (row + 1) * CELL_SIZE - CELL_PADDING;
 //                        g2d.drawLine(x1, y1, x2, y2);
 //                        g2d.drawLine(x2, y1, x1, y2);
                     } else if (game.getCell(row, col) == Cell.NOUGHT) {
                         g2d.setColor(Color.BLUE);
-                        g2d.drawOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
+                        g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
                 }
             }
