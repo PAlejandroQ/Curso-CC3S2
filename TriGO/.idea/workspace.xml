@@ -5,11 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/PracticaEntrada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/PracticaEntrada.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta6.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Fennec.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Fennec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Macaw.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Macaw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Howler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Howler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Climber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Climber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TriGO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TriGO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Ficha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Ficha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/checkButton.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +135,7 @@
       <workItem from="1664851539779" duration="679000" />
       <workItem from="1664854405101" duration="2992000" />
       <workItem from="1665357919390" duration="6127000" />
+      <workItem from="1665621062372" duration="4176000" />
     </task>
     <servers />
   </component>

@@ -69,7 +69,7 @@ public class TableroGUI extends JFrame {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            setBackground(Color.WHITE);
+            setBackground(Color.getHSBColor(43, 30, 50));
             drawGridLines(g);
             drawBoard(g);
             printStatusBar();
@@ -109,6 +109,13 @@ public class TableroGUI extends JFrame {
                 for (int col = 0; col < game.getTotalColumns(); ++col) {
                     int x1 = col * CELL_SIZE + CELL_PADDING;
                     int y1 = row * CELL_SIZE + CELL_PADDING;
+
+                    if(game.getCell(row, col)==Cell.EMPTY){
+                        g2d.setColor(Color.LIGHT_GRAY);
+                        //g2d.drawOval(x1+CELL_PADDING/4, y1+CELL_PADDING/4, SYMBOL_SIZE/2, SYMBOL_SIZE/2);
+                        g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
+                    }
+
                     if (game.getCell(row, col) == Cell.CROSS) {
                         g2d.setColor(Color.RED);
                         g2d.drawOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
@@ -128,9 +135,9 @@ public class TableroGUI extends JFrame {
             if (game.getGameState() == GameState.PLAYING) {
                 gameStatusBar.setForeground(Color.BLACK);
                 if (game.getTurn() == 'X') {
-                    gameStatusBar.setText("Turno de X");
+                    gameStatusBar.setText("Turno de Rojo");
                 } else {
-                    gameStatusBar.setText("Turno de O");
+                    gameStatusBar.setText("Turno de Azul");
                 }
             } else if (game.getGameState() == GameState.DRAW) {
                 gameStatusBar.setForeground(Color.RED);
