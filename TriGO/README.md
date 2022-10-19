@@ -13,3 +13,5 @@ https://drive.google.com/file/d/1DQwT4DDmv0W6xTER_9fxtZP-TnfDZ4Rj/view?usp=shari
 
 *Link del Trello del proyecto:
 https://trello.com/invite/b/4wG2ZH3h/4463a62a02440b55b709304bdb892925/trigo
+
+[![Video del Sprint 0-1](https://i.imgur.com/djdkELJ.png)](https://drive.google.com/file/d/1DQwT4DDmv0W6xTER_9fxtZP-TnfDZ4Rj/view)
