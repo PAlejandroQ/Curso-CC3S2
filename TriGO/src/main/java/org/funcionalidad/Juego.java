@@ -25,7 +25,7 @@ public class Juego {
         grid = new Cell[TOTALROWS][TOTALCOLUMNS];
         this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
         initGame();
-        preparePositions();
+
     }
 
     private void initGame() {
@@ -37,6 +37,7 @@ public class Juego {
         }
         currentGameState = GameState.PLAYING;
         turn = 'X';
+        preparePositions();
     }
     private void preparePositions()
     {

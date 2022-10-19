@@ -5,7 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/src/main/java/org/part1/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/src/main/java/org/part1/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/src/main/java/part2/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/src/main/java/part2/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/src/main/java/part2/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/src/main/java/part2/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/src/test/java/org/part1/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/src/test/java/org/part1/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/src/test/java/part2/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/src/test/java/part2/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/PracticaEntrada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/PracticaEntrada.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/Pregunta6.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Fennec.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta1/Fennec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Macaw.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta2/Macaw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Howler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta4/Howler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Climber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Climber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaEntrada/src/main/java/pregunta5/Explicacion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TriGO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TriGO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/JuegoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/JuegoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,26 +97,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/Nicole/Downloads/Projecto1-CC3S2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nicole/Downloads/Projecto1-CC3S2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ppaab\Documents\Repos\Curso-CC3S2" />
@@ -120,6 +177,7 @@
       <workItem from="1665621062372" duration="4176000" />
       <workItem from="1665626945574" duration="4760000" />
       <workItem from="1666130280753" duration="1657000" />
+      <workItem from="1666193095463" duration="733000" />
     </task>
     <servers />
   </component>

@@ -111,7 +111,7 @@ public class TableroGUI extends JFrame {
                     int x1 = col * CELL_SIZE + CELL_PADDING;
                     int y1 = row * CELL_SIZE + CELL_PADDING;
 
-                    if(game.getCell(row, col)==Cell.EMPTY){
+                    if(game.getCell(row, col)==Cell.EMPTY && game.getCell(row, col)!=Cell.DISABLE){
                         g2d.setColor(Color.LIGHT_GRAY);
                         //g2d.drawOval(x1+CELL_PADDING/4, y1+CELL_PADDING/4, SYMBOL_SIZE/2, SYMBOL_SIZE/2);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
