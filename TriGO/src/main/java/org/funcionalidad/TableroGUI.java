@@ -63,6 +63,7 @@ public class TableroGUI extends JFrame {
                         game.resetGame();
                     }
                     repaint();
+
                 }
             });
         }

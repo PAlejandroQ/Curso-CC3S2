@@ -34,7 +34,7 @@ public class Ficha {
 
     public boolean esLinea(Ficha finTri)
     {
-        double distancia = Math.pow(Math.pow((finTri.coordenada.x-this.coordenada.x),2)+Math.pow((finTri.coordenada.y-this.coordenada.y),2),.5);
+        double distancia = Math.sqrt(Math.pow((finTri.coordenada.x-this.coordenada.x),2)+Math.pow((finTri.coordenada.y-this.coordenada.y),2));
         return distancia % 1 == 0;
     }
     public boolean esEquipo(Ficha fActual)

@@ -106,7 +106,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nicole/Downloads/Projecto1-CC3S2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/José Tello/Downloads/Proyecto1-CC3S2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -155,9 +155,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TableroGUITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TriGO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.funcionalidad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.funcionalidad" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.TableroGUITest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TableroGUI" />
+        <item itemvalue="JUnit.TableroGUITest" />
         <item itemvalue="Application.Jugador" />
       </list>
     </recent_temporary>
@@ -177,7 +193,9 @@
       <workItem from="1665621062372" duration="4176000" />
       <workItem from="1665626945574" duration="4760000" />
       <workItem from="1666130280753" duration="1657000" />
-      <workItem from="1666193095463" duration="733000" />
+      <workItem from="1666193095463" duration="1147000" />
+      <workItem from="1666194371990" duration="2653000" />
+      <workItem from="1666197103639" duration="2607000" />
     </task>
     <servers />
   </component>

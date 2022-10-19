@@ -99,6 +99,7 @@ public class Juego {
             turn = (turn == 'X') ? 'O' : 'X';
 
         }
+
     }
 
     private void updateGameState(char turn, int row, int column) {
@@ -151,7 +152,7 @@ public class Juego {
     public void quitarPieza(Point p,Ficha ultimoMov)
     {
         if(isTri(ultimoMov))
-            this.grid[p.x][p.y] = Cell.DISABLE;
+            this.grid[p.x][p.y] = Cell.EMPTY;
     }
 
     public GameState getGameState() {
