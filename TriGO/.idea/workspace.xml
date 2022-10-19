@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroduccionTests/target/test-classes/part2/CalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../IntroduccionTests/target/test-classes/part2/CalculatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

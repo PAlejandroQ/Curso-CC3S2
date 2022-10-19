@@ -14,7 +14,7 @@ class TableroGUITest {
         TableroGUI tableroGUI= new TableroGUI(game);
         TableroGUI.main(null);
         game.makeMove(0,0);
-        assertEquals(Juego.Cell.CROSS, game.getCell(0,0));
+        assertEquals(Juego.Cell.BLUE, game.getCell(0,0));
     }
 
 }

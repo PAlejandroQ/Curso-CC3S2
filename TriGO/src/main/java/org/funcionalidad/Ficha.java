@@ -1,17 +1,16 @@
 package org.funcionalidad;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Ficha {
     int color;
     Juego.Cell state;
     Point coordenada;
-    Ficha[] vecinos;
-    boolean Bdisponible;
+    ArrayList<Point> vecinos;
     public Ficha(int color, Point coordenada){
         this.color=color;
-        this.Bdisponible = true;
-        this.vecinos = new Ficha[4];
+        this.vecinos = new ArrayList<Point>();
         this.coordenada = coordenada;
         this.state = Juego.Cell.EMPTY;
     }
@@ -23,13 +22,12 @@ public class Ficha {
     public Color getColor()
     {
         if (this.color==1) { return Color.BLUE;}
-        else if (this.color==2) {return Color.GREEN;}
+        else if (this.color==2) {return Color.RED;}
         else { return Color.LIGHT_GRAY;}
     }
-    public boolean cambiarDisponibilidad(int i, Tablero tableroJuego)
+    public void changeState(Juego.Cell newState)
     {
-        this.Bdisponible = !this.Bdisponible;
-        return this.Bdisponible;
+        this.state = newState;
     }
 
     public boolean esLinea(Ficha finTri)
@@ -39,8 +37,13 @@ public class Ficha {
     }
     public boolean esEquipo(Ficha fActual)
     {
-        if(fActual.color == this.color) return true;
+
+        if(fActual.state == this.state && fActual.state!= Juego.Cell.EMPTY && fActual.state!=Juego.Cell.DISABLE) return true;
         else return false;
+    }
+    public void setVecinos(Point vecino)
+    {
+        this.vecinos.add(vecino);
     }
 //    public Ficha findVecinoTeam()
 //    {

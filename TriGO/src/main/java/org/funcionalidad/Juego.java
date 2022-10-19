@@ -7,16 +7,17 @@ public class Juego {
     protected static final int TOTALROWS = 7;
     protected static final int TOTALCOLUMNS = 7;
     protected Ficha[][] piezasTablero;
+    private Point lastPoint;
 
     public enum Cell {
-        EMPTY, CROSS, NOUGHT, DISABLE
+        EMPTY, BLUE, RED, DISABLE
     }
 
     protected Cell[][] grid;
     protected char turn;
 
     public enum GameState {
-        PLAYING, DRAW, CROSS_WON, NOUGHT_WON
+        PLAYING, DRAW, BLUE_WON, RED_WON
     }
 
     protected GameState currentGameState;
@@ -32,12 +33,13 @@ public class Juego {
         for (int row = 0; row < TOTALROWS; ++row) {
             for (int col = 0; col < TOTALCOLUMNS; ++col) {
                 grid[row][col] = Cell.EMPTY;
-                this.piezasTablero[row][col] = new Ficha(1,new Point(row,col));
+                this.piezasTablero[row][col] = new Ficha(-1,new Point(row,col));
             }
         }
         currentGameState = GameState.PLAYING;
         turn = 'X';
         preparePositions();
+        prepareVecinos();
     }
     private void preparePositions()
     {
@@ -67,6 +69,39 @@ public class Juego {
         grid[4][5] = Cell.DISABLE;
         grid[4][6] = Cell.DISABLE;
     }
+    private void prepareVecinos()
+    {
+        this.piezasTablero[0][0].setVecinos(piezasTablero[0][3].coordenada);
+        this.piezasTablero[0][0].setVecinos(piezasTablero[3][0].coordenada);
+        this.piezasTablero[3][0].setVecinos(piezasTablero[0][0].coordenada);
+        this.piezasTablero[3][0].setVecinos(piezasTablero[6][0].coordenada);
+        this.piezasTablero[3][0].setVecinos(piezasTablero[3][1].coordenada);
+        this.piezasTablero[6][0].setVecinos(piezasTablero[6][3].coordenada);
+        this.piezasTablero[6][0].setVecinos(piezasTablero[3][0].coordenada);
+        this.piezasTablero[6][3].setVecinos(piezasTablero[6][0].coordenada);
+        this.piezasTablero[6][3].setVecinos(piezasTablero[6][6].coordenada);
+        this.piezasTablero[6][3].setVecinos(piezasTablero[5][3].coordenada);
+        this.piezasTablero[6][6].setVecinos(piezasTablero[6][3].coordenada);
+        this.piezasTablero[6][6].setVecinos(piezasTablero[3][6].coordenada);
+        this.piezasTablero[3][6].setVecinos(piezasTablero[6][6].coordenada);
+        this.piezasTablero[3][6].setVecinos(piezasTablero[0][6].coordenada);
+        this.piezasTablero[3][6].setVecinos(piezasTablero[3][5].coordenada);
+        this.piezasTablero[0][6].setVecinos(piezasTablero[3][6].coordenada);
+        this.piezasTablero[0][6].setVecinos(piezasTablero[0][3].coordenada);
+        this.piezasTablero[0][3].setVecinos(piezasTablero[0][6].coordenada);
+        this.piezasTablero[0][3].setVecinos(piezasTablero[0][0].coordenada);
+        this.piezasTablero[0][3].setVecinos(piezasTablero[0][3].coordenada);
+        // Cuadrado intermedio
+        this.piezasTablero[0][6].setVecinos(piezasTablero[0][3].coordenada);
+        this.piezasTablero[0][3].setVecinos(piezasTablero[0][6].coordenada);
+        this.piezasTablero[0][3].setVecinos(piezasTablero[0][0].coordenada);
+        this.piezasTablero[0][3].setVecinos(piezasTablero[0][3].coordenada);
+
+    }
+    private Ficha getFicha(Point posicion)
+    {
+        return this.piezasTablero[posicion.x][posicion.y];
+    }
 
     public void resetGame() {
         initGame();
@@ -94,7 +129,10 @@ public class Juego {
 
     public void makeMove(int row, int column) {
         if (row >= 0 && row < TOTALROWS && column >= 0 && column < TOTALCOLUMNS && grid[row][column] == Cell.EMPTY) {
-            grid[row][column] = (turn == 'X') ? Cell.CROSS : Cell.NOUGHT;
+            grid[row][column] = (turn == 'X') ? Cell.BLUE : Cell.RED;
+            this.piezasTablero[row][column].state = (turn == 'X') ? Cell.BLUE : Cell.RED;
+            this.lastPoint = this.piezasTablero[row][column].coordenada;
+            System.out.println(this.lastPoint);
             updateGameState(turn, row, column);
             turn = (turn == 'X') ? 'O' : 'X';
 
@@ -103,8 +141,8 @@ public class Juego {
     }
 
     private void updateGameState(char turn, int row, int column) {
-        if (hasWon(turn, row, column)) {
-            currentGameState = (turn == 'X') ? GameState.CROSS_WON : GameState.NOUGHT_WON;
+        if (this.findTri()) {
+            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
         } else if (isDraw()) {
             currentGameState = GameState.DRAW;
         }
@@ -121,26 +159,30 @@ public class Juego {
         return true;
     }
 
-    private boolean hasWon(char turn, int row, int column) {
-        Cell token = (turn == 'X') ? Cell.CROSS : Cell.NOUGHT;
-        return (grid[row][0] == token
-                && grid[row][1] == token && grid[row][2] == token
-                || grid[0][column] == token
-                && grid[1][column] == token && grid[2][column] == token
-                || row == column
-                && grid[0][0] == token && grid[1][1] == token && grid[2][2] == token
-                || row + column == 2
-                && grid[0][2] == token && grid[1][1] == token && grid[2][0] == token);
-    }
-    private boolean isTri(Ficha ultimoMove)
+    private boolean findTri()
     {
-        for(Ficha intermedio : ultimoMove.vecinos)
+        for (int row = 0; row < TOTALROWS; ++row) {
+            for (int col = 0; col < TOTALCOLUMNS; ++col) {
+                if (isTri(new Point(row,col))) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    private boolean isTri(Point esquina)
+    {
+        Ficha lastMove = this.getFicha(esquina);
+        for(Point intermedioP : lastMove.vecinos)
         {
-            if(ultimoMove.esEquipo(intermedio))
+            Ficha intermedio = this.getFicha(intermedioP);
+            if(lastMove.esEquipo(intermedio))
             {
-                for(Ficha extremo : intermedio.vecinos)
+
+                for(Point extremoP : intermedio.vecinos)
                 {
-                    if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(ultimoMove.coordenada) && ultimoMove.esLinea(extremo))
+                    Ficha extremo = this.getFicha(extremoP);
+                    if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(lastMove.coordenada) && lastMove.esLinea(extremo))
                     {
                         return true;
                     }
@@ -151,7 +193,7 @@ public class Juego {
     }
     public void quitarPieza(Point p,Ficha ultimoMov)
     {
-        if(isTri(ultimoMov))
+        if(this.findTri())
             this.grid[p.x][p.y] = Cell.EMPTY;
     }
 

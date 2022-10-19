@@ -118,10 +118,10 @@ public class TableroGUI extends JFrame {
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
 
-                    if (game.getCell(row, col) == Cell.CROSS) {
+                    if (game.getCell(row, col) == Cell.BLUE) {
                         g2d.setColor(Color.RED);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
-                    } else if (game.getCell(row, col) == Cell.NOUGHT) {
+                    } else if (game.getCell(row, col) == Cell.RED) {
                         g2d.setColor(Color.BLUE);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
@@ -138,14 +138,14 @@ public class TableroGUI extends JFrame {
                     gameStatusBar.setText("Turno de Azul");
                 }
             } else if (game.getGameState() == GameState.DRAW) {
-                gameStatusBar.setForeground(Color.RED);
+                gameStatusBar.setForeground(Color.green);
                 gameStatusBar.setText("Un lanzamiento! Click para jugar otra vez.");
-            } else if (game.getGameState() == GameState.CROSS_WON) {
+            } else if (game.getGameState() == GameState.BLUE_WON) {
                 gameStatusBar.setForeground(Color.RED);
-                gameStatusBar.setText("'X' gana! Click para jugar otra vez.");
-            } else if (game.getGameState() == GameState.NOUGHT_WON) {
-                gameStatusBar.setForeground(Color.RED);
-                gameStatusBar.setText("'O' gana! Click para jugar otra vez.");
+                gameStatusBar.setText("Rojo gana! Click para jugar otra vez.");
+            } else if (game.getGameState() == GameState.RED_WON) {
+                gameStatusBar.setForeground(Color.blue);
+                gameStatusBar.setText("Azul gana! Click para jugar otra vez.");
             }
         }
 

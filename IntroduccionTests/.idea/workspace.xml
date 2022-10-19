@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c19c76a4-17cc-49ca-b701-a71a2d6574a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/part1/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/part2/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/part2/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/part1/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/part2/CalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TriGO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TriGO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/part2/CalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/part2/CalculatorTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +54,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorTest.testAdd">
+  <component name="RunManager" selected="JUnit.CalculatorTest">
     <configuration name="CalculatorTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IntroduccionTests" />
       <extension name="coverage">
@@ -112,9 +103,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculatorTest.testAdd" />
         <item itemvalue="JUnit.CalculatorTest" />
         <item itemvalue="JUnit.CalculatorTest (1)" />
+        <item itemvalue="JUnit.CalculatorTest.testAdd" />
       </list>
     </recent_temporary>
   </component>
