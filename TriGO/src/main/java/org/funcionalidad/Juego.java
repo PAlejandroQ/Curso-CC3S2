@@ -71,6 +71,7 @@ public class Juego {
     }
     private void prepareVecinos()
     {
+        // Cuadrado externo
         this.piezasTablero[0][0].setVecinos(piezasTablero[0][3].coordenada);
         this.piezasTablero[0][0].setVecinos(piezasTablero[3][0].coordenada);
         this.piezasTablero[3][0].setVecinos(piezasTablero[0][0].coordenada);
@@ -92,11 +93,51 @@ public class Juego {
         this.piezasTablero[0][3].setVecinos(piezasTablero[0][0].coordenada);
         this.piezasTablero[0][3].setVecinos(piezasTablero[0][3].coordenada);
         // Cuadrado intermedio
-        this.piezasTablero[0][6].setVecinos(piezasTablero[0][3].coordenada);
-        this.piezasTablero[0][3].setVecinos(piezasTablero[0][6].coordenada);
-        this.piezasTablero[0][3].setVecinos(piezasTablero[0][0].coordenada);
-        this.piezasTablero[0][3].setVecinos(piezasTablero[0][3].coordenada);
-
+        this.piezasTablero[1][1].setVecinos(piezasTablero[3][1].coordenada);
+        this.piezasTablero[1][1].setVecinos(piezasTablero[1][3].coordenada);
+        this.piezasTablero[1][3].setVecinos(piezasTablero[1][1].coordenada);
+        this.piezasTablero[1][3].setVecinos(piezasTablero[2][3].coordenada);
+        this.piezasTablero[1][3].setVecinos(piezasTablero[1][5].coordenada);
+        this.piezasTablero[1][3].setVecinos(piezasTablero[0][3].coordenada);
+        this.piezasTablero[1][5].setVecinos(piezasTablero[1][3].coordenada);
+        this.piezasTablero[1][5].setVecinos(piezasTablero[3][5].coordenada);//
+        this.piezasTablero[3][5].setVecinos(piezasTablero[1][5].coordenada);
+        this.piezasTablero[3][5].setVecinos(piezasTablero[3][6].coordenada);
+        this.piezasTablero[3][5].setVecinos(piezasTablero[5][5].coordenada);
+        this.piezasTablero[3][5].setVecinos(piezasTablero[3][4].coordenada);//
+        this.piezasTablero[5][5].setVecinos(piezasTablero[3][5].coordenada);
+        this.piezasTablero[5][5].setVecinos(piezasTablero[5][3].coordenada);//
+        this.piezasTablero[5][3].setVecinos(piezasTablero[5][5].coordenada);
+        this.piezasTablero[5][3].setVecinos(piezasTablero[4][3].coordenada);
+        this.piezasTablero[5][3].setVecinos(piezasTablero[5][1].coordenada);
+        this.piezasTablero[5][3].setVecinos(piezasTablero[6][3].coordenada);
+        this.piezasTablero[5][1].setVecinos(piezasTablero[5][3].coordenada);
+        this.piezasTablero[5][1].setVecinos(piezasTablero[3][1].coordenada);
+        this.piezasTablero[3][1].setVecinos(piezasTablero[5][1].coordenada);
+        this.piezasTablero[3][1].setVecinos(piezasTablero[3][0].coordenada);
+        this.piezasTablero[3][1].setVecinos(piezasTablero[1][1].coordenada);
+        this.piezasTablero[3][1].setVecinos(piezasTablero[3][2].coordenada);
+        // Cuadrado interior
+        this.piezasTablero[2][2].setVecinos(piezasTablero[2][3].coordenada);
+        this.piezasTablero[2][2].setVecinos(piezasTablero[3][2].coordenada);
+        this.piezasTablero[2][3].setVecinos(piezasTablero[2][2].coordenada);
+        this.piezasTablero[2][3].setVecinos(piezasTablero[1][3].coordenada);
+        this.piezasTablero[2][3].setVecinos(piezasTablero[2][4].coordenada);
+        this.piezasTablero[2][4].setVecinos(piezasTablero[2][3].coordenada);
+        this.piezasTablero[2][4].setVecinos(piezasTablero[3][4].coordenada);
+        this.piezasTablero[3][4].setVecinos(piezasTablero[2][4].coordenada);
+        this.piezasTablero[3][4].setVecinos(piezasTablero[3][5].coordenada);
+        this.piezasTablero[3][4].setVecinos(piezasTablero[4][4].coordenada);
+        this.piezasTablero[4][4].setVecinos(piezasTablero[3][4].coordenada);
+        this.piezasTablero[4][4].setVecinos(piezasTablero[4][3].coordenada);
+        this.piezasTablero[4][3].setVecinos(piezasTablero[4][4].coordenada);
+        this.piezasTablero[4][3].setVecinos(piezasTablero[5][3].coordenada);
+        this.piezasTablero[4][3].setVecinos(piezasTablero[4][2].coordenada);
+        this.piezasTablero[4][2].setVecinos(piezasTablero[4][3].coordenada);
+        this.piezasTablero[4][2].setVecinos(piezasTablero[3][2].coordenada);
+        this.piezasTablero[3][2].setVecinos(piezasTablero[4][2].coordenada);
+        this.piezasTablero[3][2].setVecinos(piezasTablero[3][1].coordenada);
+        this.piezasTablero[3][2].setVecinos(piezasTablero[2][2].coordenada);
     }
     private Ficha getFicha(Point posicion)
     {
@@ -132,7 +173,6 @@ public class Juego {
             grid[row][column] = (turn == 'X') ? Cell.BLUE : Cell.RED;
             this.piezasTablero[row][column].state = (turn == 'X') ? Cell.BLUE : Cell.RED;
             this.lastPoint = this.piezasTablero[row][column].coordenada;
-            System.out.println(this.lastPoint);
             updateGameState(turn, row, column);
             turn = (turn == 'X') ? 'O' : 'X';
 
