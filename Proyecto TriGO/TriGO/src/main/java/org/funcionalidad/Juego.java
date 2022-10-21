@@ -6,18 +6,22 @@ public class Juego {
     public static final int NUM_FICHAS = 9;
     protected static final int TOTALROWS = 7;
     protected static final int TOTALCOLUMNS = 7;
+
+    protected static final int NUM_PLAYERS = 2;
     protected Ficha[][] piezasTablero;
     private Point lastPoint;
 
+    private Jugador[] jugadores = new Jugador[NUM_PLAYERS];
+
     public enum Cell {
-        EMPTY, BLUE, RED, DISABLE
+        EMPTY, BLUE, RED, DISABLE, SHINY;
     }
 
     protected Cell[][] grid;
     protected char turn;
 
     public enum GameState {
-        PLAYING, DRAW, BLUE_WON, RED_WON
+        DEPLOY, MOVING, DRAW, BLUE_WON, RED_WON
     }
 
     protected GameState currentGameState;
@@ -36,11 +40,18 @@ public class Juego {
                 this.piezasTablero[row][col] = new Ficha(-1,new Point(row,col));
             }
         }
-        currentGameState = GameState.PLAYING;
+        currentGameState = GameState.DEPLOY;
         turn = 'X';
+        preparePlayers();
         preparePositions();
         prepareVecinos();
     }
+
+    private void preparePlayers(){
+        jugadores[0] = new Jugador(1);
+        jugadores[1] = new Jugador(2);
+    }
+
     private void preparePositions()
     {
         grid[0][1] = Cell.DISABLE;
@@ -139,7 +150,7 @@ public class Juego {
         this.piezasTablero[3][2].setVecinos(piezasTablero[3][1].coordenada);
         this.piezasTablero[3][2].setVecinos(piezasTablero[2][2].coordenada);
     }
-    private Ficha getFicha(Point posicion)
+    public Ficha getFicha(Point posicion)
     {
         return this.piezasTablero[posicion.x][posicion.y];
     }
@@ -164,6 +175,8 @@ public class Juego {
         }
     }
 
+
+
     public char getTurn() {
         return turn;
     }
@@ -175,7 +188,6 @@ public class Juego {
             this.lastPoint = this.piezasTablero[row][column].coordenada;
             updateGameState(turn, row, column);
             turn = (turn == 'X') ? 'O' : 'X';
-
         }
 
     }
@@ -239,6 +251,15 @@ public class Juego {
 
     public GameState getGameState() {
         return currentGameState;
+    }
+
+    public Jugador getPlayerTurn(){
+        if(turn=='X'){
+            return jugadores[0];
+        }
+        else{
+            return jugadores[1];
+        }
     }
 
 

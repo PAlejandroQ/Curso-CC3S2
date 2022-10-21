@@ -53,12 +53,23 @@ public class TableroGUI extends JFrame {
         GameBoardCanvas() {
             addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    if (game.getGameState() == GameState.PLAYING) {
+                    if (game.getGameState() == GameState.DEPLOY) {
                         int rowSelected = e.getY() / CELL_SIZE;
                         int colSelected = e.getX() / CELL_SIZE;
                         game.makeMove(rowSelected, colSelected);
 
-                    } else {
+                    }else if(game.getGameState()== GameState.MOVING){
+                        int rowSelected = e.getY() / CELL_SIZE;
+                        int colSelected = e.getX() / CELL_SIZE;
+                        if(game.getPlayerTurn().estado== Jugador.State.MOVING){
+                            /*if(game.getCell(rowSelected, colSelected) == game.getPlayerTurn().color){
+                                ;
+                            }*/
+
+                        }
+
+                    }
+                    else {
                         game.resetGame();
                     }
                     repaint();
@@ -129,7 +140,7 @@ public class TableroGUI extends JFrame {
         }
 
         private void printStatusBar() {
-            if (game.getGameState() == GameState.PLAYING) {
+            if (game.getGameState() == GameState.DEPLOY) {
                 gameStatusBar.setForeground(Color.BLACK);
                 if (game.getTurn() == 'X') {
                     gameStatusBar.setText("Turno de Rojo");
