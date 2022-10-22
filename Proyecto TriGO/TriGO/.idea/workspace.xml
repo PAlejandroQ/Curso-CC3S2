@@ -241,10 +241,10 @@
     </ignored-roots>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TriGO$TableroGUI.ic" NAME="TableroGUI Coverage Results" MODIFIED="1666203656447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TriGO$TableroVacioTest_testNewJuego.ic" NAME="TableroVacioTest.testNewJuego Coverage Results" MODIFIED="1666230568482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.funcionalidad.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TriGO$TableroVacioTest_testNewJuego.ic" NAME="TableroVacioTest.testNewJuego Coverage Results" MODIFIED="1666230568482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TriGO$TableroGUI.ic" NAME="TableroGUI Coverage Results" MODIFIED="1666203656447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.funcionalidad.*</FILTER>
     </SUITE>
   </component>

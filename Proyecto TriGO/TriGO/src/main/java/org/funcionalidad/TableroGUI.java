@@ -147,7 +147,7 @@ public class TableroGUI extends JFrame {
                 } else {
                     gameStatusBar.setText("Turno de Azul");
                 }
-            } else if (game.getGameState() == GameState.DRAW) {
+            } else if (game.getGameState() == GameState.MOVING) {
                 gameStatusBar.setForeground(Color.green);
                 gameStatusBar.setText("Un lanzamiento! Click para jugar otra vez.");
             } else if (game.getGameState() == GameState.BLUE_WON) {

@@ -14,14 +14,14 @@ public class Juego {
     private Jugador[] jugadores = new Jugador[NUM_PLAYERS];
 
     public enum Cell {
-        EMPTY, BLUE, RED, DISABLE, SHINY;
+        EMPTY, BLUE, RED, DISABLE, SHINY ;
     }
 
     protected Cell[][] grid;
     protected char turn;
 
     public enum GameState {
-        DEPLOY, MOVING, DRAW, BLUE_WON, RED_WON
+        DEPLOY, MOVING, FLIGHT, BLUE_WON, RED_WON
     }
 
     protected GameState currentGameState;
@@ -193,23 +193,17 @@ public class Juego {
     }
 
     private void updateGameState(char turn, int row, int column) {
-        if (this.findTri()) {
-            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
-        } else if (isDraw()) {
-            currentGameState = GameState.DRAW;
+        if(this.getCantidadFichas(turn)>3 && currentGameState !=GameState.DEPLOY){
+            currentGameState =  GameState.MOVING;
+        } else if (this.getCantidadFichas(turn)==3 && currentGameState!=GameState.DEPLOY ) {
+            currentGameState = GameState.FLIGHT;
+        }
+        if(this.getCantidadFichas(turn)==2 && currentGameState!=GameState.DEPLOY){
+            currentGameState = (turn == 'O') ? GameState.BLUE_WON : GameState.RED_WON;
         }
     }
 
-    private boolean isDraw() {
-        for (int row = 0; row < TOTALROWS; ++row) {
-            for (int col = 0; col < TOTALCOLUMNS; ++col) {
-                if (grid[row][col] == Cell.EMPTY && grid[row][col]!=Cell.DISABLE) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
+
 
     private boolean findTri()
     {
@@ -248,6 +242,48 @@ public class Juego {
         if(this.findTri())
             this.grid[p.x][p.y] = Cell.EMPTY;
     }
+
+  /*  private void finJuego(){
+        int piezasRed=  0;
+        int piezasBlue=  0 ;
+        for (int row = 0; row < TOTALROWS; ++row) {
+            for (int col = 0; col < TOTALCOLUMNS; ++col) {
+                Juego.Cell estado= this.piezasTablero[row][col].state;
+                if(estado != Cell.EMPTY || estado != Cell.DISABLE) {
+                    if (estado == Cell.RED) {
+                        piezasRed++;
+                    } else if (estado == Cell.BLUE) {
+                        piezasBlue++;
+                    }
+                }
+            }
+        }
+        if(piezasBlue==2 && currentGameState!=GameState.DEPLOY){
+            currentGameState = (turn == 'O') ? GameState.BLUE_WON : GameState.RED_WON;
+        }
+    }*/
+
+    int getCantidadFichas(char turn){
+        int piezasRed=0,piezasBlue=0;
+        for (int row = 0; row < TOTALROWS; ++row) {
+            for (int col = 0; col < TOTALCOLUMNS; ++col) {
+                Juego.Cell estado= this.piezasTablero[row][col].state;
+                if(estado != Cell.DISABLE) {
+                    if (estado == Cell.RED) {
+                        piezasRed++;
+                    } else if (estado == Cell.BLUE) {
+                        piezasBlue++;
+                    }
+                }
+            }
+        }
+        if (turn == 'O'){
+            return piezasBlue;
+        }else
+            return piezasRed;
+
+    }
+
 
     public GameState getGameState() {
         return currentGameState;
