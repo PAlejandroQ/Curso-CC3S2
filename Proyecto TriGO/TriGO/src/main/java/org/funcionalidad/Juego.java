@@ -1,6 +1,7 @@
 package org.funcionalidad;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Juego {
     public static final int NUM_FICHAS = 9;
@@ -9,9 +10,10 @@ public class Juego {
 
     protected static final int NUM_PLAYERS = 2;
     protected Ficha[][] piezasTablero;
+    protected ArrayList<Point> lastMill;
     private Point lastPoint;
 
-    private Jugador[] jugadores = new Jugador[NUM_PLAYERS];
+    public Jugador[] jugadores = new Jugador[NUM_PLAYERS];
 
     public enum Cell {
         EMPTY, BLUE, RED, DISABLE, SHINY ;
@@ -21,7 +23,7 @@ public class Juego {
     protected char turn;
 
     public enum GameState {
-        DEPLOY, MOVING, FLIGHT, BLUE_WON, RED_WON
+        DEPLOY, MOVING, FLIGHT, BLUE_WON, RED_WON, SELECT_CAPTURE_BLUE, SELECT_CAPTURE_RED
     }
 
     protected GameState currentGameState;
@@ -29,6 +31,7 @@ public class Juego {
     public Juego() {
         grid = new Cell[TOTALROWS][TOTALCOLUMNS];
         this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
+        lastMill = new ArrayList<Point>();
         initGame();
 
     }
@@ -102,7 +105,7 @@ public class Juego {
         this.piezasTablero[0][6].setVecinos(piezasTablero[0][3].coordenada);
         this.piezasTablero[0][3].setVecinos(piezasTablero[0][6].coordenada);
         this.piezasTablero[0][3].setVecinos(piezasTablero[0][0].coordenada);
-        this.piezasTablero[0][3].setVecinos(piezasTablero[0][3].coordenada);
+        this.piezasTablero[0][3].setVecinos(piezasTablero[1][3].coordenada);
         // Cuadrado intermedio
         this.piezasTablero[1][1].setVecinos(piezasTablero[3][1].coordenada);
         this.piezasTablero[1][1].setVecinos(piezasTablero[1][3].coordenada);
@@ -185,9 +188,10 @@ public class Juego {
         if (row >= 0 && row < TOTALROWS && column >= 0 && column < TOTALCOLUMNS && grid[row][column] == Cell.EMPTY) {
             grid[row][column] = (turn == 'X') ? Cell.BLUE : Cell.RED;
             this.piezasTablero[row][column].state = (turn == 'X') ? Cell.BLUE : Cell.RED;
+            this.getPlayerTurn().aumentarNumFichasEnJuego(new Point(row,column));
             this.lastPoint = this.piezasTablero[row][column].coordenada;
             updateGameState(turn, row, column);
-            turn = (turn == 'X') ? 'O' : 'X';
+            if(currentGameState!=GameState.SELECT_CAPTURE_RED && currentGameState!=GameState.SELECT_CAPTURE_BLUE)turn = (turn == 'X') ? 'O' : 'X';
         }
 
     }
@@ -197,6 +201,12 @@ public class Juego {
             currentGameState =  GameState.MOVING;
         } else if (this.getCantidadFichas(turn)==3 && currentGameState!=GameState.DEPLOY ) {
             currentGameState = GameState.FLIGHT;
+        if (this.findTri()) {
+            currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_BLUE : GameState.SELECT_CAPTURE_RED;
+//            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
+        } else
+        {
+            currentGameState = GameState.DEPLOY;
         }
         if(this.getCantidadFichas(turn)==2 && currentGameState!=GameState.DEPLOY){
             currentGameState = (turn == 'O') ? GameState.BLUE_WON : GameState.RED_WON;
@@ -230,6 +240,9 @@ public class Juego {
                     Ficha extremo = this.getFicha(extremoP);
                     if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(lastMove.coordenada) && lastMove.esLinea(extremo))
                     {
+                        this.lastMill.add(esquina);
+                        this.lastMill.add(intermedioP);
+                        this.lastMill.add(extremoP);
                         return true;
                     }
                 }
@@ -299,4 +312,14 @@ public class Juego {
     }
 
 
+    public void capturarPieza(Jugador atacante, Jugador atacado, Point posicionCapturada)
+    {
+        if(atacante.fichasJugador.contains(posicionCapturada))
+        {
+            atacante.reducirNumFichasEnJuego(posicionCapturada);
+            this.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = Cell.EMPTY;
+            grid[posicionCapturada.x][posicionCapturada.y] = Cell.EMPTY;
+            updateGameState(turn, posicionCapturada.x, posicionCapturada.y);
+        }
+    }
 }

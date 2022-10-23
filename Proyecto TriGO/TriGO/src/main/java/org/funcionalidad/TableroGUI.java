@@ -53,14 +53,12 @@ public class TableroGUI extends JFrame {
         GameBoardCanvas() {
             addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
+                    System.out.println(game.turn);
+                    int rowSelected = e.getY() / CELL_SIZE;
+                    int colSelected = e.getX() / CELL_SIZE;
                     if (game.getGameState() == GameState.DEPLOY) {
-                        int rowSelected = e.getY() / CELL_SIZE;
-                        int colSelected = e.getX() / CELL_SIZE;
                         game.makeMove(rowSelected, colSelected);
-
                     }else if(game.getGameState()== GameState.MOVING){
-                        int rowSelected = e.getY() / CELL_SIZE;
-                        int colSelected = e.getX() / CELL_SIZE;
                         if(game.getPlayerTurn().estado== Jugador.State.MOVING){
                             /*if(game.getCell(rowSelected, colSelected) == game.getPlayerTurn().color){
                                 ;
@@ -68,6 +66,12 @@ public class TableroGUI extends JFrame {
 
                         }
 
+                    }
+                    else if(game.getGameState()== GameState.SELECT_CAPTURE_BLUE){
+                        game.capturarPieza(game.jugadores[1],game.jugadores[0], new Point(rowSelected,colSelected));
+                    }
+                    else if(game.getGameState()== GameState.SELECT_CAPTURE_RED){
+                        game.capturarPieza(game.jugadores[0],game.jugadores[1],new Point(rowSelected,colSelected) );
                     }
                     else {
                         game.resetGame();
@@ -87,7 +91,7 @@ public class TableroGUI extends JFrame {
             printStatusBar();
         }
 
-        private void drawGridLines(Graphics g) {
+        private void drawGridLines(Graphics  g) {
             g.setColor(Color.LIGHT_GRAY);
             int rowN=-1,colN=-1;
             for (int row = 1; row <= game.getTotalRows(); ++row) {
@@ -150,6 +154,12 @@ public class TableroGUI extends JFrame {
             } else if (game.getGameState() == GameState.MOVING) {
                 gameStatusBar.setForeground(Color.green);
                 gameStatusBar.setText("Un lanzamiento! Click para jugar otra vez.");
+            } else if(game.getGameState() == GameState.SELECT_CAPTURE_BLUE){
+                gameStatusBar.setForeground(Color.blue);
+                gameStatusBar.setText("Seleccione la ficha enemiga a capturar.");
+            } else if(game.getGameState() == GameState.SELECT_CAPTURE_RED){
+                gameStatusBar.setForeground(Color.RED);
+                gameStatusBar.setText("Seleccione la ficha enemiga a capturar.");
             } else if (game.getGameState() == GameState.BLUE_WON) {
                 gameStatusBar.setForeground(Color.RED);
                 gameStatusBar.setText("Rojo gana! Click para jugar otra vez.");
