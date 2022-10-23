@@ -201,14 +201,15 @@ public class Juego {
             currentGameState =  GameState.MOVING;
         } else if (this.getCantidadFichas(turn)==3 && currentGameState!=GameState.DEPLOY ) {
             currentGameState = GameState.FLIGHT;
+        }
         if (this.findTri()) {
             currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_BLUE : GameState.SELECT_CAPTURE_RED;
 //            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
-        } else
+        }else
         {
             currentGameState = GameState.DEPLOY;
         }
-        if(this.getCantidadFichas(turn)==2 && currentGameState!=GameState.DEPLOY){
+        if(this.getCantidadFichas(turn)==2 && currentGameState!=GameState.DEPLOY && currentGameState!=GameState.SELECT_CAPTURE_BLUE && currentGameState!=GameState.SELECT_CAPTURE_RED){
             currentGameState = (turn == 'O') ? GameState.BLUE_WON : GameState.RED_WON;
         }
     }
