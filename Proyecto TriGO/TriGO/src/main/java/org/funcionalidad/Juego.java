@@ -201,13 +201,16 @@ public class Juego {
             currentGameState =  GameState.MOVING;
         } else if (this.getCantidadFichas(turn)==3 && currentGameState!=GameState.DEPLOY ) {
             currentGameState = GameState.FLIGHT;
+        }else if (this.jugadores[1].getNumFichas() == 0)
+        {
+            currentGameState = GameState.MOVING;
+        }else{
+            currentGameState = GameState.DEPLOY;
         }
+
         if (this.findTri()) {
             currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_BLUE : GameState.SELECT_CAPTURE_RED;
 //            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
-        }else
-        {
-            currentGameState = GameState.DEPLOY;
         }
         if(this.getCantidadFichas(turn)==2 && currentGameState!=GameState.DEPLOY && currentGameState!=GameState.SELECT_CAPTURE_BLUE && currentGameState!=GameState.SELECT_CAPTURE_RED){
             currentGameState = (turn == 'O') ? GameState.BLUE_WON : GameState.RED_WON;
@@ -320,7 +323,21 @@ public class Juego {
             atacante.reducirNumFichasEnJuego(posicionCapturada);
             this.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = Cell.EMPTY;
             grid[posicionCapturada.x][posicionCapturada.y] = Cell.EMPTY;
+            turn = (turn == 'X')? 'O' : 'X';
             updateGameState(turn, posicionCapturada.x, posicionCapturada.y);
         }
+    }
+
+    public void seleccionarFicha(int row, int col){
+        Ficha actual = getFicha(new Point(row, col));
+        if(actual.state == getPlayerTurn().getColor()){
+            for (Point vecino : actual.vecinos){
+                if(getFicha(vecino).state == Cell.EMPTY){
+                    grid[vecino.x][vecino.y] = Cell.SHINY;
+                }
+            }
+            getPlayerTurn().setMoving();
+        }
+        this.lastPoint = this.piezasTablero[row][col].coordenada;
     }
 }
