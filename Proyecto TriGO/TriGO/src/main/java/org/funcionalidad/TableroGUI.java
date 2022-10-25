@@ -61,10 +61,10 @@ public class TableroGUI extends JFrame {
                     }else if(game.getGameState()== GameState.MOVING){
                         game.moverFicha(rowSelected, colSelected);
                     }
-                    else if(game.getGameState()== GameState.SELECT_CAPTURE_BLUE){
+                    else if(game.getGameState()== GameState.SELECT_CAPTURE_RED){
                         game.capturarPieza(game.jugadores[1],game.jugadores[0], new Point(rowSelected,colSelected));
                     }
-                    else if(game.getGameState()== GameState.SELECT_CAPTURE_RED){
+                    else if(game.getGameState()== GameState.SELECT_CAPTURE_BLUE){
                         game.capturarPieza(game.jugadores[0],game.jugadores[1],new Point(rowSelected,colSelected) );
                     }
                     else {
@@ -126,13 +126,14 @@ public class TableroGUI extends JFrame {
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
 
-                    if (game.getCell(row, col) == Cell.BLUE) {
+                    if (game.getCell(row, col) == Cell.RED) {
                         g2d.setColor(Color.RED);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
-                    } else if (game.getCell(row, col) == Cell.RED) {
+                    } else if (game.getCell(row, col) == Cell.BLUE) {
                         g2d.setColor(Color.BLUE);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     } else if (game.getCell(row, col) == Cell.SHINY) {
+                        g2d.setStroke(new BasicStroke(3));
                         g2d.setColor(Color.GREEN);
                         g2d.drawOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
@@ -144,19 +145,19 @@ public class TableroGUI extends JFrame {
             if (game.getGameState() == GameState.DEPLOY) {
                 gameStatusBar.setForeground(Color.BLACK);
                 if (game.getTurn() == 'X') {
-                    gameStatusBar.setText("Turno de Rojo");
-                } else {
                     gameStatusBar.setText("Turno de Azul");
+                } else {
+                    gameStatusBar.setText("Turno de Rojo");
                 }
             } else if (game.getGameState() == GameState.MOVING) {
                 gameStatusBar.setForeground(Color.GRAY);
                 gameStatusBar.setText("Fase de movimiento. Selecciona tus fichas y desplázalas");
             } else if(game.getGameState() == GameState.SELECT_CAPTURE_BLUE){
                 gameStatusBar.setForeground(Color.blue);
-                gameStatusBar.setText("Seleccione la ficha enemiga a capturar.");
+                gameStatusBar.setText("Seleccione la ficha azul a capturar.");
             } else if(game.getGameState() == GameState.SELECT_CAPTURE_RED){
                 gameStatusBar.setForeground(Color.RED);
-                gameStatusBar.setText("Seleccione la ficha enemiga a capturar.");
+                gameStatusBar.setText("Seleccione la ficha roja a capturar.");
             } else if (game.getGameState() == GameState.BLUE_WON) {
                 gameStatusBar.setForeground(Color.RED);
                 gameStatusBar.setText("Rojo gana! Click para jugar otra vez.");

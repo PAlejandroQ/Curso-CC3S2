@@ -191,17 +191,24 @@ public class Juego {
             this.getPlayerTurn().aumentarNumFichasEnJuego(new Point(row,column));
             this.lastPoint = this.piezasTablero[row][column].coordenada;
             updateGameState(turn, row, column);
-            if(currentGameState!=GameState.SELECT_CAPTURE_RED && currentGameState!=GameState.SELECT_CAPTURE_BLUE) turn = (turn == 'X') ? 'O' : 'X';
+            if(currentGameState!=GameState.SELECT_CAPTURE_RED && currentGameState!=GameState.SELECT_CAPTURE_BLUE){
+                turn = (turn == 'X') ? 'O' : 'X';
+            }
         }
 
     }
 
     private void updateGameState(char turn, int row, int column) {
+        //continuacion de fase de movimiento
         if(this.getCantidadFichas(turn)>3 && currentGameState !=GameState.DEPLOY){
             currentGameState =  GameState.MOVING;
-        } else if (this.getCantidadFichas(turn)==3 && currentGameState!=GameState.DEPLOY ) {
+        }
+        //Fase de vuelo (deberia ser por jugador v:)
+        else if (this.getCantidadFichas(turn)==3 && currentGameState==GameState.MOVING ) {
             currentGameState = GameState.FLIGHT;
-        }else if (this.jugadores[1].getNumFichas() == 0)
+        }
+        // Jugador 2 se queda sin fichas para colocar -> ambos jugadores inician fase de movimiento
+        else if (this.jugadores[1].getNumFichas() == 0)
         {
             for(Jugador jugador : jugadores){
                 jugador.setSelecting();
@@ -212,9 +219,19 @@ public class Juego {
         }
 
         if (this.findTri()) {
-            currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_BLUE : GameState.SELECT_CAPTURE_RED;
+            GameState temp = currentGameState;
+            System.out.println(getFicha(lastMill.get(0)).state.toString());
+            System.out.println(getPlayerTurn().getColor().toString());
+            if(getFicha(lastMill.get(0)).state == getPlayerTurn().getColor()) {
+                currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_RED : GameState.SELECT_CAPTURE_BLUE;
 //            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
+            }else{
+                currentGameState = temp;
+            }
         }
+
+        System.out.println(currentGameState.toString());
+
         if(this.getCantidadFichas(turn)==2 && currentGameState!=GameState.DEPLOY && currentGameState!=GameState.SELECT_CAPTURE_BLUE && currentGameState!=GameState.SELECT_CAPTURE_RED){
             currentGameState = (turn == 'O') ? GameState.BLUE_WON : GameState.RED_WON;
         }
@@ -235,6 +252,7 @@ public class Juego {
     }
     private boolean isTri(Point esquina)
     {
+
         Ficha lastMove = this.getFicha(esquina);
         for(Point intermedioP : lastMove.vecinos)
         {
@@ -247,6 +265,7 @@ public class Juego {
                     Ficha extremo = this.getFicha(extremoP);
                     if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(lastMove.coordenada) && lastMove.esLinea(extremo))
                     {
+                        this.lastMill.clear();
                         this.lastMill.add(esquina);
                         this.lastMill.add(intermedioP);
                         this.lastMill.add(extremoP);
@@ -356,6 +375,7 @@ public class Juego {
     public void seleccionarDestino(Jugador jugador, int row, int col){
         if(grid[row][col] == Cell.SHINY){
             grid[row][col] = jugador.getColor();
+            getFicha(new Point(row, col)).state = jugador.getColor();
             // :v oe
             grid[lastPoint.x][lastPoint.y] = Cell.EMPTY;
             getFicha(lastPoint).state = Cell.EMPTY;

@@ -27,7 +27,7 @@ public class Jugador {
 //        this.FICHAS_LEFT = NUM_FICHAS;
         this.FICHAS = 9;
         this.fichasJugador = new ArrayList<Point>();
-        this.col = (color ==1)? Cell.RED : Cell.BLUE;
+        this.col = (color ==1)? Cell.BLUE : Cell.RED;
 //        for(int i = 0; i< FICHAS_LEFT; ++i)
 //        {
 //            fichas.add(i, new Ficha(color,new Point(1,1)));
