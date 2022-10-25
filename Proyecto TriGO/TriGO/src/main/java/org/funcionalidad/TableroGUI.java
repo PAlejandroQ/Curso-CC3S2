@@ -59,13 +59,7 @@ public class TableroGUI extends JFrame {
                     if (game.getGameState() == GameState.DEPLOY) {
                         game.makeMove(rowSelected, colSelected);
                     }else if(game.getGameState()== GameState.MOVING){
-                        if(game.getPlayerTurn().estado== Jugador.State.MOVING){
-                            /*if(game.getCell(rowSelected, colSelected) == game.getPlayerTurn().color){
-                                ;
-                            }*/
-
-                        }
-
+                        game.moverFicha(rowSelected, colSelected);
                     }
                     else if(game.getGameState()== GameState.SELECT_CAPTURE_BLUE){
                         game.capturarPieza(game.jugadores[1],game.jugadores[0], new Point(rowSelected,colSelected));
@@ -126,7 +120,7 @@ public class TableroGUI extends JFrame {
                     int x1 = col * CELL_SIZE + CELL_PADDING;
                     int y1 = row * CELL_SIZE + CELL_PADDING;
 
-                    if(game.getCell(row, col)==Cell.EMPTY && game.getCell(row, col)!=Cell.DISABLE){
+                    if((game.getCell(row, col)== Cell.EMPTY || game.getCell(row, col)== Cell.SHINY) && game.getCell(row, col)!=Cell.DISABLE){
                         g2d.setColor(Color.LIGHT_GRAY);
                         //g2d.drawOval(x1+CELL_PADDING/4, y1+CELL_PADDING/4, SYMBOL_SIZE/2, SYMBOL_SIZE/2);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
@@ -138,6 +132,9 @@ public class TableroGUI extends JFrame {
                     } else if (game.getCell(row, col) == Cell.RED) {
                         g2d.setColor(Color.BLUE);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
+                    } else if (game.getCell(row, col) == Cell.SHINY) {
+                        g2d.setColor(Color.GREEN);
+                        g2d.drawOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
                 }
             }
@@ -152,8 +149,8 @@ public class TableroGUI extends JFrame {
                     gameStatusBar.setText("Turno de Azul");
                 }
             } else if (game.getGameState() == GameState.MOVING) {
-                gameStatusBar.setForeground(Color.green);
-                gameStatusBar.setText("Un lanzamiento! Click para jugar otra vez.");
+                gameStatusBar.setForeground(Color.GRAY);
+                gameStatusBar.setText("Fase de movimiento. Selecciona tus fichas y desplázalas");
             } else if(game.getGameState() == GameState.SELECT_CAPTURE_BLUE){
                 gameStatusBar.setForeground(Color.blue);
                 gameStatusBar.setText("Seleccione la ficha enemiga a capturar.");

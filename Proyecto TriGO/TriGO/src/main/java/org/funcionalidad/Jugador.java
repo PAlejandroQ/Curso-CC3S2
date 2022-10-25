@@ -9,12 +9,13 @@ import static org.funcionalidad.Juego.*;
 public class Jugador {
     int color;
 //    public int FICHAS_LEFT;
-    public int FICHAS_TABLERO;
+    public int FICHAS;
     public ArrayList<Point> fichasJugador;
 
     public enum State{
         SELECTING, MOVING, FLYING;
     }
+    public Cell col;
 
     protected State estado;
     //Stack<Ficha> fichas = new Stack<>();
@@ -24,9 +25,9 @@ public class Jugador {
     {
         this.color = color;
 //        this.FICHAS_LEFT = NUM_FICHAS;
-        this.FICHAS_TABLERO = 9;
+        this.FICHAS = 9;
         this.fichasJugador = new ArrayList<Point>();
-
+        this.col = (color ==1)? Cell.RED : Cell.BLUE;
 //        for(int i = 0; i< FICHAS_LEFT; ++i)
 //        {
 //            fichas.add(i, new Ficha(color,new Point(1,1)));
@@ -34,7 +35,7 @@ public class Jugador {
     }
 
     public int getNumFichas(){
-        return this.FICHAS_TABLERO;
+        return this.FICHAS;
     }
 
     public int getNumFichasEnJuego(){
@@ -43,6 +44,7 @@ public class Jugador {
 
     public void aumentarNumFichasEnJuego(Point nuevaFicha){
         this.fichasJugador.add(nuevaFicha);
+        --this.FICHAS;
     }
 
     public void reducirNumFichasEnJuego(Point fichaPerdida){
@@ -61,4 +63,6 @@ public class Jugador {
     public State getState(){
         return this.estado;
     }
+
+    public Cell getColor(){ return this.col;}
 }
