@@ -59,7 +59,7 @@ public class TableroGUI extends JFrame {
                     if (game.getGameState() == GameState.DEPLOY) {
                         game.makeMove(rowSelected, colSelected);
                     }else if(game.getGameState()== GameState.MOVING){
-                        game.seleccionarFicha(rowSelected, colSelected);
+                        game.moverFicha(rowSelected, colSelected);
                     }
                     else if(game.getGameState()== GameState.SELECT_CAPTURE_BLUE){
                         game.capturarPieza(game.jugadores[1],game.jugadores[0], new Point(rowSelected,colSelected));
@@ -120,7 +120,7 @@ public class TableroGUI extends JFrame {
                     int x1 = col * CELL_SIZE + CELL_PADDING;
                     int y1 = row * CELL_SIZE + CELL_PADDING;
 
-                    if(game.getCell(row, col)==Cell.EMPTY && game.getCell(row, col)!=Cell.DISABLE){
+                    if((game.getCell(row, col)== Cell.EMPTY || game.getCell(row, col)== Cell.SHINY) && game.getCell(row, col)!=Cell.DISABLE){
                         g2d.setColor(Color.LIGHT_GRAY);
                         //g2d.drawOval(x1+CELL_PADDING/4, y1+CELL_PADDING/4, SYMBOL_SIZE/2, SYMBOL_SIZE/2);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
@@ -134,7 +134,7 @@ public class TableroGUI extends JFrame {
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     } else if (game.getCell(row, col) == Cell.SHINY) {
                         g2d.setColor(Color.GREEN);
-                        g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
+                        g2d.drawOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
                 }
             }
