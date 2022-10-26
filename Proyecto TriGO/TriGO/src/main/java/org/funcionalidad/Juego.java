@@ -2,6 +2,8 @@ package org.funcionalidad;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Juego {
     public static final int NUM_FICHAS = 9;
@@ -10,7 +12,7 @@ public class Juego {
 
     protected static final int NUM_PLAYERS = 2;
     protected Ficha[][] piezasTablero;
-    protected ArrayList<Point> lastMill;
+    protected ArrayList<Set<Point>> lastMill;
     private Point lastPoint;
 
     public Jugador[] jugadores = new Jugador[NUM_PLAYERS];
@@ -31,7 +33,7 @@ public class Juego {
     public Juego() {
         grid = new Cell[TOTALROWS][TOTALCOLUMNS];
         this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
-        lastMill = new ArrayList<Point>();
+        lastMill = new ArrayList<>();
         initGame();
 
     }
@@ -223,9 +225,9 @@ public class Juego {
 
         if (this.findTri()) {
             GameState temp = currentGameState;
-            System.out.println(getFicha(lastMill.get(0)).state.toString());
+            System.out.println(getFicha(lastMill.get(0).iterator().next()).state.toString());
             System.out.println(getPlayerTurn().getColor().toString());
-            if(getFicha(lastMill.get(0)).state == getPlayerTurn().getColor()) {
+            if(getFicha(lastMill.get(0).iterator().next()).state == getPlayerTurn().getColor()) {
                 currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_RED : GameState.SELECT_CAPTURE_BLUE;
 //            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
             }else{
@@ -266,12 +268,14 @@ public class Juego {
                 for(Point extremoP : intermedio.vecinos)
                 {
                     Ficha extremo = this.getFicha(extremoP);
-                    if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(lastMove.coordenada) && lastMove.esLinea(extremo))
+                    HashSet<Point> newMill = new HashSet<Point>();
+                    newMill.add(esquina);
+                    newMill.add(intermedioP);
+                    newMill.add(extremoP);
+                    if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(lastMove.coordenada) && lastMove.esLinea(extremo) && !lastMill.contains(newMill))
                     {
                         this.lastMill.clear();
-                        this.lastMill.add(esquina);
-                        this.lastMill.add(intermedioP);
-                        this.lastMill.add(extremoP);
+                        this.lastMill.add(newMill);
                         return true;
                     }
                 }
