@@ -200,7 +200,10 @@ public class Juego {
 
     private void updateGameState(char turn, int row, int column) {
         //continuacion de fase de movimiento
-        if(this.getCantidadFichas(turn)>3 && currentGameState !=GameState.DEPLOY){
+        if(this.getCantidadFichas(turn)>3 && jugadores[1].getNumFichas()==0){
+            for(Jugador jugador : jugadores){
+                jugador.setSelecting();
+            }
             currentGameState =  GameState.MOVING;
         }
         //Fase de vuelo (deberia ser por jugador v:)

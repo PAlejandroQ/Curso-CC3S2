@@ -73,11 +73,6 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.funcionalidad.TableroVacioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.funcionalidad.TableroVacioTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.funcionalidad.TableroVacioTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.funcionalidad.TableroVacioTest.txt" afterDir="false" />
     </list>
@@ -279,6 +274,8 @@
       <workItem from="1666310019728" duration="5063000" />
       <workItem from="1666623366564" duration="6158000" />
       <workItem from="1666657673818" duration="9226000" />
+      <workItem from="1666718427696" duration="982000" />
+      <workItem from="1666744482543" duration="228000" />
     </task>
     <servers />
   </component>
