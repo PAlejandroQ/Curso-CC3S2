@@ -203,7 +203,7 @@ public class Juego {
         if(this.getCantidadFichas(turn)>3 && currentGameState !=GameState.DEPLOY){
             currentGameState =  GameState.MOVING;
         }
-        //Fase de vuelo (deberia ser por jugador v:)
+        //Fase de vuelo (deberia ser por jugador v:) si cierto
         else if (this.getCantidadFichas(turn)==3 && currentGameState==GameState.MOVING ) {
             currentGameState = GameState.FLIGHT;
         }

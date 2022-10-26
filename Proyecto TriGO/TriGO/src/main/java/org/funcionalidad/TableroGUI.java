@@ -31,8 +31,11 @@ public class TableroGUI extends JFrame {
         setContentPane();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
-        setTitle("NINE MEN'S MORRIS");
+        setTitle("TriGO: NINE MEN'S MORRIS");
         setVisible(true);
+        Dimension dim= Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-300,dim.height/2-340);
+
     }
 
     private void setContentPane() {
