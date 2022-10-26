@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +205,7 @@
       <workItem from="1666309972542" duration="27000" />
       <workItem from="1666310019728" duration="5063000" />
       <workItem from="1666722234791" duration="1905000" />
-      <workItem from="1666763921743" duration="1008000" />
+      <workItem from="1666763921743" duration="5376000" />
     </task>
     <servers />
   </component>

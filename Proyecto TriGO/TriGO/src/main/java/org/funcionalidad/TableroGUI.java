@@ -33,11 +33,8 @@ public class TableroGUI extends JFrame {
         pack();
         setTitle("TriGO: NINE MEN'S MORRIS");
         setVisible(true);
-        Dimension dim= Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-300,dim.height/2-340);
-
+        this.setLocationRelativeTo(null);
     }
-
     private void setContentPane() {
         gameBoardCanvas = new GameBoardCanvas();
         gameBoardCanvas
