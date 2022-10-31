@@ -1,5 +1,8 @@
 package org.funcionalidad;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 class JuegoTest {
@@ -39,4 +42,5 @@ class JuegoTest {
         Juego game = new Juego();
         assertTrue(game.getGameState() instanceof Juego.GameState);
     }
+
 }

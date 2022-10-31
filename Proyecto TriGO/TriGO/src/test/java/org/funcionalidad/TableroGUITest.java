@@ -15,4 +15,8 @@ class TableroGUITest {
         assertEquals(Juego.Cell.BLUE, game.getCell(0,0));
     }
 
+
+
+
+
 }
