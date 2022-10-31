@@ -2,16 +2,18 @@ package org.funcionalidad;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AzulMovimientosTest {
-    private final Juego game=new Juego();
+    private Juego game;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
+        game=new Juego();
     }
 
     @After
