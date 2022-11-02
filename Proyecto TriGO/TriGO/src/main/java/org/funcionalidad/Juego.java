@@ -190,6 +190,7 @@ public class Juego {
             grid[row][column] = (turn == 'X') ? Cell.BLUE : Cell.RED;
             this.piezasTablero[row][column].state = (turn == 'X') ? Cell.BLUE : Cell.RED;
             this.getPlayerTurn().aumentarNumFichasEnJuego(new Point(row,column));
+            this.getPlayerTurn().reducinNumFicha();
             this.lastPoint = this.piezasTablero[row][column].coordenada;
             updateGameState(turn, row, column);
             checkStillMil(this.lastMill);
@@ -269,9 +270,11 @@ public class Juego {
         Iterator<Set<Point>> itr = listaConjuntos.iterator();
         while (itr.hasNext()) {
 //            String loan = itr.next();
+
             Iterator<Point> itrPoints =  itr.next().iterator();
             while (itrPoints.hasNext())
             {
+
                 if (getFicha(itrPoints.next()).state == Cell.EMPTY || getFicha(itrPoints.next()).state == Cell.DISABLE)
                 {
                     itr.remove();
@@ -299,7 +302,7 @@ public class Juego {
                     newMill.add(extremoP);
                     if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(lastMove.coordenada) && lastMove.esLinea(extremo) && !lastMill.contains(newMill))
                     {
-                        this.lastMill.clear();
+                        //this.lastMill.clear();
                         this.lastMill.add(newMill);
                         return true;
                     }
@@ -393,10 +396,14 @@ public class Juego {
             // :v oe
             grid[lastPoint.x][lastPoint.y] = Cell.EMPTY;
             getFicha(lastPoint).state = Cell.EMPTY;
+            getPlayerTurn().reducirNumFichasEnJuego(lastPoint);
+            getPlayerTurn().aumentarNumFichasEnJuego(new Point(row, col));
             //
             jugador.setSelecting();
-            turn =  (turn=='X')? 'O' : 'X';
             updateGameState(turn, row, col);
+            if(currentGameState!=GameState.SELECT_CAPTURE_BLUE && currentGameState!=GameState.SELECT_CAPTURE_RED){
+                turn =  (turn=='X')? 'O' : 'X';
+            }
             clearShinys();
         }else if (grid[row][col] == getPlayerTurn().getColor()){
             jugador.setSelecting();

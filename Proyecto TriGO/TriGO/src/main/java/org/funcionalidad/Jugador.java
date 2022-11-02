@@ -44,7 +44,6 @@ public class Jugador {
 
     public void aumentarNumFichasEnJuego(Point nuevaFicha){
         this.fichasJugador.add(nuevaFicha);
-        --this.FICHAS;
     }
 
     public void reducirNumFichasEnJuego(Point fichaPerdida){
@@ -63,6 +62,8 @@ public class Jugador {
     public State getState(){
         return this.estado;
     }
+
+    public void reducinNumFicha(){--this.FICHAS;}
 
     public Cell getColor(){ return this.col;}
 }
