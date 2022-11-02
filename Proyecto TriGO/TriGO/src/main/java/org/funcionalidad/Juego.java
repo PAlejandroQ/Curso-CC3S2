@@ -289,25 +289,6 @@ public class Juego {
             this.grid[p.x][p.y] = Cell.EMPTY;
     }
 
-  /*  private void finJuego(){
-        int piezasRed=  0;
-        int piezasBlue=  0 ;
-        for (int row = 0; row < TOTALROWS; ++row) {
-            for (int col = 0; col < TOTALCOLUMNS; ++col) {
-                Juego.Cell estado= this.piezasTablero[row][col].state;
-                if(estado != Cell.EMPTY || estado != Cell.DISABLE) {
-                    if (estado == Cell.RED) {
-                        piezasRed++;
-                    } else if (estado == Cell.BLUE) {
-                        piezasBlue++;
-                    }
-                }
-            }
-        }
-        if(piezasBlue==2 && currentGameState!=GameState.DEPLOY){
-            currentGameState = (turn == 'O') ? GameState.BLUE_WON : GameState.RED_WON;
-        }
-    }*/
 
     int getCantidadFichas(char turn){
         int piezasRed=0,piezasBlue=0;

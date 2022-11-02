@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/RojoMovimientosTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/AzulMovimientosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/AzulMovimientosTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
       <command value="mvn " />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.RojoMovimientosTest.testDespliegueRojoOcupado">
     <configuration name="Jugador" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.funcionalidad.Jugador" />
       <module name="TriGO - IntelliJ" />
@@ -93,36 +94,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TableroGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.TableroGUI" />
-      <module name="TriGO" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.funcionalidad.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AzulMovimientosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TriGO" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.funcionalidad.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.funcionalidad" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.AzulMovimientosTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,7 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JuegoTest.testDespliegueAzulValido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RojoMovimientosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -152,14 +123,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.funcionalidad" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.JuegoTest" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.RojoMovimientosTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RojoMovimientosTest.testDespliegueAzulValido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TriGO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.funcionalidad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.funcionalidad" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.RojoMovimientosTest" />
       <option name="METHOD_NAME" value="testDespliegueAzulValido" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JuegoTest.testNonOcuppied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RojoMovimientosTest.testDespliegueRojoFueraTablero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -168,8 +154,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.funcionalidad" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.JuegoTest" />
-      <option name="METHOD_NAME" value="testNonOcuppied" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.RojoMovimientosTest" />
+      <option name="METHOD_NAME" value="testDespliegueRojoFueraTablero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RojoMovimientosTest.testDespliegueRojoOcupado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TriGO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.funcionalidad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.funcionalidad" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.RojoMovimientosTest" />
+      <option name="METHOD_NAME" value="testDespliegueRojoOcupado" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RojoMovimientosTest.testDespliegueRojoOcupado" />
+        <item itemvalue="JUnit.RojoMovimientosTest.testDespliegueRojoFueraTablero" />
+        <item itemvalue="JUnit.RojoMovimientosTest.testDespliegueAzulValido" />
+        <item itemvalue="JUnit.RojoMovimientosTest" />
         <item itemvalue="JUnit.AzulMovimientosTest.testDespliegueAzulValido" />
-        <item itemvalue="JUnit.AzulMovimientosTest" />
-        <item itemvalue="JUnit.JuegoTest.testDespliegueAzulValido" />
-        <item itemvalue="JUnit.JuegoTest.testNonOcuppied" />
-        <item itemvalue="Application.TableroGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +211,8 @@
       <workItem from="1666310019728" duration="5063000" />
       <workItem from="1666722234791" duration="1905000" />
       <workItem from="1666763921743" duration="5376000" />
-      <workItem from="1667146273230" duration="7551000" />
+      <workItem from="1667146273230" duration="11391000" />
+      <workItem from="1667334514440" duration="2390000" />
     </task>
     <servers />
   </component>

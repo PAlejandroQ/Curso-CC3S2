@@ -20,14 +20,7 @@ class AzulMovimientosTest {
     public void tearDown() throws Exception {
     }
 
-    @Test
-    void makeMove() {
-    }
-
-    @Test
-    void moverFicha() {
-    }
-    //AC 2.1 Posicionamiento de despliegue válido
+    //AC 2.1 Posicionamiento de despliegue azul válido
     @Test
     void testDespliegueAzulValido(){
         game.makeMove(0, 0);
@@ -35,7 +28,8 @@ class AzulMovimientosTest {
         assertEquals("", game.getCell(0, 0), Juego.Cell.BLUE);
         assertEquals("", game.getTurn(), 'O');
     }
-    // AC 2.2  Posicionamiento de despliegue inválido en una celda ocupada
+
+    //AC 2.2  Posicionamiento de despliegue azul  inválido en una celda ocupada
     @Test
     void testDespliegueAzulOcupado(){
         assertEquals("",game.getGameState(),Juego.GameState.DEPLOY);
@@ -47,13 +41,12 @@ class AzulMovimientosTest {
         assertEquals("", game.getTurn(), 'X');
 
     }
-    // AC 2.3  Posicionamiento de despliegue inválido fuera del tablero
+
+    // AC 2.3  Posicionamiento de despliegue azul inválido fuera del tablero
     @Test
     void testDespliegueAzulFueraTablero(){
         assertEquals("",game.getGameState(),Juego.GameState.DEPLOY);
         game.makeMove(0, 9);
         assertEquals("", game.getTurn(), 'X');
     }
-
-
 }
