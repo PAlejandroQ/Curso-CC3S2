@@ -5,14 +5,16 @@ import static org.junit.Assert.assertEquals;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 
 
 public class TableroVacioTest {
-    private final Juego game=new Juego();
+    private Juego game;
 
     @Before
     public void setUp() throws Exception {
+        game=new Juego();
     }
 
     @After
