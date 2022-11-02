@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/AzulMovimientosTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/NumberUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/target/classes/PruebasEspecificacion/NumberUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/test/java/PruebasEspecificacion/stringUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/test/java/PruebasEspecificacion/stringUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/target/test-classes/PruebasEspecificacion/stringUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/target/test-classes/PruebasEspecificacion/stringUtilsTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/backg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/JuegoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/JuegoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/JuegoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/JuegoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/TableroGUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/TableroGUITest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/TableroVacioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/TableroVacioTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego$Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego$Cell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego$GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego$GameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/backg.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +67,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ppaab/Documents/Repos/Curso-CC3S2/Proyecto TriGO/TriGO&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ppaab/Documents/UNI/2022-2/DesarrolloDeSoftware/Testeos&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,7 +96,7 @@
       <command value="mvn " />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AzulMovimientosTest">
     <configuration name="Jugador" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.funcionalidad.Jugador" />
       <module name="TriGO - IntelliJ" />
@@ -182,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AzulMovimientosTest.testDespliegueAzulValido" />
         <item itemvalue="JUnit.AzulMovimientosTest" />
+        <item itemvalue="Application.TableroGUI" />
+        <item itemvalue="JUnit.AzulMovimientosTest.testDespliegueAzulValido" />
         <item itemvalue="JUnit.JuegoTest.testDespliegueAzulValido" />
         <item itemvalue="JUnit.JuegoTest.testNonOcuppied" />
-        <item itemvalue="Application.TableroGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -270,14 +278,24 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TriGO$TableroVacioTest_testNewJuego.ic" NAME="TableroVacioTest.testNewJuego Coverage Results" MODIFIED="1666230568482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>org.funcionalidad.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/TriGO$JuegoTest_testNonOcuppied.ic" NAME="JuegoTest.testNonOcuppied Coverage Results" MODIFIED="1667175704030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.funcionalidad.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TriGO$TableroGUI.ic" NAME="TableroGUI Coverage Results" MODIFIED="1666203656447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.funcionalidad.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TriGO$TableroVacioTest_testNewJuego.ic" NAME="TableroVacioTest.testNewJuego Coverage Results" MODIFIED="1666230568482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.funcionalidad.*</FILTER>
     </SUITE>
   </component>

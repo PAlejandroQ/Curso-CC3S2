@@ -1,9 +1,8 @@
 package org.funcionalidad;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.List;
 
 public class Juego {
     public static final int NUM_FICHAS = 9;
@@ -193,6 +192,8 @@ public class Juego {
             this.getPlayerTurn().aumentarNumFichasEnJuego(new Point(row,column));
             this.lastPoint = this.piezasTablero[row][column].coordenada;
             updateGameState(turn, row, column);
+            checkStillMil(this.lastMill);
+//            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
             if(currentGameState!=GameState.SELECT_CAPTURE_RED && currentGameState!=GameState.SELECT_CAPTURE_BLUE){
                 turn = (turn == 'X') ? 'O' : 'X';
             }
@@ -255,6 +256,30 @@ public class Juego {
         }
         return false;
     }
+    private void checkStillMil(ArrayList<Set<Point>> listaConjuntos) {
+//        Set<Point> borrable = null;
+//        for (Set<Point> combinacion : listaConjuntos) {
+//            Iterator<Point> intercombinacion = combinacion.iterator();
+//            while (intercombinacion.hasNext())
+//                if (getFicha(intercombinacion.next()).state == Cell.EMPTY || getFicha(intercombinacion.next()).state == Cell.DISABLE) {
+//                    return false;
+//                }
+//        }
+
+        Iterator<Set<Point>> itr = listaConjuntos.iterator();
+        while (itr.hasNext()) {
+//            String loan = itr.next();
+            Iterator<Point> itrPoints =  itr.next().iterator();
+            while (itrPoints.hasNext())
+            {
+                if (getFicha(itrPoints.next()).state == Cell.EMPTY || getFicha(itrPoints.next()).state == Cell.DISABLE)
+                {
+                    itr.remove();
+                }
+            }
+        }
+
+    }
     private boolean isTri(Point esquina)
     {
 
@@ -283,11 +308,12 @@ public class Juego {
         }
         return false;
     }
-    public void quitarPieza(Point p,Ficha ultimoMov)
-    {
-        if(this.findTri())
-            this.grid[p.x][p.y] = Cell.EMPTY;
-    }
+
+//    public void quitarPieza(Point p,Ficha ultimoMov)
+//    {
+//        if(this.findTri())
+//            this.grid[p.x][p.y] = Cell.EMPTY;
+//    }
 
   /*  private void finJuego(){
         int piezasRed=  0;
