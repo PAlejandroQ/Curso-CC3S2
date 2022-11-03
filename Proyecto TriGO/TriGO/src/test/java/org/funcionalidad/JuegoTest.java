@@ -11,10 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class JuegoTest {
     private Juego game;
-
+    private TableroGUI tableroTest;
     @BeforeAll
     public void setUpGeneral() throws Exception{
-           TableroGUI tableroTest = new TableroGUI(new Juego());
+           tableroTest = new TableroGUI(new Juego());
 //            TableroGUI.GameBoardCanvas.
     }
 
@@ -54,7 +54,9 @@ class JuegoTest {
     }
     @Test
     void checkMillInDeployment(){
-
+        tableroTest.game.desplegarFicha(0,0);
+        tableroTest.game.desplegarFicha(0,3);
+        tableroTest.game.desplegarFicha(0,7);
     }
 
 }

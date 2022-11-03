@@ -11,7 +11,7 @@ class TableroGUITest {
         Juego game = new Juego();
         TableroGUI tableroGUI= new TableroGUI(game);
         TableroGUI.main(null);
-        game.makeMove(0,0);
+        game.desplegarFicha(0,0);
         assertEquals(Juego.Cell.BLUE, game.getCell(0,0));
     }
 

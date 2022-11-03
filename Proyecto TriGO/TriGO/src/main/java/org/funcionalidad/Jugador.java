@@ -9,11 +9,13 @@ import static org.funcionalidad.Juego.*;
 public class Jugador {
     int color;
 //    public int FICHAS_LEFT;
-    public int FICHAS;
+    private int FICHAS;
     public ArrayList<Point> fichasJugador;
 
+    private boolean IS_FLYING = false;
+
     public enum State{
-        SELECTING, MOVING, FLYING;
+        SELECTING, MOVING;
     }
     public Cell col;
 
@@ -57,8 +59,10 @@ public class Jugador {
         this.estado=State.SELECTING;
     }
     public void setFlying(){
-        this.estado= State.FLYING;
+        this.IS_FLYING = true;
     }
+
+    public boolean isFlying(){ return this.IS_FLYING;}
     public State getState(){
         return this.estado;
     }

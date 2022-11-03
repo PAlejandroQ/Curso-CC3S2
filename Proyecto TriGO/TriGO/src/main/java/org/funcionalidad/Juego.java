@@ -2,7 +2,6 @@ package org.funcionalidad;
 
 import java.awt.*;
 import java.util.*;
-import java.util.List;
 
 public class Juego {
     public static final int NUM_FICHAS = 9;
@@ -11,20 +10,20 @@ public class Juego {
 
     protected static final int NUM_PLAYERS = 2;
     protected Ficha[][] piezasTablero;
-    protected ArrayList<Set<Point>> lastMill;
+    protected ArrayList<ArrayList<Point>> lastMill;
     private Point lastPoint;
 
     public Jugador[] jugadores = new Jugador[NUM_PLAYERS];
 
     public enum Cell {
-        EMPTY, BLUE, RED, DISABLE, SHINY ;
+        EMPTY, BLUE, RED, DISABLE, SHINY
     }
 
     protected Cell[][] grid;
     protected char turn;
 
     public enum GameState {
-        DEPLOY, MOVING, FLIGHT, BLUE_WON, RED_WON, SELECT_CAPTURE_BLUE, SELECT_CAPTURE_RED
+        DEPLOY, MOVING, BLUE_WON, RED_WON, SELECT_CAPTURE_BLUE, SELECT_CAPTURE_RED
     }
 
     protected GameState currentGameState;
@@ -56,8 +55,7 @@ public class Juego {
         jugadores[1] = new Jugador(2);
     }
 
-    private void preparePositions()
-    {
+    private void preparePositions(){
         grid[0][1] = Cell.DISABLE;
         grid[0][2] = Cell.DISABLE;
         grid[0][4] = Cell.DISABLE;
@@ -84,8 +82,7 @@ public class Juego {
         grid[4][5] = Cell.DISABLE;
         grid[4][6] = Cell.DISABLE;
     }
-    private void prepareVecinos()
-    {
+    private void prepareVecinos(){
         // Cuadrado externo
         this.piezasTablero[0][0].setVecinos(piezasTablero[0][3].coordenada);
         this.piezasTablero[0][0].setVecinos(piezasTablero[3][0].coordenada);
@@ -154,8 +151,7 @@ public class Juego {
         this.piezasTablero[3][2].setVecinos(piezasTablero[3][1].coordenada);
         this.piezasTablero[3][2].setVecinos(piezasTablero[2][2].coordenada);
     }
-    public Ficha getFicha(Point posicion)
-    {
+    public Ficha getFicha(Point posicion){
         return this.piezasTablero[posicion.x][posicion.y];
     }
 
@@ -185,7 +181,7 @@ public class Juego {
         return turn;
     }
 
-    public void makeMove(int row, int column) {
+    public void desplegarFicha(int row, int column) {
         if (row >= 0 && row < TOTALROWS && column >= 0 && column < TOTALCOLUMNS && grid[row][column] == Cell.EMPTY) {
             grid[row][column] = (turn == 'X') ? Cell.BLUE : Cell.RED;
             this.piezasTablero[row][column].state = (turn == 'X') ? Cell.BLUE : Cell.RED;
@@ -193,7 +189,7 @@ public class Juego {
             this.getPlayerTurn().reducinNumFicha();
             this.lastPoint = this.piezasTablero[row][column].coordenada;
             updateGameState(turn, row, column);
-            checkStillMil(this.lastMill);
+
 //            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
             if(currentGameState!=GameState.SELECT_CAPTURE_RED && currentGameState!=GameState.SELECT_CAPTURE_BLUE){
                 turn = (turn == 'X') ? 'O' : 'X';
@@ -204,44 +200,86 @@ public class Juego {
 
     private void updateGameState(char turn, int row, int column) {
         //continuacion de fase de movimiento
-        if(this.getCantidadFichas(turn)>3 && jugadores[1].getNumFichas()==0){
-            for(Jugador jugador : jugadores){
-                jugador.setSelecting();
-            }
-            currentGameState =  GameState.MOVING;
+        System.out.println("NumFichas: "+getPlayerTurn().getNumFichasEnJuego());
+        checkStillMil(this.lastMill);
+        if(this.getPlayerTurn().getNumFichas()>0){
+            currentGameState = GameState.DEPLOY;
         }
-        //Fase de vuelo (deberia ser por jugador v:) si cierto
-        else if (this.getCantidadFichas(turn)==3 && currentGameState==GameState.MOVING ) {
-            currentGameState = GameState.FLIGHT;
-        }
-        // Jugador 2 se queda sin fichas para colocar -> ambos jugadores inician fase de movimiento
-        else if (this.jugadores[1].getNumFichas() == 0)
-        {
+        else if(jugadores[1].getNumFichas()==0){
             for(Jugador jugador : jugadores){
                 jugador.setSelecting();
             }
             currentGameState = GameState.MOVING;
-        }else{
-            currentGameState = GameState.DEPLOY;
+        }
+
+        if(this.getPlayerTurn().getNumFichasEnJuego()>3 && currentGameState!=GameState.DEPLOY){
+            for(Jugador jugador : jugadores){
+                jugador.setSelecting();
+            }
+            currentGameState = GameState.MOVING;
+        } else if (this.getPlayerTurn().getNumFichasEnJuego() == 3 && currentGameState != GameState.DEPLOY) {
+            this.getPlayerTurn().setFlying();
+
         }
 
         if (this.findTri()) {
             GameState temp = currentGameState;
-            System.out.println(getFicha(lastMill.get(0).iterator().next()).state.toString());
-            System.out.println(getPlayerTurn().getColor().toString());
+            System.out.println("ColorMill: " + getFicha(lastMill.get(0).iterator().next()).state.toString());
+            System.out.println("ColorJugador: "+getPlayerTurn().getColor().toString());
             if(getFicha(lastMill.get(0).iterator().next()).state == getPlayerTurn().getColor()) {
                 currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_RED : GameState.SELECT_CAPTURE_BLUE;
-//            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
             }else{
                 currentGameState = temp;
             }
         }
 
-        System.out.println(currentGameState.toString());
 
         if(this.getCantidadFichas(turn)==2 && currentGameState!=GameState.DEPLOY && currentGameState!=GameState.SELECT_CAPTURE_BLUE && currentGameState!=GameState.SELECT_CAPTURE_RED){
-            currentGameState = (turn == 'O') ? GameState.BLUE_WON : GameState.RED_WON;
+            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
         }
+
+        System.out.println("EstadoJuego: "+currentGameState.toString());
+
+        /*
+        if(this.getCantidadFichas(turn)>3  && jugadores[1].getNumFichas()==0){
+            for(Jugador jugador : jugadores){
+                jugador.setSelecting();
+            }
+            currentGameState =  GameState.MOVING;
+        }
+
+        // Jugador 2 se queda sin fichas para colocar -> ambos jugadores inician fase de movimiento
+        else if(this.getPlayerTurn().getNumFichasEnJuego()==3 && currentGameState == GameState.MOVING){
+            this.getPlayerTurn().setFlying();
+            System.out.println("Flying v:");
+        }
+        else if (this.jugadores[1].getNumFichas() == 0){
+            for(Jugador jugador : jugadores){
+                jugador.setSelecting();
+            }
+            currentGameState = GameState.MOVING;
+        }
+        else{
+            currentGameState = GameState.DEPLOY;
+        }
+
+        if (this.findTri()) {
+            GameState temp = currentGameState;
+            System.out.println("ColorMill: " + getFicha(lastMill.get(0).iterator().next()).state.toString());
+            System.out.println("ColorJugador: "+getPlayerTurn().getColor().toString());
+            if(getFicha(lastMill.get(0).iterator().next()).state == getPlayerTurn().getColor()) {
+                currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_RED : GameState.SELECT_CAPTURE_BLUE;
+            }else{
+                currentGameState = temp;
+            }
+        }
+
+        if(this.getCantidadFichas(turn)==2 && currentGameState!=GameState.DEPLOY && currentGameState!=GameState.SELECT_CAPTURE_BLUE && currentGameState!=GameState.SELECT_CAPTURE_RED){
+            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
+        }
+
+        System.out.println(currentGameState.toString());
+         */
     }
 
 
@@ -257,9 +295,9 @@ public class Juego {
         }
         return false;
     }
-    private void checkStillMil(ArrayList<Set<Point>> listaConjuntos) {
-//        Set<Point> borrable = null;
-//        for (Set<Point> combinacion : listaConjuntos) {
+    private void checkStillMil(ArrayList<ArrayList<Point>> listaConjuntos) {
+//        ArrayList<Point> borrable = null;
+//        for (ArrayList<Point> combinacion : listaConjuntos) {
 //            Iterator<Point> intercombinacion = combinacion.iterator();
 //            while (intercombinacion.hasNext())
 //                if (getFicha(intercombinacion.next()).state == Cell.EMPTY || getFicha(intercombinacion.next()).state == Cell.DISABLE) {
@@ -267,45 +305,71 @@ public class Juego {
 //                }
 //        }
 
-        Iterator<Set<Point>> itr = listaConjuntos.iterator();
-        while (itr.hasNext()) {
-//            String loan = itr.next();
 
-            Iterator<Point> itrPoints =  itr.next().iterator();
-            while (itrPoints.hasNext())
-            {
+        System.out.println("Antes:");
+        boolean deboBorrar = false;
+        if (listaConjuntos.size() > 0) {
+            Iterator<ArrayList<Point>> itr = listaConjuntos.iterator();
+            while (itr.hasNext()) {
 
-                if (getFicha(itrPoints.next()).state == Cell.EMPTY || getFicha(itrPoints.next()).state == Cell.DISABLE)
-                {
-                    itr.remove();
+                Iterator<Point> itrPoints = itr.next().iterator();
+                while (itrPoints.hasNext()) {
+                    Point i = itrPoints.next();
+                    System.out.println("----(" + i.x + ","+i.y+")");
+                    if (getFicha(i).state == Cell.EMPTY ) {
+                        System.out.print("Borra Uno");
+                        deboBorrar = true;
+
+
+                    }
+//                break;
                 }
+
+//            break;
             }
         }
 
+        if(deboBorrar) listaConjuntos.clear();
+        System.out.println("Fin While:\n ");
+
+//        for(ArrayList<Point> mill : lastMill){
+//            for()
+//        }
+
     }
-    private boolean isTri(Point esquina)
-    {
+
+    public boolean contieneCombinacion(ArrayList<ArrayList<Point>> grande, ArrayList<Point> elemento){
+        if(grande.size()>1 ){
+            if(grande.get(0).containsAll(elemento)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+    private boolean isTri(Point esquina){
 
         Ficha lastMove = this.getFicha(esquina);
-        for(Point intermedioP : lastMove.vecinos)
-        {
+        for(Point intermedioP : lastMove.vecinos){
             Ficha intermedio = this.getFicha(intermedioP);
-            if(lastMove.esEquipo(intermedio))
-            {
+            if(lastMove.esEquipo(intermedio)) {
 
                 for(Point extremoP : intermedio.vecinos)
                 {
                     Ficha extremo = this.getFicha(extremoP);
-                    HashSet<Point> newMill = new HashSet<Point>();
+                    ArrayList<Point> newMill = new ArrayList<Point>();
                     newMill.add(esquina);
                     newMill.add(intermedioP);
                     newMill.add(extremoP);
-                    if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(lastMove.coordenada) && lastMove.esLinea(extremo) && !lastMill.contains(newMill))
+
+                    if(intermedio.esEquipo(extremo) && !extremo.coordenada.equals(lastMove.coordenada) && lastMove.esLinea(extremo) && !contieneCombinacion(this.lastMill,newMill))
                     {
-                        //this.lastMill.clear();
                         this.lastMill.add(newMill);
                         return true;
                     }
+//                    else{
+//                        this.lastMill.clear();
+//                    }
                 }
             }
         }
@@ -333,7 +397,7 @@ public class Juego {
                 }
             }
         }
-        if (turn == 'O'){
+        if (turn == 'X'){
             return piezasBlue;
         }else
             return piezasRed;
@@ -355,10 +419,8 @@ public class Juego {
     }
 
 
-    public void capturarPieza(Jugador atacante, Jugador atacado, Point posicionCapturada)
-    {
-        if(atacante.fichasJugador.contains(posicionCapturada))
-        {
+    public void capturarPieza(Jugador atacante, Jugador atacado, Point posicionCapturada) {
+        if(atacante.fichasJugador.contains(posicionCapturada)) {
             atacante.reducirNumFichasEnJuego(posicionCapturada);
             this.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = Cell.EMPTY;
             grid[posicionCapturada.x][posicionCapturada.y] = Cell.EMPTY;
@@ -379,9 +441,19 @@ public class Juego {
         clearShinys();
         Ficha actual = getFicha(new Point(row, col));
         if(actual.state == jugador.getColor()){
-            for (Point vecino : actual.vecinos){
-                if(getFicha(vecino).state == Cell.EMPTY){
-                    grid[vecino.x][vecino.y] = Cell.SHINY;
+            if(jugador.isFlying()){
+                for( int x=0; x<TOTALROWS; ++x){
+                    for(int y=0; y<TOTALCOLUMNS; ++y) {
+                        if(getFicha(new Point(x,y)).state==Cell.EMPTY && grid[x][y]!=Cell.DISABLE){
+                            grid[x][y] = Cell.SHINY;
+                        }
+                    }
+                }
+            }else{
+                for (Point vecino : actual.vecinos){
+                    if(getFicha(vecino).state == Cell.EMPTY){
+                        grid[vecino.x][vecino.y] = Cell.SHINY;
+                    }
                 }
             }
             jugador.setMoving();

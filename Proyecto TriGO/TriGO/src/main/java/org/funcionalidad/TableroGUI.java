@@ -20,7 +20,7 @@ public class TableroGUI extends JFrame {
     private GameBoardCanvas gameBoardCanvas;
     private JLabel gameStatusBar;
 
-    private Juego game;
+    public Juego game;
 
     public TableroGUI() {
         this(new Juego());
@@ -53,11 +53,11 @@ public class TableroGUI extends JFrame {
         GameBoardCanvas() {
             addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    System.out.println(game.turn);
+                    System.out.println("\nTurno: "+game.turn);
                     int rowSelected = e.getY() / CELL_SIZE;
                     int colSelected = e.getX() / CELL_SIZE;
                     if (game.getGameState() == GameState.DEPLOY) {
-                        game.makeMove(rowSelected, colSelected);
+                        game.desplegarFicha(rowSelected, colSelected);
                     }else if(game.getGameState()== GameState.MOVING){
                         game.moverFicha(rowSelected, colSelected);
                     }
