@@ -8,11 +8,14 @@ https://docs.google.com/document/d/1Td5s0aVM7K3bBeLGIn7l2uCtAxpK1Q-2V-sL87vSXq8/
 * Link de Documento Sprint #1:
 https://docs.google.com/document/d/1JCenXZf7J7nStB9DaYAXkKAPHTzVpZjVzahx3RSI8m8/edit?usp=sharing
 
+* Link de Documento Sprint #2:
+https://docs.google.com/document/d/14u3Kvpu0kKFAX7IKsZF0FJCRWzaFay_A/edit?usp=sharing&ouid=111989491552785420126&rtpof=true&sd=true
+
 * Link del Trello del proyecto:
 https://trello.com/invite/b/4wG2ZH3h/4463a62a02440b55b709304bdb892925/trigo
 
 * Link de video de la presentación:
-https://drive.google.com/file/d/1DQwT4DDmv0W6xTER_9fxtZP-TnfDZ4Rj/view?usp=sharing También se puede acceder mediante un click a lo siguiente:
+https://drive.google.com/file/d/1QmP71KT6E-iqNAsD8E--EAw4LrZOxo98/view?usp=share_link También se puede acceder mediante un click a lo siguiente:
 
 
-[![Video del Sprint 0-1](https://i.imgur.com/djdkELJ.png)](https://drive.google.com/file/d/1DQwT4DDmv0W6xTER_9fxtZP-TnfDZ4Rj/view)
+[![Video del Sprint 0-1](https://i.imgur.com/djdkELJ.png)](https://drive.google.com/file/d/1QmP71KT6E-iqNAsD8E--EAw4LrZOxo98/view?usp=share_link)
