@@ -419,9 +419,9 @@ public class Juego {
     }
 
 
-    public void capturarPieza(Jugador atacante, Jugador atacado, Point posicionCapturada) {
-        if(atacante.fichasJugador.contains(posicionCapturada)) {
-            atacante.reducirNumFichasEnJuego(posicionCapturada);
+    public void capturarPieza( Jugador atacado, Point posicionCapturada) {
+        if(atacado.fichasJugador.contains(posicionCapturada)) {
+            atacado.reducirNumFichasEnJuego(posicionCapturada);
             this.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = Cell.EMPTY;
             grid[posicionCapturada.x][posicionCapturada.y] = Cell.EMPTY;
             turn = (turn == 'X')? 'O' : 'X';

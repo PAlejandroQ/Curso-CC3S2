@@ -62,10 +62,10 @@ public class TableroGUI extends JFrame {
                         game.moverFicha(rowSelected, colSelected);
                     }
                     else if(game.getGameState()== GameState.SELECT_CAPTURE_RED){
-                        game.capturarPieza(game.jugadores[1],game.jugadores[0], new Point(rowSelected,colSelected));
+                        game.capturarPieza(game.jugadores[1], new Point(rowSelected,colSelected));
                     }
                     else if(game.getGameState()== GameState.SELECT_CAPTURE_BLUE){
-                        game.capturarPieza(game.jugadores[0],game.jugadores[1],new Point(rowSelected,colSelected) );
+                        game.capturarPieza(game.jugadores[0],new Point(rowSelected,colSelected) );
                     }
                     else {
                         game.resetGame();

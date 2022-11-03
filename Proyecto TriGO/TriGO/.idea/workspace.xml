@@ -5,114 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/NumberUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/NumberUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/anotations.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/anotations.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/stringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/stringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/stringUtilsExploracionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/main/java/PruebasEspecificacion/stringUtilsExploracionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/test/java/PruebasEspecificacion/stringUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/src/test/java/PruebasEspecificacion/stringUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividad9-CC3S2/target/classes/PruebasEspecificacion/anotations.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividad9-CC3S2/target/classes/PruebasEspecificacion/anotations.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/src/main/java/org/part1/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/src/main/java/org/part1/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/src/main/java/part2/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/src/main/java/part2/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/src/main/java/part2/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/src/main/java/part2/CalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/src/test/java/org/part1/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/src/test/java/org/part1/CalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroduccionTests/src/test/java/part2/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroduccionTests/src/test/java/part2/CalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/PracticaEntrada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/PracticaEntrada.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/Pregunta3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/Pregunta3.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/Pregunta6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/Pregunta6.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta1/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta1/Explicacion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta1/Fennec.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta1/Fennec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta2/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta2/Explicacion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta2/Macaw.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta2/Macaw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta4/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta4/Explicacion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta4/Howler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta4/Howler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta5/Climber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta5/Climber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta5/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/src/main/java/pregunta5/Explicacion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/Pregunta3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/Pregunta3.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/Pregunta6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/Pregunta6.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/pregunta1/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/pregunta1/Explicacion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/pregunta2/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/pregunta2/Explicacion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/pregunta4/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/pregunta4/Explicacion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/pregunta5/Explicacion.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../PracticaEntrada/target/classes/pregunta5/Explicacion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cuestionario6/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Cuestionario6/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cuestionario6/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cuestionario6/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TriGO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TriGO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/AzulMovimientosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueAzulTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/RojoMovimientosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueRojoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego$Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego$Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego$GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego$GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Jugador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.funcionalidad.TableroVacioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.funcionalidad.TableroVacioTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.funcionalidad.TableroVacioTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.funcionalidad.TableroVacioTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/JuegoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/JuegoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TriGO/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriGO/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TriGO/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriGO/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TriGO/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriGO/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TriGO/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriGO/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TriGO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriGO/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <list id="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" name="Changes by Nicole" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
-    </list>
-    <list id="863cdb12-71f7-4d25-9e91-bf59586fb5b7" name="Changes by ppaab" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/JuegoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/JuegoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/Juego.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/funcionalidad/TableroGUI$GameBoardCanvas$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/JuegoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/JuegoTest.class" afterDir="false" />
     </list>
+    <list id="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" name="Changes by Nicole" comment="" />
+    <list id="863cdb12-71f7-4d25-9e91-bf59586fb5b7" name="Changes by ppaab" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,53 +31,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java">
-      <ranges>
-        <range start1="4" end1="5" start2="4" end2="4" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="13" end1="14" start2="12" end2="13" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="19" end1="20" start2="18" end2="19" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="26" end1="27" start2="25" end2="26" changelist="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" />
-        <range start1="58" end1="60" start2="57" end2="58" changelist="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" />
-        <range start1="86" end1="88" start2="84" end2="85" changelist="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" />
-        <range start1="156" end1="158" start2="153" end2="154" changelist="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" />
-        <range start1="187" end1="188" start2="183" end2="184" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="195" end1="196" start2="191" end2="192" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="206" end1="207" start2="202" end2="243" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="212" end1="216" start2="248" end2="249" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="217" end1="219" start2="250" end2="255" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="223" end1="224" start2="259" end2="261" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="229" end1="231" start2="266" end2="268" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="233" end1="234" start2="270" end2="270" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="239" end1="241" start2="275" end2="275" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="242" end1="243" start2="276" end2="277" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="244" end1="244" start2="278" end2="281" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="259" end1="262" start2="296" end2="299" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="269" end1="272" start2="306" end2="312" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="273" end1="276" start2="313" end2="320" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="277" end1="280" start2="321" end2="324" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="281" end1="281" start2="325" end2="327" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="283" end1="283" start2="329" end2="336" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="285" end1="287" start2="338" end2="349" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="289" end1="291" start2="351" end2="352" changelist="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" />
-        <range start1="292" end1="294" start2="353" end2="354" changelist="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" />
-        <range start1="298" end1="299" start2="358" end2="359" changelist="863cdb12-71f7-4d25-9e91-bf59586fb5b7" />
-        <range start1="302" end1="303" start2="362" end2="364" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="304" end1="305" start2="365" end2="365" changelist="863cdb12-71f7-4d25-9e91-bf59586fb5b7" />
-        <range start1="308" end1="308" start2="368" end2="371" changelist="863cdb12-71f7-4d25-9e91-bf59586fb5b7" />
-        <range start1="335" end1="336" start2="398" end2="399" changelist="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" />
-        <range start1="357" end1="361" start2="420" end2="422" changelist="3d3d61ef-4266-49d7-a05d-68eb31dd3ffd" />
-        <range start1="381" end1="384" start2="442" end2="455" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java">
-      <ranges>
-        <range start1="22" end1="23" start2="22" end2="23" changelist="863cdb12-71f7-4d25-9e91-bf59586fb5b7" />
-        <range start1="55" end1="56" start2="55" end2="56" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-        <range start1="59" end1="60" start2="59" end2="60" changelist="2395522d-04cc-4b37-ae11-b6dab3e8cb1a" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -234,7 +89,7 @@
       <command value="mvn " />
     </option>
   </component>
-  <component name="RunManager" selected="Application.TableroGUI">
+  <component name="RunManager" selected="JUnit.JuegoTest.testCapturaRojo">
     <configuration name="Jugador" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.funcionalidad.Jugador" />
       <module name="TriGO - IntelliJ" />
@@ -248,20 +103,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TableroGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.TableroGUI" />
-      <module name="TriGO" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.funcionalidad.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DespliegueRojoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DespliegueRojoTest.testDespliegueRojoValido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -271,12 +113,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.funcionalidad" />
       <option name="MAIN_CLASS_NAME" value="org.funcionalidad.DespliegueRojoTest" />
+      <option name="METHOD_NAME" value="testDespliegueRojoValido" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JuegoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TriGO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.funcionalidad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.funcionalidad" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.JuegoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DespliegueRojoTest.testDespliegueAzulValido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JuegoTest.checkMillInDeployment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -285,14 +143,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.funcionalidad" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.DespliegueRojoTest" />
-      <option name="METHOD_NAME" value="testDespliegueAzulValido" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.JuegoTest" />
+      <option name="METHOD_NAME" value="checkMillInDeployment" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DespliegueRojoTest.testDespliegueRojoFueraTablero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JuegoTest.testCapturaAzul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -301,14 +159,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.funcionalidad" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.DespliegueRojoTest" />
-      <option name="METHOD_NAME" value="testDespliegueRojoFueraTablero" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.JuegoTest" />
+      <option name="METHOD_NAME" value="testCapturaAzul" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DespliegueRojoTest.testDespliegueRojoOcupado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JuegoTest.testCapturaRojo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -317,8 +175,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.funcionalidad" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.DespliegueRojoTest" />
-      <option name="METHOD_NAME" value="testDespliegueRojoOcupado" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.JuegoTest" />
+      <option name="METHOD_NAME" value="testCapturaRojo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -326,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TableroGUI" />
-        <item itemvalue="JUnit.DespliegueRojoTest.testDespliegueRojoOcupado" />
-        <item itemvalue="JUnit.DespliegueRojoTest.testDespliegueRojoFueraTablero" />
-        <item itemvalue="JUnit.DespliegueRojoTest.testDespliegueAzulValido" />
-        <item itemvalue="JUnit.DespliegueRojoTest" />
+        <item itemvalue="JUnit.JuegoTest.testCapturaRojo" />
+        <item itemvalue="JUnit.JuegoTest.testCapturaAzul" />
+        <item itemvalue="JUnit.JuegoTest.checkMillInDeployment" />
+        <item itemvalue="JUnit.DespliegueRojoTest.testDespliegueRojoValido" />
+        <item itemvalue="JUnit.JuegoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -360,6 +218,7 @@
       <workItem from="1666763921743" duration="5376000" />
       <workItem from="1667146273230" duration="11391000" />
       <workItem from="1667334514440" duration="2390000" />
+      <workItem from="1667442121268" duration="2947000" />
     </task>
     <servers />
   </component>
@@ -422,15 +281,6 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java</url>
-          <line>420</line>
-          <properties class="org.funcionalidad.Juego" method="capturarPieza">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java</url>
           <line>363</line>
@@ -445,13 +295,13 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TriGO$TableroGUI.ic" NAME="TableroGUI Coverage Results" MODIFIED="1666203656447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>org.funcionalidad.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/TriGO$TableroVacioTest_testNewJuego.ic" NAME="TableroVacioTest.testNewJuego Coverage Results" MODIFIED="1666230568482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.funcionalidad.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TriGO$JuegoTest_testNonOcuppied.ic" NAME="JuegoTest.testNonOcuppied Coverage Results" MODIFIED="1667175704030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.funcionalidad.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TriGO$TableroGUI.ic" NAME="TableroGUI Coverage Results" MODIFIED="1666203656447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.funcionalidad.*</FILTER>
     </SUITE>
   </component>
