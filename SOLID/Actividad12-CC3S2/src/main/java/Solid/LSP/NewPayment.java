@@ -1,5 +1,6 @@
 package Solid.LSP;
 
 interface NewPayment {
-    // completa
+    void newPayment();
+    public void previousPaymentInfo();
 }
