@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 
 public class TableroGUI extends JFrame {
@@ -22,9 +23,9 @@ public class TableroGUI extends JFrame {
 
     public Juego game;
 
-    public TableroGUI() {
-        this(new JuegoFase1(7,7));
-    }
+//    public TableroGUI() {
+//        this(new JuegoFase1(7,7));
+//    }
 
     public TableroGUI(Juego game) {
         this.game = game;
@@ -56,20 +57,7 @@ public class TableroGUI extends JFrame {
                     System.out.println("\nTurno: "+game.turn);
                     int rowSelected = e.getY() / CELL_SIZE;
                     int colSelected = e.getX() / CELL_SIZE;
-//                    if (game.getGameState() == GameState.DEPLOY) {
-//                        game.desplegarFicha(rowSelected, colSelected);
-//                    }else if(game.getGameState()== GameState.MOVING){
-//                        game.moverFicha(rowSelected, colSelected);
-//                    }
-//                    else if(game.getGameState()== GameState.SELECT_CAPTURE_RED){
-//                        game.capturarPieza(game.jugadores[1], new Point(rowSelected,colSelected));
-//                    }
-//                    else if(game.getGameState()== GameState.SELECT_CAPTURE_BLUE){
-//                        game.capturarPieza(game.jugadores[0],new Point(rowSelected,colSelected) );
-//                    }
-//                    else {
-//                        game.resetGame();
-//                    }
+                    game.updateGameState(rowSelected,colSelected);
                     repaint();
 
                 }
@@ -171,8 +159,12 @@ public class TableroGUI extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
+
             public void run() {
-                new TableroGUI(new JuegoFase1(7,7));
+                ArrayList<Jugador> jugadores =  new ArrayList<Jugador>();
+                jugadores.add(new JugadorHumano());
+                jugadores.add(new JugadorHumano());
+                new TableroGUI(new JuegoFase1(7,7,jugadores));
             }
         });
     }

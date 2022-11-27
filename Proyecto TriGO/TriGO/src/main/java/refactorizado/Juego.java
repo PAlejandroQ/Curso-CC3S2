@@ -12,18 +12,11 @@ abstract public class Juego {
     protected Ficha[][] piezasTablero;
     protected ArrayList<ArrayList<Point>> lastMill;
     public Point lastPoint;
-    public Jugador[] jugadores;
+    public ArrayList<Jugador> jugadores;
     protected char turn;
     protected GameState currentGameState;
 
-    public Juego(int totalRows, int totalColumns) {
-        this.TOTALCOLUMNS = totalColumns;
-        this.TOTALROWS = totalRows;
-        this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
-        lastMill = new ArrayList<>();
-//        initGame();
 
-    }
 
     private boolean findTri() {
         for (int row = 0; row < TOTALROWS; ++row) {
@@ -87,10 +80,10 @@ abstract public class Juego {
 
     public Jugador getPlayerTurn(){
         if(turn=='X'){
-            return jugadores[0];
+            return jugadores.get(0);
         }
         else{
-            return jugadores[1];
+            return jugadores.get(1);
         }
     }
 
@@ -106,9 +99,23 @@ abstract public class Juego {
         return TOTALCOLUMNS;
     }
 
-    public void desplegarFicha(int rowSelected, int colSelected) {
+    public void desplegarFicha(int row, int column) {
     }
     public char getTurn() {
         return turn;
     }
+    abstract void updateGameState(int row, int column);
+    public void capturarPieza(Jugador atacado, Point posicionCapturada) {
+        if(atacado.fichasJugador.contains(posicionCapturada)) {
+            atacado.reducirNumFichasEnJuego(posicionCapturada);
+            this.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = FichaState.EMPTY;
+            turn = (turn == 'X')? 'O' : 'X';
+            updateGameState(posicionCapturada.x, posicionCapturada.y);
+        }
+    }
+    public Juego resetGame() {
+        return (JuegoFase1) this;
+//        initGame();
+    }
+
 }
