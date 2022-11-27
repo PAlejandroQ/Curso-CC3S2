@@ -5,48 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16e15c0a-380c-4514-a75a-3ae029ce546e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/css/coverage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/css/idea.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/img/arrowDown.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/img/arrowUp.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/js/highlight.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/js/highlightjs-line-numbers.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_BLOCK.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_CLASS.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_LINE.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_LINE_DESC.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_METHOD.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_NAME_DESC.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/sources/source-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/src/main/java/pregunta1/CountWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/src/main/java/pregunta1/LeftPadUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/src/test/java/pregunta1/CountWordsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/src/test/java/pregunta1/LeftPadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorHumano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorMaquina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Tablero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/FichaState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +24,8 @@
       <list>
         <option value="JUnit4 Test Class" />
         <option value="JUnit5 Test Class" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>

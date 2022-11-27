@@ -11,7 +11,7 @@ abstract public class Juego {
     protected static final int NUM_PLAYERS = 2;
     protected Ficha[][] piezasTablero;
     protected ArrayList<ArrayList<Point>> lastMill;
-    private Point lastPoint;
+    public Point lastPoint;
     public Jugador[] jugadores;
     protected char turn;
     protected GameState currentGameState;
@@ -77,7 +77,7 @@ abstract public class Juego {
         return false;
     }
 
-    private Ficha getFicha(Point esquina) {
+    public Ficha getFicha(Point esquina) {
         return null;
     }
 
@@ -92,5 +92,23 @@ abstract public class Juego {
         else{
             return jugadores[1];
         }
+    }
+
+    public String setTitle() {
+        return null;
+    }
+
+    public int getTotalRows() {
+        return TOTALROWS;
+    }
+
+    public int getTotalColumns() {
+        return TOTALCOLUMNS;
+    }
+
+    public void desplegarFicha(int rowSelected, int colSelected) {
+    }
+    public char getTurn() {
+        return turn;
     }
 }

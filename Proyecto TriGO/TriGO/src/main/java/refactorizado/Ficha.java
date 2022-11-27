@@ -6,14 +6,14 @@ import java.util.ArrayList;
 
 public class Ficha {
     int color;
-    GameState state;
+    FichaState state;
     Point coordenada;
     ArrayList<Point> vecinos;
     public Ficha(int color, Point coordenada){
         this.color=color;
         this.vecinos = new ArrayList<Point>();
         this.coordenada = coordenada;
-        this.state = GameState.EMPTY;
+        this.state = FichaState.EMPTY;
     }
 
     public void setColor(int i, Tablero tableroJuego)
@@ -26,7 +26,7 @@ public class Ficha {
         else if (this.color==2) {return Color.RED;}
         else { return Color.LIGHT_GRAY;}
     }
-    public void changeState(GameState newState)
+    public void changeStateFicha(FichaState newState)
     {
         this.state = newState;
     }
@@ -39,7 +39,7 @@ public class Ficha {
     public boolean esEquipo(Ficha fActual)
     {
 
-        if(fActual.state == this.state && fActual.state!= GameState.EMPTY && fActual.state!= GameState.DISABLE) return true;
+        if(fActual.state == this.state && fActual.state!= FichaState.EMPTY && fActual.state!= FichaState.DISABLE) return true;
         else return false;
     }
     public void setVecinos(Point vecino)
