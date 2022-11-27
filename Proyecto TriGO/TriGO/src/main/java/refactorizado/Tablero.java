@@ -1,4 +1,4 @@
-package org.funcionalidad;
+package refactorizado;
 
 public class Tablero {
     int[] posiciones;

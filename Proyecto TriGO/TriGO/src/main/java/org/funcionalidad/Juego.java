@@ -32,7 +32,7 @@ public class Juego {
         grid = new Cell[TOTALROWS][TOTALCOLUMNS];
         this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
         lastMill = new ArrayList<>();
-        initGame();
+//        initGame();
 
     }
 

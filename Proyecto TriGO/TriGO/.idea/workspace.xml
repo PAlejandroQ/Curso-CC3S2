@@ -5,85 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16e15c0a-380c-4514-a75a-3ae029ce546e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta1/ClassRemove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta1/Climber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta1/Panda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta1/Secret1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta1/iterador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta1/remove2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Anterior/Produccion/Airport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Anterior/Produccion/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Anterior/Produccion/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase1/Produccion/Airport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase1/Produccion/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase1/Produccion/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase1/Pruebas/AirportTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase2/Produccion/Airport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase2/Produccion/BusinessFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase2/Produccion/EconomyFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase2/Produccion/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase2/Produccion/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase2/Pruebas/AirportTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase3/Produccion/BusinessFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase3/Produccion/EconomyFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase3/Produccion/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase3/Produccion/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase3/Pruebas/AirportTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase4/Produccion/BusinessFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase4/Produccion/EconomyFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase4/Produccion/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase4/Produccion/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase4/Produccion/PremiumFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase4/Pruebas/AirportTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase5/Produccion/BusinessFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase5/Produccion/EconomyFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase5/Produccion/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase5/Produccion/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase5/Produccion/PremiumFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta2/Fase5/Pruebas/AirportTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta3/CustomerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/main/java/pregunta3/Invoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/test/java/pregunta3/InvoiceBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/test/java/pregunta3/InvoiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/ExamenParcialCode/src/test/java/pregunta3/InvoiceTestWithMistakes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ExamenParcial-3S2/README.assets/image-20221110091730211.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/css/coverage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/css/idea.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/img/arrowDown.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/img/arrowUp.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/js/highlight.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/js/highlightjs-line-numbers.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/ns-1/sources/source-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/src/main/java/pregunta1/CountWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/src/main/java/pregunta1/LeftPadUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/src/test/java/pregunta1/CountWordsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividad13-CC3S2/src/test/java/pregunta1/LeftPadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorHumano.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorMaquina.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Tablero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/LSP/GuestUserPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/LSP/GuestUserPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/LSP/NewPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/LSP/NewPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/LSP/PreviousPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/LSP/PreviousPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/OCP/ArtsDistinctionDecider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/OCP/ArtsDistinctionDecider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/OCP/DistinctionDecider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/OCP/DistinctionDecider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/OCP/ScienceDistinctionDecider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/src/main/java/Solid/OCP/ScienceDistinctionDecider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/ISP/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/ISP/DispositivoFax.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/ISP/Impresora.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/ISP/ImpresoraAvanzada.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/ISP/ImpresoraBasica.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/LSP/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/LSP/GuestUserPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/LSP/NewPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/LSP/PaymentHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/LSP/PreviousPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/LSP/RegisteredUserPayment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/OCP/ArteEstudiante.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/OCP/ArtsDistinctionDecider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/OCP/CienciaEstudiante.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/OCP/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/OCP/DistinctionDecider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/OCP/Estudiante.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/OCP/ScienceDistinctionDecider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/SRP/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/SRP/Empleado.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/SRP/GeneradorIDEmpleado.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/target/classes/Solid/SRP/SeniorityChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,9 +56,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -159,10 +123,23 @@
       <command value="mvn " />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JuegoTest.testCapturaRojo">
+  <component name="RunManager" selected="Application.TableroGUI">
     <configuration name="Jugador" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.funcionalidad.Jugador" />
       <module name="TriGO - IntelliJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.funcionalidad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TableroGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.TableroGUI" />
+      <module name="TriGO" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.funcionalidad.*" />
@@ -185,21 +162,6 @@
       <option name="MAIN_CLASS_NAME" value="org.funcionalidad.DespliegueRojoTest" />
       <option name="METHOD_NAME" value="testDespliegueRojoValido" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JuegoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TriGO" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.funcionalidad.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.funcionalidad" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.JuegoTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -254,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TableroGUI" />
         <item itemvalue="JUnit.JuegoTest.testCapturaRojo" />
         <item itemvalue="JUnit.JuegoTest.testCapturaAzul" />
         <item itemvalue="JUnit.JuegoTest.checkMillInDeployment" />
         <item itemvalue="JUnit.DespliegueRojoTest.testDespliegueRojoValido" />
-        <item itemvalue="JUnit.JuegoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -351,16 +313,6 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java</url>
-          <line>363</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/funcionalidad/Juego.java</url>
-          <line>317</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
