@@ -9,12 +9,12 @@ public class JuegoFase1 extends  Juego{
         currentGameState = GameState.DEPLOY;
     }
     public void desplegarFicha(int row, int column) {
-        if (row >= 0 && row < this.tablero.getRows() && column >= 0 && column < this.tablero.getColumns() && piezasTablero[row][column].state == FichaState.EMPTY) {
-            piezasTablero[row][column].state = (turn == 'X') ? FichaState.BLUE : FichaState.RED;
-            this.piezasTablero[row][column].state = (turn == 'X') ? FichaState.BLUE : FichaState.RED;
+        if (row >= 0 && row < this.tablero.getRows() && column >= 0 && column < this.tablero.getColumns() && this.tablero.piezasTablero[row][column].state == FichaState.EMPTY) {
+            this.tablero.piezasTablero[row][column].state = (turn == 'X') ? FichaState.BLUE : FichaState.RED;
+            this.tablero.piezasTablero[row][column].state = (turn == 'X') ? FichaState.BLUE : FichaState.RED;
             this.getPlayerTurn().aumentarNumFichasEnJuego(new Point(row,column));
             this.getPlayerTurn().reducinNumFicha();
-            this.lastPoint = this.piezasTablero[row][column].coordenada;
+            this.lastPoint = this.tablero.piezasTablero[row][column].coordenada;
             updateGameState(row, column);
 
 //            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
@@ -25,6 +25,13 @@ public class JuegoFase1 extends  Juego{
     }
 
     public void realizarMovimiento(int row, int col){
-        getPlayerTurn().eventClick(row,col);
+        desplegarFicha(row,col);
+    }
+
+    public Juego selfCast(){
+        if(jugadores[1].getNumFichas()==0){
+            return (JuegoFase2)((Juego)this);
+        }
+        return this;
     }
 }

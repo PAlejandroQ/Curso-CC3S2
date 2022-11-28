@@ -31,7 +31,7 @@ public class JuegoFase2 extends Juego{
     public void clearShinys(){
         for (int row = 0; row < this.tablero.getRows(); ++row) {
             for (int col = 0; col < this.tablero.getColumns(); ++col) {
-                if (this.piezasTablero[row][col].state == FichaState.SHINY) this.piezasTablero[row][col].state = FichaState.EMPTY;
+                if (this.tablero.piezasTablero[row][col].state == FichaState.SHINY) this.tablero.piezasTablero[row][col].state = FichaState.EMPTY;
             }
         }
     }
@@ -43,29 +43,29 @@ public class JuegoFase2 extends Juego{
             if(jugador.isFlying()){
                 for( int x=0; x<this.tablero.getRows(); ++x){
                     for(int y=0; y<this.tablero.getColumns(); ++y) {
-                        if(getFicha(new Point(x,y)).state== FichaState.EMPTY && piezasTablero[x][y].state!= FichaState.DISABLE){
-                            piezasTablero[x][y].state = FichaState.SHINY;
+                        if(getFicha(new Point(x,y)).state== FichaState.EMPTY && this.tablero.piezasTablero[x][y].state!= FichaState.DISABLE){
+                            this.tablero.piezasTablero[x][y].state = FichaState.SHINY;
                         }
                     }
                 }
             }else{
                 for (Point vecino : actual.vecinos){
                     if(getFicha(vecino).state == FichaState.EMPTY){
-                        piezasTablero[vecino.x][vecino.y].state = FichaState.SHINY.SHINY;
+                        this.tablero.piezasTablero[vecino.x][vecino.y].state = FichaState.SHINY.SHINY;
                     }
                 }
             }
             jugador.setMoving();
         }
-        this.lastPoint = this.piezasTablero[row][col].coordenada;
+        this.lastPoint = this.tablero.piezasTablero[row][col].coordenada;
     }
 
     public void seleccionarDestino(Jugador jugador, int row, int col){
-        if(piezasTablero[row][col].state == FichaState.SHINY){
-            piezasTablero[row][col].state = jugador.getColor();
+        if(this.tablero.piezasTablero[row][col].state == FichaState.SHINY){
+            this.tablero.piezasTablero[row][col].state = jugador.getColor();
             getFicha(new Point(row, col)).state = jugador.getColor();
             //
-            piezasTablero[lastPoint.x][lastPoint.y].state = FichaState.EMPTY;
+            this.tablero.piezasTablero[lastPoint.x][lastPoint.y].state = FichaState.EMPTY;
             getFicha(lastPoint).state = FichaState.EMPTY;
             getPlayerTurn().reducirNumFichasEnJuego(lastPoint);
             getPlayerTurn().aumentarNumFichasEnJuego(new Point(row, col));
@@ -76,7 +76,7 @@ public class JuegoFase2 extends Juego{
                 turn =  (turn=='X')? 'O' : 'X';
             }
             clearShinys();
-        }else if (piezasTablero[row][col].state == getPlayerTurn().getColor()){
+        }else if (this.tablero.piezasTablero[row][col].state == getPlayerTurn().getColor()){
             jugador.setSelecting();
         }
     }
@@ -91,7 +91,7 @@ public class JuegoFase2 extends Juego{
     }
 
     public void realizarMovimiento(int row, int col){
-        getPlayerTurn().eventClick(row, col);
+        moverFicha(row, col);
     }
 
 }

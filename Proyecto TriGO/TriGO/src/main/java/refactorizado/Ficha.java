@@ -9,6 +9,17 @@ public class Ficha {
     public FichaState state;
     public Point coordenada;
     public ArrayList<Point> vecinos;
+
+    /**
+     * Constructor that takes the x and y position for the
+     * turtle
+     * Preconditions: parameters x and y are coordinates from 0 to
+     *    the width and height of the world.
+     * Postconditions: the turtle is placed in (x,y) coordinates
+     * @param x the x position to place the turtle
+     * @param y the y position to place the turtle
+     */
+
     public Ficha(int color, Point coordenada){
         this.color=color;
         this.vecinos = new ArrayList<Point>();

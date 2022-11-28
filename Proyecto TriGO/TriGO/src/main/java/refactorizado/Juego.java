@@ -7,7 +7,6 @@ abstract public class Juego {
     public static int NUM_FICHAS=9;
 
     protected static final int NUM_PLAYERS = 2;
-    protected Ficha[][] piezasTablero;
     protected ArrayList<ArrayList<Point>> lastMill;
     public Tablero tablero;
     public Point lastPoint;
@@ -105,7 +104,7 @@ abstract public class Juego {
     public void capturarPieza(Jugador atacado, Point posicionCapturada) {
         if(atacado.fichasJugador.contains(posicionCapturada)) {
             atacado.reducirNumFichasEnJuego(posicionCapturada);
-            this.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = FichaState.EMPTY;
+            this.tablero.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = FichaState.EMPTY;
             turn = (turn == 'X')? 'O' : 'X';
             updateGameState(posicionCapturada.x, posicionCapturada.y);
         }
@@ -116,9 +115,16 @@ abstract public class Juego {
 
     public Juego resetGame() {
         return (JuegoFase1) this;
+        // this =
 //        initGame();
     }
 
     public void realizarMovimiento(int row, int col){}
 
+    public Juego selfCast() {
+        if(jugadores[1].getNumFichas()==0){
+            return (JuegoFase2)((Juego)this);
+        }
+        return this;
+    }
 }
