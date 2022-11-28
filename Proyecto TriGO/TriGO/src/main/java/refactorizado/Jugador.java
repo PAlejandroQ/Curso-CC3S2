@@ -4,29 +4,36 @@ import java.awt.*;
 import java.util.ArrayList;
 
 abstract public class Jugador {
-    int color;
-    //    public int FICHAS_LEFT;
+    public FichaState color;
     private int FICHAS;
     public ArrayList<Point> fichasJugador;
     public Juego juegoEnlazado;
     private boolean IS_FLYING = false;
 
-    public enum State{
-        SELECTING, MOVING;
+    public enum State {
+        SELECTING, MOVING
     }
-    public FichaState col;
 
     protected Jugador.State estado;
 
-    public Jugador(int color, Juego juegoEnlazado)
-    {
-        this.juegoEnlazado=juegoEnlazado;
-        this.color = color;
+    /**
+     * Constructor que toma el valor de un entero como indice y un Juego para ser asociado
+     * Preconditions: 0 < indexColor < 3 && juegoEnlazado != NULL
+     * Postconditions: creación de un jugador inicializando: las fichas en 9,
+     *                 el color de fichas de acuerdo con el indexColor
+     *
+     * @param indexColor
+     * @param juegoEnlazado
+     */
+
+    public Jugador(int indexColor, Juego juegoEnlazado) {
+        this.juegoEnlazado = juegoEnlazado;
 //        this.FICHAS_LEFT = NUM_FICHAS;
         this.FICHAS = 9;
         this.fichasJugador = new ArrayList<Point>();
-        this.col = (color ==1)? FichaState.BLUE : FichaState.RED;
+        this.color = (indexColor == 1)? FichaState.BLUE : FichaState.RED;
     }
+
     public int getNumFichas(){
         return this.FICHAS;
     }
@@ -60,9 +67,7 @@ abstract public class Jugador {
 
     public void reducinNumFicha(){--this.FICHAS;}
 
-    public FichaState getColor(){ return this.col;}
+    public FichaState getColor(){ return this.color;}
 
-    public void eventClick(int row, int column){
-
-    }
+    abstract void eventClick(int row, int column);
 }

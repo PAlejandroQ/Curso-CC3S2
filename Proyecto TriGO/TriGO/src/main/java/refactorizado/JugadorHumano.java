@@ -1,8 +1,6 @@
 package refactorizado;
 
 
-import java.awt.*;
-
 public class JugadorHumano extends Jugador{
     public JugadorHumano(int color, Juego juegoEnlazado){
         super(color, juegoEnlazado);

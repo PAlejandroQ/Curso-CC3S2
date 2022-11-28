@@ -160,15 +160,12 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Jugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/funcionalidad/TableroGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/FichaState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/FichaState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueAzulTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueAzulTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueRojoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueRojoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/JuegoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/JuegoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroGUITest.java" afterDir="false" />
@@ -176,8 +173,12 @@
       <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Ficha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Ficha.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Juego.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/TableroGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/TableroGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Jugador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JugadorHumano.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/JugadorHumano.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JugadorMaquina.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Tablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Tablero.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.funcionalidad.TableroVacioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.funcionalidad.TableroVacioTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.funcionalidad.TableroVacioTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.funcionalidad.TableroVacioTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../SOLID/Actividad12-CC3S2/.idea/.gitignore" afterDir="false" />
@@ -235,10 +236,14 @@
     <list id="df1b3383-f8c9-48c6-a5a1-c854cea64a8d" name="Changes by Jose Tello" comment="" />
     <list id="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" name="Changes by Nicole" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueAzulTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueAzulTest.java" afterDir="false" />
     </list>
     <list id="92dbb7e0-242b-45c5-9e46-0f150898d2bb" name="Changes by ppaab" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase3.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorHumano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorHumano.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorMaquina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorMaquina.java" afterDir="false" />
@@ -262,17 +267,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java">
+    <file path="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java">
       <ranges>
-        <range start1="21" end1="22" start2="21" end2="22" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
+        <range start1="3" end1="4" start2="3" end2="3" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
+        <range start1="7" end1="7" start2="6" end2="7" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
+        <range start1="30" end1="30" start2="30" end2="31" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
+        <range start1="32" end1="33" start2="33" end2="36" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java">
+      <ranges>
+        <range start1="6" end1="8" start2="6" end2="7" changelist="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" />
+        <range start1="13" end1="15" start2="12" end2="14" changelist="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" />
+        <range start1="16" end1="17" start2="15" end2="15" changelist="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" />
+        <range start1="20" end1="24" start2="18" end2="30" changelist="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" />
+        <range start1="27" end1="28" start2="33" end2="34" changelist="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" />
+        <range start1="29" end1="29" start2="35" end2="36" changelist="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" />
+        <range start1="62" end1="63" start2="69" end2="70" changelist="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" />
+        <range start1="64" end1="67" start2="71" end2="72" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java">
       <ranges>
-        <range start1="9" end1="10" start2="9" end2="9" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
-        <range start1="107" end1="108" start2="106" end2="107" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
-        <range start1="118" end1="118" start2="117" end2="118" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
-        <range start1="123" end1="123" start2="123" end2="129" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
+        <range start1="27" end1="28" start2="27" end2="28" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
+        <range start1="37" end1="37" start2="37" end2="47" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
+        <range start1="54" end1="55" start2="64" end2="65" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
+        <range start1="56" end1="57" start2="66" end2="67" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
+        <range start1="58" end1="59" start2="68" end2="69" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
+        <range start1="62" end1="63" start2="72" end2="73" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
+        <range start1="81" end1="84" start2="91" end2="92" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
+        <range start1="121" end1="122" start2="129" end2="130" changelist="92dbb7e0-242b-45c5-9e46-0f150898d2bb" />
+        <range start1="123" end1="129" start2="131" end2="132" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
       </ranges>
     </file>
   </component>
@@ -374,7 +399,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JuegoTest.checkMillInDeployment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DespliegueAzulTest.asfafa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -383,8 +408,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.funcionalidad" />
-      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.JuegoTest" />
-      <option name="METHOD_NAME" value="checkMillInDeployment" />
+      <option name="MAIN_CLASS_NAME" value="org.funcionalidad.DespliegueAzulTest" />
+      <option name="METHOD_NAME" value="asfafa" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -425,10 +450,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.refactorizado.TableroGUI" />
+        <item itemvalue="JUnit.DespliegueAzulTest.asfafa" />
         <item itemvalue="Application.TableroGUI" />
         <item itemvalue="JUnit.JuegoTest.testCapturaRojo" />
         <item itemvalue="JUnit.JuegoTest.testCapturaAzul" />
-        <item itemvalue="JUnit.JuegoTest.checkMillInDeployment" />
       </list>
     </recent_temporary>
   </component>
@@ -460,7 +485,8 @@
       <workItem from="1667334514440" duration="2390000" />
       <workItem from="1667442121268" duration="2947000" />
       <workItem from="1669583522384" duration="12325000" />
-      <workItem from="1669601060240" duration="5075000" />
+      <workItem from="1669601060240" duration="5724000" />
+      <workItem from="1669663471103" duration="8978000" />
     </task>
     <servers />
   </component>
@@ -523,6 +549,16 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

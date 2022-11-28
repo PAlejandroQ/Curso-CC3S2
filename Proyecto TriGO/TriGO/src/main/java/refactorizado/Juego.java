@@ -22,10 +22,10 @@ abstract public class Juego {
 
     private void preparePlayers(){
         jugadores[0] = new JugadorHumano(1, this);
-        jugadores[1] = new JugadorHumano(2, this);
+        jugadores[1] = new JugadorMaquina(2, this);
     }
 
-    private boolean findTri(){
+    public boolean findTri(){
         for (int row = 0; row < this.tablero.getRows(); ++row) {
             for (int col = 0; col < this.tablero.getColumns(); ++col) {
                 if (isTri(new Point(row, col))) {
@@ -34,6 +34,16 @@ abstract public class Juego {
             }
         }
         return false;
+    }
+    public Point findTriCoordenada(){
+        for (int row = 0; row < this.tablero.getRows(); ++row) {
+            for (int col = 0; col < this.tablero.getColumns(); ++col) {
+                if (isTri(new Point(row, col))) {
+                    return new Point(row,col);
+                }
+            }
+        }
+        return null;
     }
 
     private void checkStillMil(ArrayList<ArrayList<Point>> listaConjuntos) {
@@ -52,15 +62,15 @@ abstract public class Juego {
         return false;
     }
 
-    private boolean isTri(Point esquina) {
+    public boolean isTri(Point esquina) {
 
-        Ficha lastMove = this.getFicha(esquina);
+        Ficha lastMove = this.tablero.getFicha(esquina);
         for (Point intermedioP : lastMove.vecinos) {
-            Ficha intermedio = this.getFicha(intermedioP);
+            Ficha intermedio = this.tablero.getFicha(intermedioP);
             if (lastMove.esEquipo(intermedio)) {
 
                 for (Point extremoP : intermedio.vecinos) {
-                    Ficha extremo = this.getFicha(extremoP);
+                    Ficha extremo = this.tablero.getFicha(extremoP);
                     ArrayList<Point> newMill = new ArrayList<Point>();
                     newMill.add(esquina);
                     newMill.add(intermedioP);
@@ -79,9 +89,7 @@ abstract public class Juego {
         return false;
     }
 
-    public Ficha getFicha(Point esquina) {
-        return null;
-    }
+
     public GameState getGameState() {
         return currentGameState;
     }
@@ -119,12 +127,7 @@ abstract public class Juego {
 //        initGame();
     }
 
-    public void realizarMovimiento(int row, int col){}
+    abstract void realizarMovimiento(int row, int col);
 
-    public Juego selfCast() {
-        if(jugadores[1].getNumFichas()==0){
-            return (JuegoFase2)((Juego)this);
-        }
-        return this;
-    }
+    public abstract Juego selfCast();
 }

@@ -1,10 +1,10 @@
 package refactorizado;
 
 import java.awt.*;
-import java.util.ArrayList;
 
 public class JuegoFase1 extends  Juego{
     public JuegoFase1() {
+
         super();
         currentGameState = GameState.DEPLOY;
     }
@@ -28,9 +28,12 @@ public class JuegoFase1 extends  Juego{
         desplegarFicha(row,col);
     }
 
+    @Override
     public Juego selfCast(){
         if(jugadores[1].getNumFichas()==0){
-            return (JuegoFase2)((Juego)this);
+            Juego fase2 = new JuegoFase2(this.tablero, this.jugadores, this.lastMill, this.lastPoint);
+            jugadores[0].juegoEnlazado = fase2;
+            jugadores[1].juegoEnlazado = fase2;
         }
         return this;
     }
