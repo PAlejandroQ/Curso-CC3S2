@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class Ficha {
     int color;
-    FichaState state;
-    Point coordenada;
-    ArrayList<Point> vecinos;
+    public FichaState state;
+    public Point coordenada;
+    public ArrayList<Point> vecinos;
     public Ficha(int color, Point coordenada){
         this.color=color;
         this.vecinos = new ArrayList<Point>();
@@ -16,10 +16,7 @@ public class Ficha {
         this.state = FichaState.EMPTY;
     }
 
-    public void setColor(int i, Tablero tableroJuego)
-    {
-        this.color = tableroJuego.estadoPosicion(i);
-    }
+
     public Color getColor()
     {
         if (this.color==1) { return Color.BLUE;}

@@ -1,7 +1,5 @@
 package refactorizado;
 
-import org.funcionalidad.Juego;
-
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -10,23 +8,24 @@ abstract public class Jugador {
     //    public int FICHAS_LEFT;
     private int FICHAS;
     public ArrayList<Point> fichasJugador;
-
+    public Juego juegoEnlazado;
     private boolean IS_FLYING = false;
 
     public enum State{
         SELECTING, MOVING;
     }
-    public Juego.Cell col;
+    public FichaState col;
 
-    protected org.funcionalidad.Jugador.State estado;
+    protected Jugador.State estado;
 
-    public Jugador(int color)
+    public Jugador(int color, Juego juegoEnlazado)
     {
+        this.juegoEnlazado=juegoEnlazado;
         this.color = color;
 //        this.FICHAS_LEFT = NUM_FICHAS;
         this.FICHAS = 9;
         this.fichasJugador = new ArrayList<Point>();
-        this.col = (color ==1)? Juego.Cell.BLUE : Juego.Cell.RED;
+        this.col = (color ==1)? FichaState.BLUE : FichaState.RED;
     }
     public int getNumFichas(){
         return this.FICHAS;
@@ -45,21 +44,25 @@ abstract public class Jugador {
     }
 
     public void setMoving(){
-        this.estado= org.funcionalidad.Jugador.State.MOVING;
+        this.estado= Jugador.State.MOVING;
     }
     public void setSelecting(){
-        this.estado= org.funcionalidad.Jugador.State.SELECTING;
+        this.estado= Jugador.State.SELECTING;
     }
     public void setFlying(){
         this.IS_FLYING = true;
     }
 
     public boolean isFlying(){ return this.IS_FLYING;}
-    public org.funcionalidad.Jugador.State getState(){
+    public Jugador.State getState(){
         return this.estado;
     }
 
     public void reducinNumFicha(){--this.FICHAS;}
 
-    public Juego.Cell getColor(){ return this.col;}
+    public FichaState getColor(){ return this.col;}
+
+    public void eventClick(int row, int column){
+
+    }
 }

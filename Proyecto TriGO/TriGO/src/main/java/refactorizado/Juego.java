@@ -4,23 +4,31 @@ import java.awt.*;
 import java.util.ArrayList;
 
 abstract public class Juego {
-    public static int NUM_FICHAS;
-    protected static int TOTALROWS;
-    protected static int TOTALCOLUMNS;
+    public static int NUM_FICHAS=9;
 
     protected static final int NUM_PLAYERS = 2;
     protected Ficha[][] piezasTablero;
     protected ArrayList<ArrayList<Point>> lastMill;
+    public Tablero tablero;
     public Point lastPoint;
-    public ArrayList<Jugador> jugadores;
-    protected char turn;
+    public Jugador[] jugadores = new Jugador[NUM_PLAYERS];
+    protected char turn = 'X';
     protected GameState currentGameState;
 
+    public Juego(){
+        tablero= new Tablero();
+        lastMill = new ArrayList<>();
+        preparePlayers();
+    }
 
+    private void preparePlayers(){
+        jugadores[0] = new JugadorHumano(1, this);
+        jugadores[1] = new JugadorHumano(2, this);
+    }
 
-    private boolean findTri() {
-        for (int row = 0; row < TOTALROWS; ++row) {
-            for (int col = 0; col < TOTALCOLUMNS; ++col) {
+    private boolean findTri(){
+        for (int row = 0; row < this.tablero.getRows(); ++row) {
+            for (int col = 0; col < this.tablero.getColumns(); ++col) {
                 if (isTri(new Point(row, col))) {
                     return true;
                 }
@@ -32,6 +40,8 @@ abstract public class Juego {
     private void checkStillMil(ArrayList<ArrayList<Point>> listaConjuntos) {
 
     }
+
+    public void changeTurn(){turn =  (turn=='X')? 'O' : 'X';}
 
     public boolean contieneCombinacion(ArrayList<ArrayList<Point>> grande, ArrayList<Point> elemento) {
         if (grande.size() > 1) {
@@ -73,38 +83,25 @@ abstract public class Juego {
     public Ficha getFicha(Point esquina) {
         return null;
     }
-
     public GameState getGameState() {
         return currentGameState;
     }
-
     public Jugador getPlayerTurn(){
         if(turn=='X'){
-            return jugadores.get(0);
+            return jugadores[0];
         }
         else{
-            return jugadores.get(1);
+            return jugadores[1];
         }
-    }
-
-    public String setTitle() {
-        return null;
-    }
-
-    public int getTotalRows() {
-        return TOTALROWS;
-    }
-
-    public int getTotalColumns() {
-        return TOTALCOLUMNS;
-    }
-
-    public void desplegarFicha(int row, int column) {
     }
     public char getTurn() {
         return turn;
     }
-    abstract void updateGameState(int row, int column);
+
+    public void desplegarFicha(int row, int column) {
+    }
+
+
     public void capturarPieza(Jugador atacado, Point posicionCapturada) {
         if(atacado.fichasJugador.contains(posicionCapturada)) {
             atacado.reducirNumFichasEnJuego(posicionCapturada);
@@ -113,9 +110,15 @@ abstract public class Juego {
             updateGameState(posicionCapturada.x, posicionCapturada.y);
         }
     }
+
+    public void updateGameState(int x, int y) {
+    }
+
     public Juego resetGame() {
         return (JuegoFase1) this;
 //        initGame();
     }
+
+    public void realizarMovimiento(int row, int col){}
 
 }

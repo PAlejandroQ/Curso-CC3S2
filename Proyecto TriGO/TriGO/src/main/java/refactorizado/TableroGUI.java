@@ -39,7 +39,7 @@ public class TableroGUI extends JFrame {
     private void setContentPane() {
         gameBoardCanvas = new GameBoardCanvas();
         gameBoardCanvas
-                .setPreferredSize(new Dimension(CELL_SIZE * game.getTotalRows(), CELL_SIZE * game.getTotalColumns()));
+                .setPreferredSize(new Dimension(CELL_SIZE * game.tablero.getRows(), CELL_SIZE * game.tablero.getColumns()));
         gameStatusBar = new JLabel("  ");
         gameStatusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 15));
         gameStatusBar.setBorder(BorderFactory.createEmptyBorder(2, 5, 4, 5));
@@ -57,7 +57,7 @@ public class TableroGUI extends JFrame {
                     System.out.println("\nTurno: "+game.turn);
                     int rowSelected = e.getY() / CELL_SIZE;
                     int colSelected = e.getX() / CELL_SIZE;
-                    game.updateGameState(rowSelected,colSelected);
+                    game.realizarMovimiento(rowSelected,colSelected);
                     repaint();
 
                 }
@@ -76,51 +76,51 @@ public class TableroGUI extends JFrame {
         private void drawGridLines(Graphics  g) {
             g.setColor(Color.LIGHT_GRAY);
             int rowN=-1,colN=-1;
-            for (int row = 1; row <= game.getTotalRows(); ++row) {
-                if(row<(int)game.getTotalRows()/2+1) rowN++;
-                else if (row>(int)game.getTotalRows()/2+1) rowN--;
+            for (int row = 1; row <= game.tablero.getRows(); ++row) {
+                if(row< game.tablero.getRows() /2+1) rowN++;
+                else if (row> game.tablero.getRows() /2+1) rowN--;
                 else {rowN++;continue;}
-                g.fillRoundRect(CELL_SIZE_HALF + CELL_SIZE*rowN, CELL_SIZE * row - GRID_WIDHT_HALF - CELL_SIZE_HALF, CELL_SIZE * (game.getTotalRows()-1-rowN*2) - 1, GRID_WIDTH,
+                g.fillRoundRect(CELL_SIZE_HALF + CELL_SIZE*rowN, CELL_SIZE * row - GRID_WIDHT_HALF - CELL_SIZE_HALF, CELL_SIZE * (game.tablero.getRows()-1-rowN*2) - 1, GRID_WIDTH,
                         GRID_WIDTH, GRID_WIDTH);
             }
-            for (int col = 1; col <= game.getTotalColumns(); ++col) {
-                if(col<(int)game.getTotalRows()/2+1) colN++;
-                else if (col>(int)game.getTotalRows()/2+1) colN--;
+            for (int col = 1; col <= game.tablero.getColumns(); ++col) {
+                if(col< game.tablero.getRows() /2+1) colN++;
+                else if (col> game.tablero.getRows() /2+1) colN--;
                 else {colN++;continue;}
                 g.fillRoundRect(CELL_SIZE * col - GRID_WIDHT_HALF -CELL_SIZE_HALF, CELL_SIZE_HALF+CELL_SIZE*colN, GRID_WIDTH,
-                        CELL_SIZE * (game.getTotalColumns()-1-colN*2) - 1, GRID_WIDTH, GRID_WIDTH);
+                        CELL_SIZE * (game.tablero.getColumns()-1-colN*2) - 1, GRID_WIDTH, GRID_WIDTH);
             }
-            g.fillRoundRect( CELL_SIZE - GRID_WIDHT_HALF - CELL_SIZE_HALF,CELL_SIZE_HALF * game.getTotalColumns(), CELL_SIZE * 2+2, GRID_WIDTH,
+            g.fillRoundRect( CELL_SIZE - GRID_WIDHT_HALF - CELL_SIZE_HALF,CELL_SIZE_HALF * game.tablero.getColumns(), CELL_SIZE * 2+2, GRID_WIDTH,
                     GRID_WIDTH, GRID_WIDTH);
-            g.fillRoundRect( CELL_SIZE*5 - GRID_WIDHT_HALF - CELL_SIZE_HALF,CELL_SIZE_HALF * game.getTotalColumns(), CELL_SIZE * 2+2, GRID_WIDTH,
+            g.fillRoundRect( CELL_SIZE*5 - GRID_WIDHT_HALF - CELL_SIZE_HALF,CELL_SIZE_HALF * game.tablero.getColumns(), CELL_SIZE * 2+2, GRID_WIDTH,
                     GRID_WIDTH, GRID_WIDTH);
-            g.fillRoundRect( CELL_SIZE_HALF * game.getTotalColumns(),CELL_SIZE - GRID_WIDHT_HALF - CELL_SIZE_HALF, GRID_WIDTH,CELL_SIZE * 2+2,
+            g.fillRoundRect( CELL_SIZE_HALF * game.tablero.getColumns(),CELL_SIZE - GRID_WIDHT_HALF - CELL_SIZE_HALF, GRID_WIDTH,CELL_SIZE * 2+2,
                     GRID_WIDTH, GRID_WIDTH);
-            g.fillRoundRect( CELL_SIZE_HALF * game.getTotalColumns(),CELL_SIZE*5 - GRID_WIDHT_HALF - CELL_SIZE_HALF, GRID_WIDTH,CELL_SIZE * 2+2,
+            g.fillRoundRect( CELL_SIZE_HALF * game.tablero.getColumns(),CELL_SIZE*5 - GRID_WIDHT_HALF - CELL_SIZE_HALF, GRID_WIDTH,CELL_SIZE * 2+2,
                     GRID_WIDTH, GRID_WIDTH);
         }
 
         private void drawBoard(Graphics g) {
             Graphics2D g2d = (Graphics2D) g;
             g2d.setStroke(new BasicStroke(SYMBOL_STROKE_WIDTH, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-            for (int row = 0; row < game.getTotalRows(); ++row) {
-                for (int col = 0; col < game.getTotalColumns(); ++col) {
+            for (int row = 0; row < game.tablero.getRows(); ++row) {
+                for (int col = 0; col < game.tablero.getColumns(); ++col) {
                     int x1 = col * CELL_SIZE + CELL_PADDING;
                     int y1 = row * CELL_SIZE + CELL_PADDING;
 
-                    if((game.getFicha(new Point(row,col)).state== FichaState.EMPTY || game.getFicha(new Point(row,col)).state== FichaState.SHINY) && game.getFicha(new Point(row,col)).state!=FichaState.DISABLE){
+                    if((game.tablero.getFicha(new Point(row,col)).state== FichaState.EMPTY || game.tablero.getFicha(new Point(row,col)).state== FichaState.SHINY) && game.tablero.getFicha(new Point(row,col)).state!=FichaState.DISABLE){
                         g2d.setColor(Color.LIGHT_GRAY);
                         //g2d.drawOval(x1+CELL_PADDING/4, y1+CELL_PADDING/4, SYMBOL_SIZE/2, SYMBOL_SIZE/2);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
 
-                    if (game.getFicha(new Point(row,col)).state == FichaState.RED) {
+                    if (game.tablero.getFicha(new Point(row,col)).state == FichaState.RED) {
                         g2d.setColor(Color.RED);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
-                    } else if (game.getFicha(new Point(row,col)).state == FichaState.BLUE) {
+                    } else if (game.tablero.getFicha(new Point(row,col)).state == FichaState.BLUE) {
                         g2d.setColor(Color.BLUE);
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
-                    } else if (game.getFicha(new Point(row,col)).state == FichaState.SHINY) {
+                    } else if (game.tablero.getFicha(new Point(row,col)).state == FichaState.SHINY) {
                         g2d.setStroke(new BasicStroke(3));
                         g2d.setColor(Color.GREEN);
                         g2d.drawOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
@@ -161,10 +161,7 @@ public class TableroGUI extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
 
             public void run() {
-                ArrayList<Jugador> jugadores =  new ArrayList<Jugador>();
-                jugadores.add(new JugadorHumano());
-                jugadores.add(new JugadorHumano());
-                new TableroGUI(new JuegoFase1(7,7,jugadores));
+                new TableroGUI(new JuegoFase1());
             }
         });
     }

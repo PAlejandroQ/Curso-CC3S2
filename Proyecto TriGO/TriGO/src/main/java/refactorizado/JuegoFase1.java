@@ -4,17 +4,12 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class JuegoFase1 extends  Juego{
-    public JuegoFase1(int totalRows, int totalColumns, ArrayList<Jugador> jugadoresList) {
-        this.TOTALCOLUMNS = totalColumns;
-        this.TOTALROWS = totalRows;
-        this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
-        lastMill = new ArrayList<>();
-        jugadores = jugadoresList;
-//        initGame();
-
+    public JuegoFase1() {
+        super();
+        currentGameState = GameState.DEPLOY;
     }
     public void desplegarFicha(int row, int column) {
-        if (row >= 0 && row < TOTALROWS && column >= 0 && column < TOTALCOLUMNS && piezasTablero[row][column].state == FichaState.EMPTY) {
+        if (row >= 0 && row < this.tablero.getRows() && column >= 0 && column < this.tablero.getColumns() && piezasTablero[row][column].state == FichaState.EMPTY) {
             piezasTablero[row][column].state = (turn == 'X') ? FichaState.BLUE : FichaState.RED;
             this.piezasTablero[row][column].state = (turn == 'X') ? FichaState.BLUE : FichaState.RED;
             this.getPlayerTurn().aumentarNumFichasEnJuego(new Point(row,column));
@@ -27,26 +22,9 @@ public class JuegoFase1 extends  Juego{
                 turn = (turn == 'X') ? 'O' : 'X';
             }
         }
-
     }
 
-
-    public void updateGameState(int row, int column){
-        if (this.getGameState() == GameState.DEPLOY) {
-            this.desplegarFicha(row, column);
-        }
-//        else if(this.getGameState()== GameState.MOVING){
-//            this.moverFicha(row, column);
-//        }
-        else if(this.getGameState()== GameState.SELECT_CAPTURE_RED){
-            this.capturarPieza(this.jugadores.get(1), new Point(row,column));
-        }
-        else if(this.getGameState()== GameState.SELECT_CAPTURE_BLUE){
-            this.capturarPieza(this.jugadores.get(0),new Point(row,column) );
-        }
-        else {
-            this.resetGame();
-        }
+    public void realizarMovimiento(int row, int col){
+        getPlayerTurn().eventClick(row,col);
     }
-
 }

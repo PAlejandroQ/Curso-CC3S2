@@ -465,7 +465,7 @@ public class Juego {
         if(grid[row][col] == Cell.SHINY){
             grid[row][col] = jugador.getColor();
             getFicha(new Point(row, col)).state = jugador.getColor();
-            // :v oe
+
             grid[lastPoint.x][lastPoint.y] = Cell.EMPTY;
             getFicha(lastPoint).state = Cell.EMPTY;
             getPlayerTurn().reducirNumFichasEnJuego(lastPoint);
