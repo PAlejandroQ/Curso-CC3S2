@@ -2,6 +2,7 @@ package refactorizado;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 abstract public class Juego {
     public static int NUM_FICHAS=9;
@@ -14,18 +15,18 @@ abstract public class Juego {
     protected char turn = 'X';
     protected GameState currentGameState;
 
-    public Juego(){
+    public Juego() {
         tablero= new Tablero();
         lastMill = new ArrayList<>();
         preparePlayers();
     }
 
-    private void preparePlayers(){
+    private void preparePlayers() {
         jugadores[0] = new JugadorHumano(1, this);
-        jugadores[1] = new JugadorMaquina(2, this);
+        jugadores[1] = new JugadorHumano(2, this);
     }
 
-    public boolean findTri(){
+    public boolean findTri() {
         for (int row = 0; row < this.tablero.getRows(); ++row) {
             for (int col = 0; col < this.tablero.getColumns(); ++col) {
                 if (isTri(new Point(row, col))) {
@@ -35,7 +36,8 @@ abstract public class Juego {
         }
         return false;
     }
-    public Point findTriCoordenada(){
+
+    public Point findTriCoordenada() {
         for (int row = 0; row < this.tablero.getRows(); ++row) {
             for (int col = 0; col < this.tablero.getColumns(); ++col) {
                 if (isTri(new Point(row, col))) {
@@ -47,10 +49,46 @@ abstract public class Juego {
     }
 
     private void checkStillMil(ArrayList<ArrayList<Point>> listaConjuntos) {
+        System.out.println("Antes:");
+        boolean deboBorrar = false;
+        if (listaConjuntos.size() > 0) {
+            Iterator<ArrayList<Point>> itr = listaConjuntos.iterator();
+            while (itr.hasNext()) {
+
+                Iterator<Point> itrPoints = itr.next().iterator();
+                while (itrPoints.hasNext()) {
+                    Point i = itrPoints.next();
+                    System.out.println("----(" + i.x + ","+i.y+")");
+                    if (this.tablero.getFicha(i).state == FichaState.EMPTY ) {
+                        System.out.print("Borra Uno");
+                        deboBorrar = true;
+
+
+                    }
+//                break;
+                }
+
+//            break;
+            }
+        }
+
+        if(deboBorrar) listaConjuntos.clear();
+        System.out.println("Fin While:\n ");
+
+//        for(ArrayList<Point> mill : lastMill){
+//            for()
+//        }
 
     }
 
-    public void changeTurn(){turn =  (turn=='X')? 'O' : 'X';}
+    public void changeTurn() {
+        this.isEliminar();
+//            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
+        if(currentGameState!= GameState.SELECT_CAPTURE_RED && currentGameState!= GameState.SELECT_CAPTURE_BLUE){
+            turn =  (turn=='X')? 'O' : 'X';
+        }
+
+    }
 
     public boolean contieneCombinacion(ArrayList<ArrayList<Point>> grande, ArrayList<Point> elemento) {
         if (grande.size() > 1) {
@@ -93,14 +131,14 @@ abstract public class Juego {
     public GameState getGameState() {
         return currentGameState;
     }
+
     public Jugador getPlayerTurn(){
-        if(turn=='X'){
+        if(turn=='X') {
             return jugadores[0];
         }
-        else{
             return jugadores[1];
-        }
     }
+
     public char getTurn() {
         return turn;
     }
@@ -126,8 +164,26 @@ abstract public class Juego {
         // this =
 //        initGame();
     }
+    public void isEliminar(){
+        this.checkStillMil(this.lastMill);
+        if (this.findTri()) {
+            GameState temp = currentGameState;
+            System.out.println("ColorMill: " + this.tablero.getFicha(lastMill.get(0).iterator().next()).state.toString());
+            System.out.println("ColorJugador: "+getPlayerTurn().getColor().toString());
+            if(this.tablero.getFicha(lastMill.get(lastMill.size()-1).iterator().next()).state == getPlayerTurn().getColor()) {
+                currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_RED : GameState.SELECT_CAPTURE_BLUE;
+            }else{
+                currentGameState = temp;
+            }
+        }
+
+
+        if(this.getPlayerTurn().getNumFichasEnJuego()==2 && currentGameState!= GameState.DEPLOY && currentGameState!= GameState.SELECT_CAPTURE_BLUE && currentGameState!= GameState.SELECT_CAPTURE_RED){
+            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
+        }
+    }
 
     abstract void realizarMovimiento(int row, int col);
 
-    public abstract Juego selfCast();
+    abstract Juego selfCast();
 }

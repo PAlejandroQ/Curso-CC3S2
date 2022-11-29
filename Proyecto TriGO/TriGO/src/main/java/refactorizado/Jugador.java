@@ -17,10 +17,10 @@ abstract public class Jugador {
     protected Jugador.State estado;
 
     /**
-     * Constructor que toma el valor de un entero como indice y un Juego para ser asociado
+     * Constructor que toma el valor de un entero como indice y un Juego para asociar
      * Preconditions: 0 < indexColor < 3 && juegoEnlazado != NULL
      * Postconditions: creación de un jugador inicializando: las fichas en 9,
-     *                 el color de fichas de acuerdo con el indexColor
+     *                 el color de fichas de acuerdo con el indexColor, un arrayList de sus fichas
      *
      * @param indexColor
      * @param juegoEnlazado
@@ -29,7 +29,7 @@ abstract public class Jugador {
     public Jugador(int indexColor, Juego juegoEnlazado) {
         this.juegoEnlazado = juegoEnlazado;
 //        this.FICHAS_LEFT = NUM_FICHAS;
-        this.FICHAS = 9;
+        this.FICHAS = Juego.NUM_FICHAS;
         this.fichasJugador = new ArrayList<Point>();
         this.color = (indexColor == 1)? FichaState.BLUE : FichaState.RED;
     }

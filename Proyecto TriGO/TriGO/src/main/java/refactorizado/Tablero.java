@@ -5,8 +5,8 @@ import org.funcionalidad.Juego;
 import java.awt.*;
 
 public class Tablero {
-    protected static int TOTALROWS=7 ;
-    protected static int TOTALCOLUMNS=7;
+    protected static int TOTALROWS = 7 ;
+    protected static int TOTALCOLUMNS = 7;
     protected Ficha[][] piezasTablero;
     public Tablero() {
         this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];

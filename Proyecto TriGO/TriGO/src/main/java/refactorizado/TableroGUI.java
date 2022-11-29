@@ -58,7 +58,7 @@ public class TableroGUI extends JFrame {
                     int rowSelected = e.getY() / CELL_SIZE;
                     int colSelected = e.getX() / CELL_SIZE;
                     game.getPlayerTurn().eventClick(rowSelected,colSelected);
-                    game = game.selfCast();
+
                     repaint();
 
                 }

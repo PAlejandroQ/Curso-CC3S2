@@ -64,8 +64,9 @@ public class JuegoFase2 extends Juego{
                     }
                 }
             }
-            System.out.println("Cambio a moving");
+
             jugador.setMoving();
+            System.out.println("Cambio a moving");
         }
         this.lastPoint = this.tablero.piezasTablero[row][col].coordenada;
     }
@@ -80,10 +81,7 @@ public class JuegoFase2 extends Juego{
             //
             jugador.setSelecting();
             System.out.println("Seleccionado destino");
-            updateGameState(row, col);
-            if(currentGameState!= GameState.SELECT_CAPTURE_BLUE && currentGameState!= GameState.SELECT_CAPTURE_RED){
-                this.changeTurn();
-            }
+            this.changeTurn();
             clearShinys();
         }else if (this.tablero.piezasTablero[row][col].state == getPlayerTurn().getColor()){
             jugador.setSelecting();
@@ -92,7 +90,7 @@ public class JuegoFase2 extends Juego{
 
     public void moverFicha(int row, int col){
         Jugador jugador = this.getPlayerTurn();
-        System.out.println(jugador.getState().toString());
+
         if(jugador.getState() == Jugador.State.SELECTING){
             seleccionarInicio(jugador, row, col);
         } else if (jugador.getState()== Jugador.State.MOVING){
@@ -106,31 +104,12 @@ public class JuegoFase2 extends Juego{
 
     @Override
     public Juego selfCast(){
-        if(this.getPlayerTurn().getNumFichasEnJuego()>3 && currentGameState!= GameState.DEPLOY){
-            for(Jugador jugador : jugadores){
-                jugador.setSelecting();
-            }
-            currentGameState = GameState.MOVING;
-        } else if (this.getPlayerTurn().getNumFichasEnJuego() == 3 && currentGameState ==GameState.DEPLOY) {
+        currentGameState = GameState.MOVING;
+        if (this.getPlayerTurn().getNumFichasEnJuego() == 3) {
             this.getPlayerTurn().setFlying();
-
         }
 
-        if (this.findTri()) {
-            GameState temp = currentGameState;
-            System.out.println("ColorMill: " + this.tablero.getFicha(lastMill.get(0).iterator().next()).state.toString());
-            System.out.println("ColorJugador: "+getPlayerTurn().getColor().toString());
-            if(this.tablero.getFicha(lastMill.get(0).iterator().next()).state == getPlayerTurn().getColor()) {
-                currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_RED : GameState.SELECT_CAPTURE_BLUE;
-            }else{
-                currentGameState = temp;
-            }
-        }
-
-
-        if(this.getPlayerTurn().getNumFichasEnJuego()==2 && currentGameState!= GameState.DEPLOY && currentGameState!= GameState.SELECT_CAPTURE_BLUE && currentGameState!= GameState.SELECT_CAPTURE_RED){
-            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
-        }
+        System.out.println(getPlayerTurn().getState().toString());
 
         return this;
     }
