@@ -12,7 +12,7 @@ public class Tablero {
         this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
         for (int row = 0; row < TOTALROWS; ++row) {
             for (int col = 0; col < TOTALCOLUMNS; ++col) {
-                this.piezasTablero[row][col] = new Ficha(-1,new Point(row,col));
+                this.piezasTablero[row][col] = new Ficha(new Point(row,col));
             }
         }
         preparePositions();

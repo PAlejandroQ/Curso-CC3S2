@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
+
 import static org.junit.Assert.assertEquals;
 
 class DespliegueAzulTest {
@@ -46,5 +48,11 @@ class DespliegueAzulTest {
         assertEquals("",game.getGameState(),Juego.GameState.DEPLOY);
         game.desplegarFicha(0, 9);
         assertEquals("", game.getTurn(), 'X');
+    }
+
+    @Test
+    void asfafa(){
+        Ficha ficha= new Ficha(-1,new Point(1,1));
+        assertEquals(-1,ficha.color);
     }
 }

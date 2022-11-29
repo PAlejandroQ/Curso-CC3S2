@@ -7,7 +7,6 @@ abstract public class Juego {
     public static int NUM_FICHAS=9;
 
     protected static final int NUM_PLAYERS = 2;
-    protected Ficha[][] piezasTablero;
     protected ArrayList<ArrayList<Point>> lastMill;
     public Tablero tablero;
     public Point lastPoint;
@@ -23,10 +22,10 @@ abstract public class Juego {
 
     private void preparePlayers(){
         jugadores[0] = new JugadorHumano(1, this);
-        jugadores[1] = new JugadorHumano(2, this);
+        jugadores[1] = new JugadorMaquina(2, this);
     }
 
-    private boolean findTri(){
+    public boolean findTri(){
         for (int row = 0; row < this.tablero.getRows(); ++row) {
             for (int col = 0; col < this.tablero.getColumns(); ++col) {
                 if (isTri(new Point(row, col))) {
@@ -35,6 +34,16 @@ abstract public class Juego {
             }
         }
         return false;
+    }
+    public Point findTriCoordenada(){
+        for (int row = 0; row < this.tablero.getRows(); ++row) {
+            for (int col = 0; col < this.tablero.getColumns(); ++col) {
+                if (isTri(new Point(row, col))) {
+                    return new Point(row,col);
+                }
+            }
+        }
+        return null;
     }
 
     private void checkStillMil(ArrayList<ArrayList<Point>> listaConjuntos) {
@@ -53,15 +62,15 @@ abstract public class Juego {
         return false;
     }
 
-    private boolean isTri(Point esquina) {
+    public boolean isTri(Point esquina) {
 
-        Ficha lastMove = this.getFicha(esquina);
+        Ficha lastMove = this.tablero.getFicha(esquina);
         for (Point intermedioP : lastMove.vecinos) {
-            Ficha intermedio = this.getFicha(intermedioP);
+            Ficha intermedio = this.tablero.getFicha(intermedioP);
             if (lastMove.esEquipo(intermedio)) {
 
                 for (Point extremoP : intermedio.vecinos) {
-                    Ficha extremo = this.getFicha(extremoP);
+                    Ficha extremo = this.tablero.getFicha(extremoP);
                     ArrayList<Point> newMill = new ArrayList<Point>();
                     newMill.add(esquina);
                     newMill.add(intermedioP);
@@ -80,9 +89,7 @@ abstract public class Juego {
         return false;
     }
 
-    public Ficha getFicha(Point esquina) {
-        return null;
-    }
+
     public GameState getGameState() {
         return currentGameState;
     }
@@ -105,7 +112,7 @@ abstract public class Juego {
     public void capturarPieza(Jugador atacado, Point posicionCapturada) {
         if(atacado.fichasJugador.contains(posicionCapturada)) {
             atacado.reducirNumFichasEnJuego(posicionCapturada);
-            this.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = FichaState.EMPTY;
+            this.tablero.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = FichaState.EMPTY;
             turn = (turn == 'X')? 'O' : 'X';
             updateGameState(posicionCapturada.x, posicionCapturada.y);
         }
@@ -116,9 +123,11 @@ abstract public class Juego {
 
     public Juego resetGame() {
         return (JuegoFase1) this;
+        // this =
 //        initGame();
     }
 
-    public void realizarMovimiento(int row, int col){}
+    abstract void realizarMovimiento(int row, int col);
 
+    public abstract Juego selfCast();
 }
