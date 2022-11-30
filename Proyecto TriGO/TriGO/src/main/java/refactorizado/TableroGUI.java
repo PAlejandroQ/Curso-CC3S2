@@ -60,6 +60,9 @@ public class TableroGUI extends JFrame {
                     game.getPlayerTurn().eventClick(rowSelected,colSelected);
 
                     repaint();
+                    if(game.jugadores[0].juegoEnlazado.getGameState() == GameState.BLUE_WON || game.jugadores[0].juegoEnlazado.getGameState()==GameState.RED_WON){
+                        game.resetGame();
+                    }
 
                 }
             });
@@ -143,26 +146,26 @@ public class TableroGUI extends JFrame {
         }
 
         private void printStatusBar() {
-            if (game.getGameState() == GameState.DEPLOY) {
+            if (game.jugadores[0].juegoEnlazado.getGameState() == GameState.DEPLOY) {
                 gameStatusBar.setForeground(Color.BLACK);
                 if (game.getTurn() == 'X') {
                     gameStatusBar.setText("Turno de Azul");
                 } else {
                     gameStatusBar.setText("Turno de Rojo");
                 }
-            } else if (game.getGameState() == GameState.MOVING) {
+            } else if (game.jugadores[0].juegoEnlazado.getGameState() == GameState.MOVING) {
                 gameStatusBar.setForeground(Color.GRAY);
                 gameStatusBar.setText("Fase de movimiento. Selecciona tus fichas y desplázalas");
-            } else if(game.getGameState() == GameState.SELECT_CAPTURE_BLUE){
+            } else if(game.jugadores[0].juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_BLUE){
                 gameStatusBar.setForeground(Color.blue);
                 gameStatusBar.setText("Seleccione la ficha azul a capturar.");
-            } else if(game.getGameState() == GameState.SELECT_CAPTURE_RED){
+            } else if(game.jugadores[0].juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_RED){
                 gameStatusBar.setForeground(Color.RED);
                 gameStatusBar.setText("Seleccione la ficha roja a capturar.");
-            } else if (game.getGameState() == GameState.BLUE_WON) {
+            } else if (game.jugadores[0].juegoEnlazado.getGameState() == GameState.BLUE_WON) {
                 gameStatusBar.setForeground(Color.RED);
                 gameStatusBar.setText("Rojo gana! Click para jugar otra vez.");
-            } else if (game.getGameState() == GameState.RED_WON) {
+            } else if (game.jugadores[0].juegoEnlazado.getGameState() == GameState.RED_WON) {
                 gameStatusBar.setForeground(Color.blue);
                 gameStatusBar.setText("Azul gana! Click para jugar otra vez.");
             }
