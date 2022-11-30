@@ -23,13 +23,14 @@ public class JuegoFase1 extends  Juego {
             this.lastPoint = this.tablero.piezasTablero[row][column].coordenada;
 
         } else{
-            throw new IllegalArgumentException("Out of bound");
+            throw new IllegalArgumentException("Out of bound of table");
         }
     }
 
     public void realizarMovimiento(int row, int col){
         desplegarFicha(row,col);
     }
+
 
 
     @Override

@@ -24,6 +24,7 @@ abstract public class Juego {
     private void preparePlayers() {
         jugadores[0] = new JugadorHumano(1, this);
         jugadores[1] = new JugadorHumano(2, this);
+        //jugadores[1] = new JugadorMaquina(2, this);
     }
 
     public boolean findTri() {
@@ -58,7 +59,7 @@ abstract public class Juego {
                 Iterator<Point> itrPoints = itr.next().iterator();
                 while (itrPoints.hasNext()) {
                     Point i = itrPoints.next();
-                    System.out.println("----(" + i.x + ","+i.y+")");
+                    System.out.println("----(" + i.x + "," + i.y+")");
                     if (this.tablero.getFicha(i).state == FichaState.EMPTY ) {
                         System.out.print("Borra Uno");
                         deboBorrar = true;
@@ -82,18 +83,25 @@ abstract public class Juego {
     }
 
     public void changeTurn() {
-        this.isEliminar();
+        if(currentGameState == GameState.DEPLOY || currentGameState == GameState.MOVING){
+            this.isEliminar();
 //            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
-        if(currentGameState!= GameState.SELECT_CAPTURE_RED && currentGameState!= GameState.SELECT_CAPTURE_BLUE){
+            if(currentGameState != GameState.SELECT_CAPTURE_RED && currentGameState != GameState.SELECT_CAPTURE_BLUE){
+                turn =  (turn=='X')? 'O' : 'X';
+            }
+        }
+        else{
             turn =  (turn=='X')? 'O' : 'X';
         }
 
     }
 
     public boolean contieneCombinacion(ArrayList<ArrayList<Point>> grande, ArrayList<Point> elemento) {
-        if (grande.size() > 1) {
-            if (grande.get(0).containsAll(elemento)) {
-                return true;
+        if (grande.size() >= 1) {
+            for(ArrayList<Point> mills : grande){
+                if (mills.containsAll(elemento)) {
+                    return true;
+                }
             }
         }
 
@@ -151,10 +159,9 @@ abstract public class Juego {
         if(atacado.fichasJugador.contains(posicionCapturada)) {
             atacado.reducirNumFichasEnJuego(posicionCapturada);
             this.tablero.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = FichaState.EMPTY;
-            turn = (turn == 'X')? 'O' : 'X';
-            updateGameState(posicionCapturada.x, posicionCapturada.y);
         }
     }
+
 
     public void updateGameState(int x, int y) {
     }

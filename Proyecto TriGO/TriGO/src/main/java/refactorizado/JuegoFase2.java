@@ -104,11 +104,11 @@ public class JuegoFase2 extends Juego{
 
     @Override
     public Juego selfCast(){
-        currentGameState = GameState.MOVING;
+
         if (this.getPlayerTurn().getNumFichasEnJuego() == 3) {
             this.getPlayerTurn().setFlying();
         }
-
+        System.out.println(currentGameState.toString());
         System.out.println(getPlayerTurn().getState().toString());
 
         return this;

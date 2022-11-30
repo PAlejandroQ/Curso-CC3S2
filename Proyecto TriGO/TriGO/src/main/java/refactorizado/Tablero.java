@@ -120,6 +120,6 @@ public class Tablero {
     }
 
 
-    public int getRows(){return TOTALROWS;}
-    public int getColumns(){return TOTALCOLUMNS;}
+    public int getRows() {return TOTALROWS;}
+    public int getColumns() {return TOTALCOLUMNS;}
 }
