@@ -14,9 +14,13 @@ public class JugadorHumano extends Jugador {
         }
         else if(juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_BLUE){
             juegoEnlazado.capturarPieza(juegoEnlazado.jugadores[0],new Point(row,column) );
+            juegoEnlazado.currentGameState = GameState.MOVING;
+            juegoEnlazado.changeTurn();
         }
         else if(juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_RED) {
             juegoEnlazado.capturarPieza(juegoEnlazado.jugadores[1], new Point(row, column));
+            juegoEnlazado.currentGameState = GameState.MOVING;
+            juegoEnlazado.changeTurn();
         }
         juegoEnlazado = juegoEnlazado.selfCast();
     }
