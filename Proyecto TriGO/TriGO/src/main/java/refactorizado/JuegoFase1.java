@@ -40,6 +40,7 @@ public class JuegoFase1 extends  Juego {
             jugadores[0].juegoEnlazado = fase2;
             jugadores[1].juegoEnlazado = fase2;
             System.out.println("Cambio de Fase");
+            return fase2;
         }
         System.out.println("Selfcast1");
         this.changeTurn();
