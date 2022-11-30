@@ -15,16 +15,22 @@ abstract public class Juego {
     protected char turn = 'X';
     protected GameState currentGameState;
 
-    public Juego() {
-        tablero= new Tablero();
+    boolean isMachine = false;
+
+    public Juego(){
+
+    }
+
+    public Juego(boolean isMachine) {
+        tablero = new Tablero();
         lastMill = new ArrayList<>();
+        this.isMachine = isMachine;
         preparePlayers();
     }
 
     private void preparePlayers() {
         jugadores[0] = new JugadorHumano(1, this);
-        jugadores[1] = new JugadorHumano(2, this);
-        //jugadores[1] = new JugadorMaquina(2, this);
+        jugadores[1] = (isMachine) ? new JugadorMaquina(2, this) : new JugadorHumano(2, this);
     }
 
     public boolean findTri() {

@@ -3,9 +3,8 @@ package refactorizado;
 import java.awt.*;
 
 public class JuegoFase1 extends  Juego {
-    public JuegoFase1() {
-
-        super();
+    public JuegoFase1(boolean isMachine) {
+        super(isMachine);
         currentGameState = GameState.DEPLOY;
     }
 
