@@ -109,6 +109,9 @@ public class JuegoFase2 extends Juego{
             this.getPlayerTurn().setFlying();
         }
         System.out.println(currentGameState.toString());
+        if(this.getPlayerTurn().getNumFichasEnJuego()==2){
+            currentGameState = (jugadores[0].juegoEnlazado.turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
+        }
         //System.out.println(getPlayerTurn().getState().toString());
         return this;
     }
