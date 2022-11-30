@@ -95,7 +95,7 @@ abstract public class Juego {
         System.out.println(jugadores[0].juegoEnlazado.currentGameState.toString());
 //            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
         if(currentGameState != GameState.SELECT_CAPTURE_RED && currentGameState != GameState.SELECT_CAPTURE_BLUE){
-            turn =  (turn=='X')? 'O' : 'X';
+            jugadores[0].juegoEnlazado.turn =  (jugadores[0].juegoEnlazado.turn=='X')? 'O' : 'X';
         }
 
     }

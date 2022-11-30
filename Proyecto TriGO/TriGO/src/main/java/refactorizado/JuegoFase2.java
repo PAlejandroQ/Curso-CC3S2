@@ -81,8 +81,8 @@ public class JuegoFase2 extends Juego{
             //
             jugador.setSelecting();
             System.out.println("Seleccionado destino");
-            this.changeTurn();
             clearShinys();
+            this.changeTurn();
         }else if (this.tablero.piezasTablero[row][col].state == getPlayerTurn().getColor()){
             jugador.setSelecting();
         }
