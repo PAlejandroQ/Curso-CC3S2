@@ -172,6 +172,7 @@ abstract public class Juego {
         }
         if(jugadores[1].getNumFichas()==0){
             jugadores[0].juegoEnlazado.currentGameState = GameState.MOVING;
+            jugadores[0].juegoEnlazado.changeTurn();
         }
         else{
             jugadores[0].juegoEnlazado.currentGameState = GameState.DEPLOY;
