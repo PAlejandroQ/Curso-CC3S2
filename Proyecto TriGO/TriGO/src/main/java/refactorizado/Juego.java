@@ -37,10 +37,12 @@ abstract public class Juego {
         for (int row = 0; row < this.tablero.getRows(); ++row) {
             for (int col = 0; col < this.tablero.getColumns(); ++col) {
                 if (isTri(new Point(row, col))) {
+                    System.out.println("MILL");
                     return true;
                 }
             }
         }
+        System.out.println("No MILL");
         return false;
     }
 
@@ -89,14 +91,10 @@ abstract public class Juego {
     }
 
     public void changeTurn() {
-        if(currentGameState == GameState.DEPLOY || currentGameState == GameState.MOVING){
-            this.isEliminar();
+        this.isEliminar();
+        System.out.println(jugadores[0].juegoEnlazado.currentGameState.toString());
 //            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
-            if(currentGameState != GameState.SELECT_CAPTURE_RED && currentGameState != GameState.SELECT_CAPTURE_BLUE){
-                turn =  (turn=='X')? 'O' : 'X';
-            }
-        }
-        else{
+        if(currentGameState != GameState.SELECT_CAPTURE_RED && currentGameState != GameState.SELECT_CAPTURE_BLUE){
             turn =  (turn=='X')? 'O' : 'X';
         }
 
@@ -147,7 +145,7 @@ abstract public class Juego {
     }
 
     public Jugador getPlayerTurn(){
-        if(turn=='X') {
+        if(jugadores[0].juegoEnlazado.turn=='X') {
             return jugadores[0];
         }
             return jugadores[1];
@@ -160,7 +158,7 @@ abstract public class Juego {
     }
 
     public char getTurn() {
-        return turn;
+        return jugadores[0].juegoEnlazado.turn;
     }
 
     public void desplegarFicha(int row, int column) {
@@ -172,6 +170,14 @@ abstract public class Juego {
             atacado.reducirNumFichasEnJuego(posicionCapturada);
             this.tablero.piezasTablero[posicionCapturada.x][posicionCapturada.y].state = FichaState.EMPTY;
         }
+        if(jugadores[1].getNumFichas()==0){
+            jugadores[0].juegoEnlazado.currentGameState = GameState.MOVING;
+        }
+        else{
+            jugadores[0].juegoEnlazado.currentGameState = GameState.DEPLOY;
+        }
+
+        System.out.println("Pieza capturada " + jugadores[0].juegoEnlazado.currentGameState.toString());
     }
 
 
@@ -190,7 +196,7 @@ abstract public class Juego {
             System.out.println("ColorMill: " + this.tablero.getFicha(lastMill.get(0).iterator().next()).state.toString());
             System.out.println("ColorJugador: "+getPlayerTurn().getColor().toString());
             if(this.tablero.getFicha(lastMill.get(lastMill.size()-1).iterator().next()).state == getPlayerTurn().getColor()) {
-                currentGameState = (turn == 'X') ? GameState.SELECT_CAPTURE_RED : GameState.SELECT_CAPTURE_BLUE;
+                currentGameState = (jugadores[0].juegoEnlazado.turn == 'X') ? GameState.SELECT_CAPTURE_RED : GameState.SELECT_CAPTURE_BLUE;
             }else{
                 currentGameState = temp;
             }
@@ -198,7 +204,7 @@ abstract public class Juego {
 
 
         if(this.getPlayerTurn().getNumFichasEnJuego()==2 && currentGameState!= GameState.DEPLOY && currentGameState!= GameState.SELECT_CAPTURE_BLUE && currentGameState!= GameState.SELECT_CAPTURE_RED){
-            currentGameState = (turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
+            currentGameState = (jugadores[0].juegoEnlazado.turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
         }
     }
 

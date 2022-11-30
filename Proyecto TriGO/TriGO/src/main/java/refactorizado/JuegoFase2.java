@@ -109,8 +109,7 @@ public class JuegoFase2 extends Juego{
             this.getPlayerTurn().setFlying();
         }
         System.out.println(currentGameState.toString());
-        System.out.println(getPlayerTurn().getState().toString());
-
+        //System.out.println(getPlayerTurn().getState().toString());
         return this;
     }
 
