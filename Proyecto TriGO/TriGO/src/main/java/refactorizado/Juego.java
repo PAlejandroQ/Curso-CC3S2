@@ -152,6 +152,12 @@ abstract public class Juego {
         }
             return jugadores[1];
     }
+    public Jugador getOpositivePlayerTurn(){
+        if(turn!='X') {
+            return jugadores[0];
+        }
+        return jugadores[1];
+    }
 
     public char getTurn() {
         return turn;
