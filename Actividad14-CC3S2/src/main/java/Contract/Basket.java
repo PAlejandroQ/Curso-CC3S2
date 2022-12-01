@@ -17,9 +17,16 @@ public class Basket {
      * @param qtyToAdd la cantidad de producto
      */
     public void add(Product product, int qtyToAdd) {
+        assert product != null : "No puedes ingresar un producto vacío";
+        assert qtyToAdd > 0 : "La cantidad a agregar tiene que ser mayor a 0";
 
-        basket.put(product,qtyToAdd);
-        this.totalValue = totalValue.add(product.getPrice().multiply(new BigDecimal(qtyToAdd)));
+        BigDecimal prev_totalValue = this.totalValue;
+
+        basket.put(product,qtyToAdd); //add the product
+        this.totalValue = totalValue.add(product.getPrice().multiply(new BigDecimal(qtyToAdd))); //update totalValue
+
+        assert basket.containsKey(product) : "El producto no se encuentra en la cesta";
+        assert (prev_totalValue.compareTo(this.totalValue) == -1) : "El valor total actual debe ser mayor al anterior valor" ;
 
     }
 
@@ -30,8 +37,15 @@ public class Basket {
      * @param product producto a eliminar.
      */
     public void remove(Product product) {
+        assert product != null : "El producto no puede ser nulo";
+        assert basket.containsKey(product) : "El producto tiene que estar registrado en la cesta";
+
+        //update totalValue
         this.totalValue = totalValue.subtract(product.getPrice().multiply(new BigDecimal(this.quantityOf(product))));
+        //remove product from the basket
         basket.remove(product);
+
+        assert !basket.containsKey(product) : "El producto no ha sido eliminado";
 
     }
     private boolean invariant() {
