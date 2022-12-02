@@ -64,6 +64,7 @@ public class JuegoFase2 extends Juego{
             }else{
                 for(Point vecino : actual.vecinos){
                     if(this.tablero.getFicha(vecino).state == FichaState.EMPTY){
+                        this.tablero.listOfShinys.add(vecino);
                         this.tablero.piezasTablero[vecino.x][vecino.y].state = FichaState.SHINY;
                     }
                 }
