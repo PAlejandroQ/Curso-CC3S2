@@ -3,13 +3,16 @@ package refactorizado;
 import org.funcionalidad.Juego;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Tablero {
     protected static int TOTALROWS = 7 ;
     protected static int TOTALCOLUMNS = 7;
     protected Ficha[][] piezasTablero;
+    ArrayList<Point> listOfShinys;
     public Tablero() {
         this.piezasTablero = new Ficha[TOTALROWS][TOTALCOLUMNS];
+        listOfShinys = new ArrayList<Point>();
         for (int row = 0; row < TOTALROWS; ++row) {
             for (int col = 0; col < TOTALCOLUMNS; ++col) {
                 this.piezasTablero[row][col] = new Ficha(new Point(row,col));

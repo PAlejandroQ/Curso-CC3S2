@@ -5,6 +5,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class JuegoFase2 extends Juego{
+
     public JuegoFase2(Tablero tablero, Jugador[] jugadores, ArrayList<ArrayList<Point>> lastMill, Point lastPoint) {
         this.tablero = tablero;
         this.jugadores = jugadores;
@@ -14,6 +15,7 @@ public class JuegoFase2 extends Juego{
         this.currentGameState = GameState.MOVING;
         jugadores[0].setSelecting();
         jugadores[1].setSelecting();
+
     }
 
 /*
@@ -43,6 +45,7 @@ public class JuegoFase2 extends Juego{
                 if (this.tablero.piezasTablero[row][col].state == FichaState.SHINY) this.tablero.piezasTablero[row][col].state = FichaState.EMPTY;
             }
         }
+        this.tablero.listOfShinys.clear();
     }
 
     public void seleccionarInicio(Jugador jugador, int row, int col){
@@ -53,6 +56,7 @@ public class JuegoFase2 extends Juego{
                 for( int x=0; x<this.tablero.getRows(); ++x){
                     for(int y=0; y<this.tablero.getColumns(); ++y) {
                         if(this.tablero.getFicha(new Point(x,y)).state== FichaState.EMPTY && this.tablero.piezasTablero[x][y].state!= FichaState.DISABLE){
+                            this.tablero.listOfShinys.add(new Point(x,y));
                             this.tablero.piezasTablero[x][y].state = FichaState.SHINY;
                         }
                     }

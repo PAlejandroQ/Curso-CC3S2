@@ -186,7 +186,7 @@ abstract public class Juego {
     }
 
     public Juego resetGame() {
-        ;
+        ;return new JuegoFase1(true);
     }
     public void isEliminar(){
         this.checkStillMil(this.lastMill);

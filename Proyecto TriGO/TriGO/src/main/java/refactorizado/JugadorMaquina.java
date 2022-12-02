@@ -1,10 +1,12 @@
 package refactorizado;
+import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.Random;
 import java.awt.*;
 
 public class JugadorMaquina extends Jugador {
     GameState estadoBot;
+    Point respuesta;
     Point lastPointBot;
     Point lastCaptureBot;
     public JugadorMaquina(int color, Juego juegoEnlazado){
@@ -15,15 +17,17 @@ public class JugadorMaquina extends Jugador {
     /*
     * Metodo que envia el flujo de datos*/
     public void eventClick(int row, int column) {
-        Point respuesta;
+
         if(this.juegoEnlazado.getGameState()!= GameState.SELECT_CAPTURE_RED && this.juegoEnlazado.getGameState() != GameState.SELECT_CAPTURE_BLUE) {
             if(this.juegoEnlazado instanceof  JuegoFase2){
                 respuesta=chooseOwnFichaBot();
                 this.juegoEnlazado.realizarMovimiento((int)respuesta.getX(), (int)respuesta.getY());
-            }
+                respuesta=this.selectShinyOwn();
+                this.juegoEnlazado.realizarMovimiento((int)respuesta.getX(), (int)respuesta.getY());
+            }else{
             respuesta = this.deployingBot();
-
             this.juegoEnlazado.realizarMovimiento((int)respuesta.getX(), (int)respuesta.getY());
+            }
         }else if(juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_BLUE){
             respuesta = this.capturingBot();
             juegoEnlazado.capturarPieza(juegoEnlazado.jugadores[0],new Point((int)respuesta.getX(), (int)respuesta.getY()) );
@@ -83,6 +87,13 @@ public class JugadorMaquina extends Jugador {
         this.lastCaptureBot=this.juegoEnlazado.getOpositivePlayerTurn().fichasJugador.get(index);
         return this.lastCaptureBot;
     }
-
+    public Point selectShinyOwn(){
+        /*
+        * Crear array de shinis, y que elija aleatoriamente un shiny para
+        * */
+        ArrayList<Point> shinysPosibles = this.juegoEnlazado.tablero.listOfShinys;
+        int randNeighbor = ThreadLocalRandom.current().nextInt(0, shinysPosibles.size());
+        return shinysPosibles.get(randNeighbor);
+    }
 
 }
