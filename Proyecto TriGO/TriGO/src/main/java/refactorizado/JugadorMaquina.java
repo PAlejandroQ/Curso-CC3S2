@@ -34,12 +34,12 @@ public class JugadorMaquina extends Jugador {
         }else if(juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_BLUE){
             respuesta = this.capturingBot();
             juegoEnlazado.capturarPieza(juegoEnlazado.jugadores[0],new Point((int)respuesta.getX(), (int)respuesta.getY()) );
-            juegoEnlazado.currentGameState = GameState.MOVING;
+            //juegoEnlazado.currentGameState = GameState.MOVING;
             //juegoEnlazado.changeTurn();
         } else if(juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_RED){
             respuesta = this.capturingBot();
             juegoEnlazado.capturarPieza(juegoEnlazado.jugadores[1], new Point((int)respuesta.getX(), (int)respuesta.getY()));
-            juegoEnlazado.currentGameState = GameState.MOVING;
+            //juegoEnlazado.currentGameState = GameState.MOVING;
             //juegoEnlazado.changeTurn();
         }
 //        System.out.println(respuesta.x + "- "+ respuesta.y);

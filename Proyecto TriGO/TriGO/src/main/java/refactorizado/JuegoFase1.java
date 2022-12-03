@@ -34,22 +34,14 @@ public class JuegoFase1 extends  Juego {
 
     @Override
     public Juego selfCast(){
-<<<<<<< Updated upstream
         System.out.println("Selfcast1");
         this.changeTurn();
         if(jugadores[1].getNumFichas()==0 && currentGameState!= GameState.SELECT_CAPTURE_RED && currentGameState!=GameState.SELECT_CAPTURE_BLUE){
-=======
-
-        if(jugadores[1].getNumFichas()==0){
->>>>>>> Stashed changes
             Juego fase2 = new JuegoFase2(this.tablero, this.jugadores, this.lastMill, this.lastPoint);
             jugadores[0].juegoEnlazado = fase2;
             jugadores[1].juegoEnlazado = fase2;
             System.out.println("Cambio de Fase");
-<<<<<<< Updated upstream
             return fase2;
-=======
->>>>>>> Stashed changes
         }
 
         return this;
