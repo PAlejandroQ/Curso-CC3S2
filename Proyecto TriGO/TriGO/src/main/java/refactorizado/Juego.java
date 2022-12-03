@@ -201,7 +201,6 @@ abstract public class Juego {
             }
         }
 
-
         if(this.getPlayerTurn().getNumFichasEnJuego()==2 && currentGameState!= GameState.DEPLOY && currentGameState!= GameState.SELECT_CAPTURE_BLUE && currentGameState!= GameState.SELECT_CAPTURE_RED){
             currentGameState = (jugadores[0].juegoEnlazado.turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
         }
