@@ -48,35 +48,15 @@ public class JugadorMaquina extends Jugador {
 
     public Point deployingBot(){
         while(true){
-            int randRow = ThreadLocalRandom.current().nextInt( juegoEnlazado.tablero.getRows()-1);
-            int randCol = ThreadLocalRandom.current().nextInt( juegoEnlazado.tablero.getColumns()-1);
+            int randRow = ThreadLocalRandom.current().nextInt( 50)%juegoEnlazado.tablero.getRows();
+            int randCol = ThreadLocalRandom.current().nextInt( 50)%juegoEnlazado.tablero.getRows();
             if (juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).esLinea(juegoEnlazado.tablero.getFicha(this.lastPointBot)) && juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).state == FichaState.EMPTY){
                 this.lastPointBot = new Point(randRow,randCol);
                 break;
             }
         }
         return this.lastPointBot;
-
-
-//        if(lastPointBot == null) {
-//            int randRow = ThreadLocalRandom.current().nextInt(0, juegoEnlazado.tablero.getRows()-1);
-//            int randCol = ThreadLocalRandom.current().nextInt(0, juegoEnlazado.tablero.getColumns()-1);
-//            this.lastPointBot = new Point(randRow,randCol);
-//            return this.lastPointBot;
-//        }else{
-//            for (int rows = 0; rows < juegoEnlazado.tablero.getRows(); rows++) {
-//                for (int col = 0; col < juegoEnlazado.tablero.getColumns(); col++) {
-//                    if (juegoEnlazado.tablero.getFicha(new Point(rows,col)).esLinea(juegoEnlazado.tablero.getFicha(this.lastPointBot)) && juegoEnlazado.tablero.getFicha(new Point(rows,col)).state == FichaState.EMPTY) {
-//                        this.lastPointBot = new Point(rows, col);
-//                        break;
-//
-//
-//                    }
-//                }
-//            }
-//            return this.lastPointBot;
-//        }
-
+        
     }
     public Point chooseOwnFichaBot(){
         for(Point fichaBot : this.juegoEnlazado.getPlayerTurn().fichasJugador){
@@ -114,4 +94,20 @@ public class JugadorMaquina extends Jugador {
         }
         return casillasDisponibles;
     }
+    public boolean checkPotentiallyTryEnemy(){
+        return false;
+    }
+    public Point cancellPotentiallyTryEnemy(){
+        return null;
+    }
 }
+
+
+
+
+
+
+
+
+
+
