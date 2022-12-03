@@ -95,7 +95,11 @@ abstract public class Juego {
         System.out.println(jugadores[0].juegoEnlazado.currentGameState.toString());
 //            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
         if(currentGameState != GameState.SELECT_CAPTURE_RED && currentGameState != GameState.SELECT_CAPTURE_BLUE){
+<<<<<<< Updated upstream
             jugadores[0].juegoEnlazado.turn =  (jugadores[0].juegoEnlazado.turn=='X')? 'O' : 'X';
+=======
+            turn =  (turn=='X')? 'O' : 'X';
+>>>>>>> Stashed changes
         }
 
     }
@@ -172,7 +176,10 @@ abstract public class Juego {
         }
         if(jugadores[1].getNumFichas()==0){
             jugadores[0].juegoEnlazado.currentGameState = GameState.MOVING;
+<<<<<<< Updated upstream
             jugadores[0].juegoEnlazado.turn = (jugadores[0].juegoEnlazado.turn == 'X')? 'O': 'X';
+=======
+>>>>>>> Stashed changes
         }
         else{
             jugadores[0].juegoEnlazado.currentGameState = GameState.DEPLOY;
