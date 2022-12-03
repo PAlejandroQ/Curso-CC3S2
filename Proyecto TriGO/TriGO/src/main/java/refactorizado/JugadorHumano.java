@@ -20,6 +20,7 @@ public class JugadorHumano extends Jugador {
             juegoEnlazado.capturarPieza(juegoEnlazado.jugadores[1], new Point(row, column));
 
         }
+
         juegoEnlazado = juegoEnlazado.selfCast();
     }
 }
