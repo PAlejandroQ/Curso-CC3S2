@@ -60,6 +60,7 @@ abstract public class Juego {
     private void checkStillMil(ArrayList<ArrayList<Point>> listaConjuntos) {
         System.out.println("Antes:");
         boolean deboBorrar = false;
+        int indexBorrar=-1,index=0;
         if (listaConjuntos.size() > 0) {
             Iterator<ArrayList<Point>> itr = listaConjuntos.iterator();
             while (itr.hasNext()) {
@@ -71,17 +72,17 @@ abstract public class Juego {
                     if (this.tablero.getFicha(i).state == FichaState.EMPTY ) {
                         System.out.print("Borra Uno");
                         deboBorrar = true;
-
+                        indexBorrar = index;
 
                     }
 //                break;
                 }
-
+                index++;
 //            break;
             }
         }
 
-        if(deboBorrar) listaConjuntos.clear();
+        if(deboBorrar) listaConjuntos.remove(indexBorrar);
         System.out.println("Fin While:\n ");
 
 //        for(ArrayList<Point> mill : lastMill){

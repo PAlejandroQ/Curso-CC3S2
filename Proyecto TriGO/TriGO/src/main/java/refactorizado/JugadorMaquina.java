@@ -47,13 +47,22 @@ public class JugadorMaquina extends Jugador {
     }
 
     public Point deployingBot(){
+        int maxIter=0;
         while(true){
-            int randRow = ThreadLocalRandom.current().nextInt( juegoEnlazado.tablero.getRows()-1);
-            int randCol = ThreadLocalRandom.current().nextInt( juegoEnlazado.tablero.getColumns()-1);
+            int randRow = ThreadLocalRandom.current().nextInt( 50)%juegoEnlazado.tablero.getColumns();
+            int randCol = ThreadLocalRandom.current().nextInt( 50)%juegoEnlazado.tablero.getColumns();
             if (juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).esLinea(juegoEnlazado.tablero.getFicha(this.lastPointBot)) && juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).state == FichaState.EMPTY){
                 this.lastPointBot = new Point(randRow,randCol);
                 break;
             }
+            maxIter++;
+            if(maxIter>50) {
+                if (juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).state == FichaState.EMPTY || juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).state == FichaState.SHINY){
+                    this.lastPointBot = new Point(randRow,randCol);
+                    break;
+                }
+            }
+
         }
         return this.lastPointBot;
 
@@ -102,12 +111,19 @@ public class JugadorMaquina extends Jugador {
         /*
         * Crear array de shinis, y que elija aleatoriamente un shiny para
         * */
-        ArrayList<Point> posicionesPosibles = this.casillasDisponiblesBot(piezaMoverBot);
+        if(!this.IS_FLYING){
+            ArrayList<Point> posicionesPosibles = this.casillasDisponiblesBot(piezaMoverBot);
 //        int randNeighbor = ThreadLocalRandom.current().nextInt(posicionesPosibles.size()-1);
-        return posicionesPosibles.get(0);
+            this.lastPointBot = posicionesPosibles.get(0);
+            return this.lastPointBot;
+        }else{
+            return this.deployingBot();
+        }
+
     }
     public ArrayList<Point> casillasDisponiblesBot(Point piezaPropia){
         ArrayList<Point> casillasDisponibles = new ArrayList<Point>();
+
         for(Point vecino : this.juegoEnlazado.tablero.getFicha(piezaPropia).vecinos){
             if(this.juegoEnlazado.tablero.getFicha(vecino).state !=FichaState.RED && this.juegoEnlazado.tablero.getFicha(vecino).state !=FichaState.BLUE) // o una condicion por complemento
                 casillasDisponibles.add(vecino);

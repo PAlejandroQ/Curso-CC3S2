@@ -8,7 +8,7 @@ abstract public class Jugador {
     private int FICHAS;
     public ArrayList<Point> fichasJugador;
     public Juego juegoEnlazado;
-    private boolean IS_FLYING = false;
+    protected boolean IS_FLYING = false;
 
     public enum State {
         SELECTING, MOVING
