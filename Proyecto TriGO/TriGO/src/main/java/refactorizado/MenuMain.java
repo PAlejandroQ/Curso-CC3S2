@@ -18,6 +18,7 @@ public class MenuMain extends JFrame{
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         humanoButton.setFocusPainted(false);
+        machineButton.setFocusPainted(false);
 
         setContentPane(panelMain);
 

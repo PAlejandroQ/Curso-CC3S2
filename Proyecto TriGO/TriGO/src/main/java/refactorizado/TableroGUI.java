@@ -2,8 +2,10 @@ package refactorizado;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 
@@ -14,18 +16,18 @@ public class TableroGUI extends JFrame {
     public static final int GRID_WIDTH = 8;
     public static final int GRID_WIDHT_HALF = GRID_WIDTH / 2;
 
-    public static final int CELL_PADDING = CELL_SIZE / 3;  // iba 6e
+    public static final int CELL_PADDING = CELL_SIZE / 3;
     public static final int SYMBOL_SIZE = CELL_SIZE - CELL_PADDING * 2;
     public static final int SYMBOL_STROKE_WIDTH = 8;
 
     private GameBoardCanvas gameBoardCanvas;
     private JLabel gameStatusBar;
+    private JButton restartButton;
+    private JButton returnMenuButton;
+
 
     public Juego game;
 
-//    public TableroGUI() {
-//        this(new JuegoFase1(7,7));
-//    }
 
     public TableroGUI(Juego game) {
         this.game = game;
@@ -43,11 +45,47 @@ public class TableroGUI extends JFrame {
         gameStatusBar = new JLabel("  ");
         gameStatusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 15));
         gameStatusBar.setBorder(BorderFactory.createEmptyBorder(2, 5, 4, 5));
+        JLabel tittle = new JLabel(" TriGO! ");
+        tittle.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 15));
+        tittle.setBorder(BorderFactory.createEmptyBorder(2, 130, 4, 5));
+
+        restartButton = new JButton("Restart");
+        returnMenuButton = new JButton("Back to Menu");
+        restartButton.setFocusPainted(false);
+        returnMenuButton.setFocusPainted(false);
+
+        Container container = new Container();
+        container.setLayout(new BorderLayout());
+        container.add(restartButton, BorderLayout.EAST);
+        container.add(returnMenuButton, BorderLayout.WEST);
+        container.add(tittle, BorderLayout.CENTER);
+
         Container contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
         contentPane.add(gameBoardCanvas, BorderLayout.CENTER);
         contentPane.add(gameStatusBar, BorderLayout.PAGE_END);
+        contentPane.add(container, BorderLayout.NORTH);
+
+        restartButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new TableroGUI(game.resetGame());
+                dispose();
+            }
+        });
+
+        returnMenuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MenuMain();
+                dispose();
+            }
+        });
+
     }
+
+
+
 
     class GameBoardCanvas extends JPanel {
 
