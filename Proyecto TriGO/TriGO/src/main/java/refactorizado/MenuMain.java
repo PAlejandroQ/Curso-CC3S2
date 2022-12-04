@@ -9,6 +9,7 @@ public class MenuMain extends JFrame{
     private JPanel panelMain;
     private JButton humanoButton;
     private JButton machineButton;
+    private JButton howToPlayButton;
 
     public MenuMain(){
         super("TriGO");
@@ -37,7 +38,21 @@ public class MenuMain extends JFrame{
                 menu.dispose();
             }
         });
+    JFrame how = this;
+        howToPlayButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                JOptionPane.showMessageDialog(how,"Coloca tus piezas en el tablero, forma un tres en raya \ny captura tantas piezas de tu rival como puedas. \n" +
+                        "\nCuida tus movimientos y lleva tus piezas a la victoria \ndejando al oponente con solo dos piezas o incluso \nhasta sin movimientos \n" +
+                        "\n ¡Recuerda que cada movimiento \n cuenta en tu camino hacia la victoria!\n\n",
+                        "How To Play", JOptionPane.INFORMATION_MESSAGE );
+
+            }
+        });
+
     }
+
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
