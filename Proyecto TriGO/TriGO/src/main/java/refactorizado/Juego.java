@@ -46,17 +46,6 @@ abstract public class Juego {
         return false;
     }
 
-    public Point findTriCoordenada() {
-        for (int row = 0; row < this.tablero.getRows(); ++row) {
-            for (int col = 0; col < this.tablero.getColumns(); ++col) {
-                if (isTri(new Point(row, col))) {
-                    return new Point(row,col);
-                }
-            }
-        }
-        return null;
-    }
-
     private void checkStillMil(ArrayList<ArrayList<Point>> listaConjuntos) {
         System.out.println("Antes:");
         boolean deboBorrar = false;
@@ -131,9 +120,6 @@ abstract public class Juego {
                         this.lastMill.add(newMill);
                         return true;
                     }
-//                    else{
-//                        this.lastMill.clear();
-//                    }
                 }
             }
         }
@@ -162,9 +148,6 @@ abstract public class Juego {
         return jugadores[0].juegoEnlazado.turn;
     }
 
-    public void desplegarFicha(int row, int column) {
-    }
-
 
     public void capturarPieza(Jugador atacado, Point posicionCapturada) {
         if(atacado.fichasJugador.contains(posicionCapturada)) {
@@ -180,10 +163,6 @@ abstract public class Juego {
         }
 
         System.out.println("Pieza capturada " + jugadores[0].juegoEnlazado.currentGameState.toString());
-    }
-
-
-    public void updateGameState(int x, int y) {
     }
 
     public Juego resetGame() {
