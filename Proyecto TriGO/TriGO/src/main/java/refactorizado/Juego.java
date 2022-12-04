@@ -210,4 +210,7 @@ abstract public class Juego {
     abstract void realizarMovimiento(int row, int col);
 
     abstract Juego selfCast();
+    public void winForNotBeingAbleToMove(){
+        this.currentGameState = (jugadores[0].juegoEnlazado.turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
+    }
 }

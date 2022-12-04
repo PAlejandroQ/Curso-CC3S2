@@ -65,27 +65,6 @@ public class JugadorMaquina extends Jugador {
 
         }
         return this.lastPointBot;
-
-
-//        if(lastPointBot == null) {
-//            int randRow = ThreadLocalRandom.current().nextInt(0, juegoEnlazado.tablero.getRows()-1);
-//            int randCol = ThreadLocalRandom.current().nextInt(0, juegoEnlazado.tablero.getColumns()-1);
-//            this.lastPointBot = new Point(randRow,randCol);
-//            return this.lastPointBot;
-//        }else{
-//            for (int rows = 0; rows < juegoEnlazado.tablero.getRows(); rows++) {
-//                for (int col = 0; col < juegoEnlazado.tablero.getColumns(); col++) {
-//                    if (juegoEnlazado.tablero.getFicha(new Point(rows,col)).esLinea(juegoEnlazado.tablero.getFicha(this.lastPointBot)) && juegoEnlazado.tablero.getFicha(new Point(rows,col)).state == FichaState.EMPTY) {
-//                        this.lastPointBot = new Point(rows, col);
-//                        break;
-//
-//
-//                    }
-//                }
-//            }
-//            return this.lastPointBot;
-//        }
-
     }
     public Point chooseOwnFichaBot(){
         for(Point fichaBot : this.juegoEnlazado.getPlayerTurn().fichasJugador){
@@ -94,9 +73,12 @@ public class JugadorMaquina extends Jugador {
                 this.posicionesMovibles.add(fichaBot);
             }
         }
-
+        if(this.posicionesMovibles.isEmpty()) {
+            this.juegoEnlazado.winForNotBeingAbleToMove();
+            return this.lastCaptureBot;
+        }
         Random randomGen = new Random();
-        int index = randomGen.nextInt(this.posicionesMovibles.size()-1);
+        int index = randomGen.nextInt(50)%this.posicionesMovibles.size();
         this.lastCaptureBot=this.posicionesMovibles.get(index);
         this.posicionesMovibles.clear();
         return this.lastCaptureBot;
