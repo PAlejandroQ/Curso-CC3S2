@@ -18,27 +18,6 @@ public class JuegoFase2 extends Juego{
 
     }
 
-/*
-    public void eventClick(int row, int column){
-        super.eventClick(row,column);
-//        if (this.getGameState() == GameState.DEPLOY) {
-//            this.desplegarFicha(row, column);
-//        }
-        if(this.getGameState()== GameState.MOVING){
-            this.moverFicha(row, column);
-        }
-//        else if(this.getGameState()== GameState.SELECT_CAPTURE_RED){
-//            this.capturarPieza(this.jugadores.get(1), new Point(row,column));
-//        }
-//        else if(this.getGameState()== GameState.SELECT_CAPTURE_BLUE){
-//            this.capturarPieza(this.jugadores.get(0),new Point(row,column) );
-//        }
-//        else {
-//            this.resetGame();
-//        }
-    }
-    */
-
     public void clearShinys(){
         for (int row = 0; row < this.tablero.getRows(); ++row) {
             for (int col = 0; col < this.tablero.getColumns(); ++col) {

@@ -50,9 +50,4 @@ class DespliegueAzulTest {
         assertEquals("", game.getTurn(), 'X');
     }
 
-    @Test
-    void asfafa(){
-        Ficha ficha= new Ficha(-1,new Point(1,1));
-        assertEquals(-1,ficha.color);
-    }
 }

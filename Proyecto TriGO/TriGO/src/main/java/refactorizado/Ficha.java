@@ -22,10 +22,6 @@ public class Ficha {
         this.state = FichaState.EMPTY;
     }
 
-    public void changeStateFicha(FichaState newState) {
-        this.state = newState;
-    }
-
     public boolean esLinea(Ficha finTri) {
         double distancia = Math.sqrt(Math.pow((finTri.coordenada.x-this.coordenada.x),2)+Math.pow((finTri.coordenada.y-this.coordenada.y),2));
         return distancia % 1 == 0;

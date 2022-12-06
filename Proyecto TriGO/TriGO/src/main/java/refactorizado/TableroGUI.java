@@ -95,11 +95,11 @@ public class TableroGUI extends JFrame {
                     System.out.println("\nTurno: "+game.jugadores[0].juegoEnlazado.turn);
                     int rowSelected = e.getY() / CELL_SIZE;
                     int colSelected = e.getX() / CELL_SIZE;
-                    game.getPlayerTurn().eventClick(rowSelected,colSelected);
+                    game.getPlayerTurn().eventClick(rowSelected, colSelected);
 
                     repaint();
-                    if(game.jugadores[0].juegoEnlazado.getGameState() == GameState.BLUE_WON || game.jugadores[0].juegoEnlazado.getGameState()==GameState.RED_WON){
-                        game.resetGame();
+                    if(game.jugadores[0].juegoEnlazado.getGameState() == GameState.BLUE_WON || game.jugadores[0].juegoEnlazado.getGameState() == GameState.RED_WON){
+                        new MenuMain();
                     }
 
                 }
@@ -117,10 +117,10 @@ public class TableroGUI extends JFrame {
 
         private void drawGridLines(Graphics  g) {
             g.setColor(Color.LIGHT_GRAY);
-            int rowN=-1,colN=-1;
+            int rowN = -1, colN = -1;
             for (int row = 1; row <= game.tablero.getRows(); ++row) {
-                if(row< game.tablero.getRows() /2+1) rowN++;
-                else if (row> game.tablero.getRows() /2+1) rowN--;
+                if(row< game.tablero.getRows() / 2 + 1) rowN++;
+                else if (row> game.tablero.getRows() / 2 + 1) rowN--;
                 else {
                     rowN++;continue;
                 }
