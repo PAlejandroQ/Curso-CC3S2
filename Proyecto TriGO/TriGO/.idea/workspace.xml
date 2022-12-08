@@ -10,28 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16e15c0a-380c-4514-a75a-3ae029ce546e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/refactorizado/JuegoHumanHumanTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/refactorizado/JuegoMachineHumanTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InformesIndividuales/LezamaVerasteguiDagmar.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InformesIndividuales/QuispeOlaecheaPablo.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InformesIndividuales/TelloLeonJose.pdf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/refactorizado/HumanVsHumanMovingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorHumano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorHumano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorMaquina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorMaquina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/MenuMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/MenuMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueAzulTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/DespliegueAzulTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Ficha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Ficha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/refactorizado/JuegoHumanHumanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/refactorizado/HumanVsHumanDeployTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/refactorizado/JuegoMachineHumanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/refactorizado/MachineVsHumanDeployTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Juego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/JuegoFase2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/TableroGUI$GameBoardCanvas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/TableroGUI$GameBoardCanvas$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/DespliegueAzulTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/funcionalidad/DespliegueAzulTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Jugador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JugadorMaquina.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/JugadorMaquina.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/MenuMain$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/MenuMain$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/MenuMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/MenuMain.class" afterDir="false" />
     </list>
-    <list id="df1b3383-f8c9-48c6-a5a1-c854cea64a8d" name="Changes by Jose Tello" comment="" />
+    <list id="3651eade-3313-49ab-abb5-ecc03b20efa8" name="Changes by Jose Tello" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
+    </list>
     <list id="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" name="Changes by Nicole" comment="" />
-    <list id="92dbb7e0-242b-45c5-9e46-0f150898d2bb" name="Changes by ppaab" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +50,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="10" changelist="3651eade-3313-49ab-abb5-ecc03b20efa8" />
+        <range start1="25" end1="26" start2="29" end2="30" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
+        <range start1="30" end1="31" start2="34" end2="35" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -110,7 +120,7 @@
       <command value="mvn " />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JuegoMachineHumanTest">
+  <component name="RunManager" selected="Application.MenuMain">
     <configuration name="Jugador" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.funcionalidad.Jugador" />
       <module name="TriGO - IntelliJ" />
@@ -137,39 +147,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JuegoHumanHumanTest$MillFormationsTest.millAzulTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TriGO" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="refactorizado.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="refactorizado.JuegoHumanHumanTest" />
-      <option name="MAIN_CLASS_NAME" value="refactorizado.JuegoHumanHumanTest$MillFormationsTest" />
-      <option name="METHOD_NAME" value="millAzulTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JuegoHumanHumanTest$MillFormationsTest.millRojoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TriGO" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="refactorizado.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="refactorizado.JuegoHumanHumanTest" />
-      <option name="MAIN_CLASS_NAME" value="refactorizado.JuegoHumanHumanTest$MillFormationsTest" />
-      <option name="METHOD_NAME" value="millRojoTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JuegoHumanHumanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HumanVsHumanDeployTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -178,13 +156,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="refactorizado" />
-      <option name="MAIN_CLASS_NAME" value="refactorizado.JuegoHumanHumanTest" />
+      <option name="MAIN_CLASS_NAME" value="refactorizado.HumanVsHumanDeployTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JuegoMachineHumanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HumanVsHumanMovingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TriGO" />
       <extension name="coverage">
         <pattern>
@@ -193,19 +171,49 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="refactorizado" />
-      <option name="MAIN_CLASS_NAME" value="refactorizado.JuegoMachineHumanTest" />
+      <option name="MAIN_CLASS_NAME" value="refactorizado.HumanVsHumanMovingTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HumanVsHumanMovingTest.JuegoFase2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TriGO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="refactorizado.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="refactorizado" />
+      <option name="MAIN_CLASS_NAME" value="refactorizado.HumanVsHumanMovingTest" />
+      <option name="METHOD_NAME" value="JuegoFase2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="refactorizado in TriGO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TriGO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="refactorizado.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="refactorizado" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JuegoMachineHumanTest" />
         <item itemvalue="Application.MenuMain" />
-        <item itemvalue="JUnit.JuegoHumanHumanTest" />
-        <item itemvalue="JUnit.JuegoHumanHumanTest$MillFormationsTest.millRojoTest" />
-        <item itemvalue="JUnit.JuegoHumanHumanTest$MillFormationsTest.millAzulTest" />
+        <item itemvalue="JUnit.HumanVsHumanMovingTest" />
+        <item itemvalue="JUnit.HumanVsHumanMovingTest.JuegoFase2" />
+        <item itemvalue="JUnit.HumanVsHumanDeployTest" />
+        <item itemvalue="JUnit.refactorizado in TriGO" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +256,8 @@
       <workItem from="1670100209670" duration="1120000" />
       <workItem from="1670172881139" duration="4328000" />
       <workItem from="1670256379402" duration="2664000" />
-      <workItem from="1670297500599" duration="19045000" />
+      <workItem from="1670297500599" duration="36950000" />
+      <workItem from="1670428629405" duration="6605000" />
     </task>
     <servers />
   </component>
@@ -325,11 +334,20 @@
     <SUITE FILE_PATH="coverage/TriGO$JuegoTest_testNonOcuppied.ic" NAME="JuegoTest.testNonOcuppied Coverage Results" MODIFIED="1667175704030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.funcionalidad.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TriGO$JuegoMachineHumanTest.ic" NAME="JuegoMachineHumanTest Coverage Results" MODIFIED="1670316233727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TriGO$org_funcionalidad_in_TriGO.ic" NAME="org.funcionalidad in TriGO Coverage Results" MODIFIED="1670428956219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.funcionalidad.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TriGO$JuegoMachineHumanTest.ic" NAME="JuegoMachineHumanTest Coverage Results" MODIFIED="1670343844267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>refactorizado.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TriGO$refactorizado_in_TriGO.ic" NAME="refactorizado in TriGO Coverage Results" MODIFIED="1670428999613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>refactorizado.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TriGO$TableroGUI.ic" NAME="TableroGUI Coverage Results" MODIFIED="1666203656447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.funcionalidad.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TriGO$JuegoFase2Test.ic" NAME="JuegoFase2Test Coverage Results" MODIFIED="1670396788492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>refactorizado.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TriGO$JuegoHumanHumanTest.ic" NAME="JuegoHumanHumanTest Coverage Results" MODIFIED="1670315290003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>refactorizado.*</FILTER>

@@ -154,7 +154,7 @@ public class TableroGUI extends JFrame {
 
                     if((game.tablero.getFicha(new Point(row,col)).state == FichaState.EMPTY || game.tablero.getFicha(new Point(row,col)).state == FichaState.SHINY) && game.tablero.getFicha(new Point(row,col)).state!=FichaState.DISABLE){
                         g2d.setColor(Color.LIGHT_GRAY);
-                        //g2d.drawOval(x1+CELL_PADDING/4, y1+CELL_PADDING/4, SYMBOL_SIZE/2, SYMBOL_SIZE/2);
+
                         g2d.fillOval(x1, y1, SYMBOL_SIZE, SYMBOL_SIZE);
                     }
 

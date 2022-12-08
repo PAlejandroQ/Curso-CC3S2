@@ -32,9 +32,9 @@ public class JuegoFase2 extends Juego{
         Ficha actual = this.tablero.getFicha(new Point(row, col));
         if(actual.state == jugador.getColor()){
             if(jugador.isFlying()){
-                for( int x=0; x<this.tablero.getRows(); ++x){
-                    for(int y=0; y<this.tablero.getColumns(); ++y) {
-                        if(this.tablero.getFicha(new Point(x,y)).state== FichaState.EMPTY && this.tablero.piezasTablero[x][y].state!= FichaState.DISABLE){
+                for( int x = 0; x < this.tablero.getRows(); ++x){
+                    for(int y = 0; y < this.tablero.getColumns(); ++y) {
+                        if(this.tablero.getFicha(new Point(x, y)).state == FichaState.EMPTY && this.tablero.piezasTablero[x][y].state != FichaState.DISABLE){
                             this.tablero.listOfShinys.add(new Point(x,y));
                             this.tablero.piezasTablero[x][y].state = FichaState.SHINY;
                         }
@@ -58,11 +58,11 @@ public class JuegoFase2 extends Juego{
     public void seleccionarDestino(Jugador jugador, int row, int col){
         if(this.tablero.piezasTablero[row][col].state == FichaState.SHINY){
             this.tablero.piezasTablero[row][col].state = jugador.getColor();
-            //
+
             this.tablero.piezasTablero[lastPoint.x][lastPoint.y].state = FichaState.EMPTY;
             getPlayerTurn().reducirNumFichasEnJuego(lastPoint);
             getPlayerTurn().aumentarNumFichasEnJuego(new Point(row, col));
-            //
+
             jugador.setSelecting();
             System.out.println("Seleccionado destino");
             clearShinys();
@@ -77,7 +77,7 @@ public class JuegoFase2 extends Juego{
 
         if(jugador.getState() == Jugador.State.SELECTING){
             seleccionarInicio(jugador, row, col);
-        } else if (jugador.getState()== Jugador.State.MOVING){
+        } else if (jugador.getState() == Jugador.State.MOVING){
             seleccionarDestino(jugador, row, col);
         }
     }
@@ -93,10 +93,10 @@ public class JuegoFase2 extends Juego{
             this.getPlayerTurn().setFlying();
         }
         System.out.println(currentGameState.toString());
-        if(this.getPlayerTurn().getNumFichasEnJuego()==2){
+        if(this.getPlayerTurn().getNumFichasEnJuego() == 2){
             currentGameState = (jugadores[0].juegoEnlazado.turn == 'X') ? GameState.BLUE_WON : GameState.RED_WON;
         }
-        //System.out.println(getPlayerTurn().getState().toString());
+
         return this;
     }
 

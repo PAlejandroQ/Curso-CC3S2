@@ -4,6 +4,10 @@ package refactorizado;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * Clase que sirve de base para abstraer el concepto de una ficha de juego en el tablero
+ * Constituye las posiciones del tablero y el estado de las mismas
+ */
 public class Ficha {
     public FichaState state;
     public Point coordenada;
@@ -23,12 +27,12 @@ public class Ficha {
     }
 
     public boolean esLinea(Ficha finTri) {
-        double distancia = Math.sqrt(Math.pow((finTri.coordenada.x-this.coordenada.x),2)+Math.pow((finTri.coordenada.y-this.coordenada.y),2));
+        double distancia = Math.sqrt(Math.pow((finTri.coordenada.x - this.coordenada.x),2) + Math.pow((finTri.coordenada.y-this.coordenada.y), 2));
         return distancia % 1 == 0;
     }
 
     public boolean esEquipo(Ficha fActual) {
-        if(fActual.state == this.state && fActual.state!= FichaState.EMPTY && fActual.state!= FichaState.DISABLE) return true;
+        if(fActual.state == this.state && fActual.state != FichaState.EMPTY && fActual.state != FichaState.DISABLE) return true;
         else return false;
     }
 

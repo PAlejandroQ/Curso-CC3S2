@@ -9,7 +9,7 @@ public class JugadorHumano extends Jugador {
 
     }
     public void eventClick(int row, int column) {
-        if(juegoEnlazado.getGameState()!= GameState.SELECT_CAPTURE_RED && juegoEnlazado.getGameState() != GameState.SELECT_CAPTURE_BLUE){
+        if(juegoEnlazado.getGameState() != GameState.SELECT_CAPTURE_RED && juegoEnlazado.getGameState() != GameState.SELECT_CAPTURE_BLUE){
             juegoEnlazado.realizarMovimiento(row, column);
         }
         else if(juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_BLUE){

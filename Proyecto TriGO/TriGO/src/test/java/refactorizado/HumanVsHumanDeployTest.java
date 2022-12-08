@@ -1,15 +1,11 @@
 package refactorizado;
 
-import org.funcionalidad.Juego;
-import org.junit.Assert;
 import org.junit.jupiter.api.*;
-
-import java.awt.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
-class JuegoHumanHumanTest {
+class HumanVsHumanDeployTest {
     private JuegoFase1 game;
 
     @BeforeEach

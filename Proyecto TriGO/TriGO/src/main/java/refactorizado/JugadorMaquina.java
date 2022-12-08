@@ -21,7 +21,7 @@ public class JugadorMaquina extends Jugador {
     * Metodo que envia el flujo de datos*/
     public void eventClick(int row, int column) {
 
-        if(this.juegoEnlazado.getGameState()!= GameState.SELECT_CAPTURE_RED && this.juegoEnlazado.getGameState() != GameState.SELECT_CAPTURE_BLUE) {
+        if(this.juegoEnlazado.getGameState() != GameState.SELECT_CAPTURE_RED && this.juegoEnlazado.getGameState() != GameState.SELECT_CAPTURE_BLUE) {
             if(this.juegoEnlazado instanceof  JuegoFase2){
                 respuesta=chooseOwnFichaBot();
                 this.juegoEnlazado.realizarMovimiento((int)respuesta.getX(), (int)respuesta.getY());
@@ -34,29 +34,26 @@ public class JugadorMaquina extends Jugador {
         }else if(juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_BLUE){
             respuesta = this.capturingBot();
             juegoEnlazado.capturarPieza(juegoEnlazado.jugadores[0],new Point((int)respuesta.getX(), (int)respuesta.getY()) );
-            //juegoEnlazado.currentGameState = GameState.MOVING;
-            //juegoEnlazado.changeTurn();
+
         } else if(juegoEnlazado.getGameState() == GameState.SELECT_CAPTURE_RED){
             respuesta = this.capturingBot();
             juegoEnlazado.capturarPieza(juegoEnlazado.jugadores[1], new Point((int)respuesta.getX(), (int)respuesta.getY()));
-            //juegoEnlazado.currentGameState = GameState.MOVING;
-            //juegoEnlazado.changeTurn();
+
         }
-//        System.out.println(respuesta.x + "- "+ respuesta.y);
             juegoEnlazado = juegoEnlazado.selfCast();
     }
 
     public Point deployingBot(){
         int maxIter=0;
         while(true){
-            int randRow = ThreadLocalRandom.current().nextInt( 50)%juegoEnlazado.tablero.getColumns();
-            int randCol = ThreadLocalRandom.current().nextInt( 50)%juegoEnlazado.tablero.getColumns();
+            int randRow = ThreadLocalRandom.current().nextInt( 50) % juegoEnlazado.tablero.getColumns();
+            int randCol = ThreadLocalRandom.current().nextInt( 50) % juegoEnlazado.tablero.getColumns();
             if (juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).esLinea(juegoEnlazado.tablero.getFicha(this.lastPointBot)) && juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).state == FichaState.EMPTY){
                 this.lastPointBot = new Point(randRow,randCol);
                 break;
             }
             maxIter++;
-            if(maxIter>50) {
+            if(maxIter > 50) {
                 if (juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).state == FichaState.EMPTY || juegoEnlazado.tablero.getFicha(new Point(randRow,randCol)).state == FichaState.SHINY){
                     this.lastPointBot = new Point(randRow,randCol);
                     break;
@@ -78,8 +75,8 @@ public class JugadorMaquina extends Jugador {
             return this.lastCaptureBot;
         }
         Random randomGen = new Random();
-        int index = randomGen.nextInt(50)%this.posicionesMovibles.size();
-        this.lastCaptureBot=this.posicionesMovibles.get(index);
+        int index = randomGen.nextInt(50) % this.posicionesMovibles.size();
+        this.lastCaptureBot = this.posicionesMovibles.get(index);
         this.posicionesMovibles.clear();
         return this.lastCaptureBot;
     }
@@ -91,11 +88,10 @@ public class JugadorMaquina extends Jugador {
     }
     public Point selectDestinoBot(Point piezaMoverBot){
         /*
-        * Crear array de shinis, y que elija aleatoriamente un shiny para
+        * Crear array de shynis, y que elija aleatoriamente un shiny para
         * */
         if(!this.IS_FLYING){
             ArrayList<Point> posicionesPosibles = this.casillasDisponiblesBot(piezaMoverBot);
-//        int randNeighbor = ThreadLocalRandom.current().nextInt(posicionesPosibles.size()-1);
             this.lastPointBot = posicionesPosibles.get(0);
             return this.lastPointBot;
         }else{
@@ -107,7 +103,7 @@ public class JugadorMaquina extends Jugador {
         ArrayList<Point> casillasDisponibles = new ArrayList<Point>();
 
         for(Point vecino : this.juegoEnlazado.tablero.getFicha(piezaPropia).vecinos){
-            if(this.juegoEnlazado.tablero.getFicha(vecino).state !=FichaState.RED && this.juegoEnlazado.tablero.getFicha(vecino).state !=FichaState.BLUE) // o una condicion por complemento
+            if(this.juegoEnlazado.tablero.getFicha(vecino).state != FichaState.RED && this.juegoEnlazado.tablero.getFicha(vecino).state != FichaState.BLUE) // o una condicion por complemento
                 casillasDisponibles.add(vecino);
         }
         return casillasDisponibles;

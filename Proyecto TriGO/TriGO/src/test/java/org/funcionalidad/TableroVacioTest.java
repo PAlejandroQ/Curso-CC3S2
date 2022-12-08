@@ -26,7 +26,7 @@ public class TableroVacioTest {
     @Test
     @DisplayName("Tablero vacio")
     public void testNewJuego() {
-        int column=0;
+        int column = 0;
         for (int row = 0; row<7; row++) {
             if(row==0 || row==6){
                 for (column = 0; column<7; column+=3) {

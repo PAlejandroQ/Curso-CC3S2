@@ -28,7 +28,6 @@ abstract public class Jugador {
 
     public Jugador(int indexColor, Juego juegoEnlazado) {
         this.juegoEnlazado = juegoEnlazado;
-//        this.FICHAS_LEFT = NUM_FICHAS;
         this.FICHAS = Juego.NUM_FICHAS;
         this.fichasJugador = new ArrayList<Point>();
         this.color = (indexColor == 1)? FichaState.BLUE : FichaState.RED;

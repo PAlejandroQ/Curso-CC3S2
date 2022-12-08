@@ -33,10 +33,10 @@ abstract public class Juego {
         jugadores[1] = (isMachine) ? new JugadorMaquina(2, this) : new JugadorHumano(2, this);
     }
 
-    public boolean findTri() {
+    public boolean findMill() {
         for (int row = 0; row < this.tablero.getRows(); ++row) {
             for (int col = 0; col < this.tablero.getColumns(); ++col) {
-                if (isTri(new Point(row, col))) {
+                if (isMill(new Point(row, col))) {
                     System.out.println("MILL");
                     return true;
                 }
@@ -64,10 +64,8 @@ abstract public class Juego {
                         indexBorrar = index;
 
                     }
-//                break;
                 }
                 index++;
-//            break;
             }
         }
 
@@ -80,7 +78,6 @@ abstract public class Juego {
     public void changeTurn() {
         this.isEliminar();
         System.out.println(jugadores[0].juegoEnlazado.currentGameState.toString());
-//            if(!this.checkStillMil(this.lastMill)) this.lastMill.clear();
         if(currentGameState != GameState.SELECT_CAPTURE_RED && currentGameState != GameState.SELECT_CAPTURE_BLUE){
             jugadores[0].juegoEnlazado.turn = (this.getTurn() == 'X')? 'O' : 'X';
         }
@@ -99,7 +96,7 @@ abstract public class Juego {
         return false;
     }
 
-    public boolean isTri(Point esquina) {
+    public boolean isMill(Point esquina) {
 
         Ficha lastMove = this.tablero.getFicha(esquina);
         for (Point intermedioP : lastMove.vecinos) {
@@ -167,7 +164,7 @@ abstract public class Juego {
     }
     public void isEliminar(){
         this.checkStillMil(this.lastMill);
-        if (this.findTri()) {
+        if (this.findMill()) {
             GameState temp = currentGameState;
             System.out.println("ColorMill: " + this.tablero.getFicha(lastMill.get(0).iterator().next()).state.toString());
             System.out.println("ColorJugador: "+getPlayerTurn().getColor().toString());
