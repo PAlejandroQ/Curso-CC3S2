@@ -28,4 +28,4 @@ https://drive.google.com/file/d/15ux_KMTswKYhdZou4537euvLNInPUpdn/view?usp=shari
 
 El video del Sprint #3, también puede ser accedido mediante un click a lo siguiente:
 
-[![Video del Sprint 3](https://i.imgur.com/djdkELJ.png)](https://drive.google.com/file/d/15ux_KMTswKYhdZou4537euvLNInPUpdn/view?usp=sharing)
+[![Video del Sprint 3](https://imgur.com/P3CLNOO.png)](https://drive.google.com/file/d/15ux_KMTswKYhdZou4537euvLNInPUpdn/view?usp=sharing)
