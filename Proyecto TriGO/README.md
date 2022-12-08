@@ -11,7 +11,7 @@ https://docs.google.com/document/d/1JCenXZf7J7nStB9DaYAXkKAPHTzVpZjVzahx3RSI8m8/
 * Link de Documento Sprint #2:
 https://docs.google.com/document/d/14u3Kvpu0kKFAX7IKsZF0FJCRWzaFay_A/edit?usp=sharing&ouid=111989491552785420126&rtpof=true&sd=true
 
-*Link de Documento Sprint #3:
+* Link de Documento Sprint #3:
 https://docs.google.com/document/d/1yUgGk6AdBBBf9l02XH8U1_beEPXZwGv9/edit?usp=sharing&ouid=111989491552785420126&rtpof=true&sd=true
 
 * Link del Trello del proyecto:
