@@ -9,29 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16e15c0a-380c-4514-a75a-3ae029ce546e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/refactorizado/HumanVsHumanMovingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JuegoFase2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorHumano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorHumano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorMaquina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/JugadorMaquina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/MenuMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/MenuMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/TableroGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/funcionalidad/TableroVacioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/refactorizado/JuegoHumanHumanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/refactorizado/HumanVsHumanDeployTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/refactorizado/JuegoMachineHumanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/refactorizado/MachineVsHumanDeployTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Juego.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Juego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/Jugador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/JugadorMaquina.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/JugadorMaquina.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/MenuMain$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/MenuMain$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refactorizado/MenuMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/refactorizado/MenuMain.class" afterDir="false" />
-    </list>
-    <list id="3651eade-3313-49ab-abb5-ecc03b20efa8" name="Changes by Jose Tello" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java" afterDir="false" />
-    </list>
+    <list default="true" id="16e15c0a-380c-4514-a75a-3ae029ce546e" name="Changes" comment="" />
+    <list id="3651eade-3313-49ab-abb5-ecc03b20efa8" name="Changes by Jose Tello" comment="" />
     <list id="c3bf9d0a-9bdc-4fdd-be0d-ceb496cce65e" name="Changes by Nicole" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/refactorizado/Ficha.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="10" changelist="3651eade-3313-49ab-abb5-ecc03b20efa8" />
-        <range start1="25" end1="26" start2="29" end2="30" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
-        <range start1="30" end1="31" start2="34" end2="35" changelist="16e15c0a-380c-4514-a75a-3ae029ce546e" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -258,6 +228,7 @@
       <workItem from="1670256379402" duration="2664000" />
       <workItem from="1670297500599" duration="36950000" />
       <workItem from="1670428629405" duration="6605000" />
+      <workItem from="1670499520939" duration="610000" />
     </task>
     <servers />
   </component>

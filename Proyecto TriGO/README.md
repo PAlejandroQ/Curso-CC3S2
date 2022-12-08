@@ -11,6 +11,9 @@ https://docs.google.com/document/d/1JCenXZf7J7nStB9DaYAXkKAPHTzVpZjVzahx3RSI8m8/
 * Link de Documento Sprint #2:
 https://docs.google.com/document/d/14u3Kvpu0kKFAX7IKsZF0FJCRWzaFay_A/edit?usp=sharing&ouid=111989491552785420126&rtpof=true&sd=true
 
+*Link de Documento Sprint #3:
+https://docs.google.com/document/d/1yUgGk6AdBBBf9l02XH8U1_beEPXZwGv9/edit?usp=sharing&ouid=111989491552785420126&rtpof=true&sd=true
+
 * Link del Trello del proyecto:
 https://trello.com/invite/b/4wG2ZH3h/4463a62a02440b55b709304bdb892925/trigo
 
@@ -20,6 +23,9 @@ https://drive.google.com/file/d/1DQwT4DDmv0W6xTER_9fxtZP-TnfDZ4Rj/view?usp=shari
 * Video del Sprint #2:
 https://drive.google.com/file/d/1QmP71KT6E-iqNAsD8E--EAw4LrZOxo98/view?usp=sharing
 
-El video del Sprint #2, también puede ser accedido mediante un click a lo siguiente:
+* Video del Sprint #3:
+https://drive.google.com/file/d/15ux_KMTswKYhdZou4537euvLNInPUpdn/view?usp=sharing
 
-[![Video del Sprint 2](https://i.imgur.com/djdkELJ.png)](https://drive.google.com/file/d/1QmP71KT6E-iqNAsD8E--EAw4LrZOxo98/view?usp=sharing)
+El video del Sprint #3, también puede ser accedido mediante un click a lo siguiente:
+
+[![Video del Sprint 3](https://i.imgur.com/djdkELJ.png)](https://drive.google.com/file/d/15ux_KMTswKYhdZou4537euvLNInPUpdn/view?usp=sharing)
