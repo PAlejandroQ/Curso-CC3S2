@@ -10,11 +10,7 @@ https://github.com/PAlejandroQ/calculador
 
   Si, ya que pese a que se necesitara una nueva implementación, esos servicios igual necesitaran de la infraestructura SOA. Esto se ve, en la Orchestration & Integration, el cual usara estos 2 nuevos servicios para trabajar en conjunto con los ya existentes.
 
-* El servicio de evaluación de campañas necesita manejar una gran cantidad de datos.
-
-  
-
-* ¿Sería mejor utilizar la replicación de datos, la integración a nivel de interfaz de usuario o las
+* El servicio de evaluación de campañas necesita manejar una gran cantidad de datos. ¿Sería mejor utilizar la replicación de datos, la integración a nivel de interfaz de usuario o las
   llamadas de servicio para acceder a grandes cantidades de datos?
 
   Al tratarse de grandes cantidades de datos, la replicación no seria una buena opción, ya que se tendria más datos de los necesarios.En la integración a nivel de interfaz se busca ensamblar todo en un framework, pero para acceder a grandes datos, es mejor que cada servicio lo haga de manera independiente. Por ello seria mejor las llamadas de servicios.
@@ -23,8 +19,8 @@ https://github.com/PAlejandroQ/calculador
 
   Suele ofrecer:
 
-  * Integracino de Web Service Provider
-  * Integracino de Web service Consumer
+  * Integracion de Web Service Provider
+  * Integracion de Web service Consumer
   * Notificaciones de eventos.
 
 * ¿Debe el servicio integrarse al portal existente o tener su propia interfaz de usuario?
@@ -33,9 +29,11 @@ https://github.com/PAlejandroQ/calculador
 
 * ¿Cuáles son los argumentos a favor de cada opción?
 
+  Una interfaz permite a dos diferentes sistemas hablar mutuamente, sin sincronizar datos en tiempo real. Por otro lado, una integración hara que funcionaran de manera coordinada como piezas de un reloj.
+
 * ¿Deberías implementar la nueva funcionalidad, el equipo de CRM?
 
-  Si, ya que respeta la estructura seguida de independencia de servicios.
+  Si, ya que respeta la estructura seguida de independencia de servicios, agregandole su interfaz propia para que no necesite estar sincronizado con los demas servicios.
 
 ## Pregunta 2
 
@@ -51,19 +49,29 @@ https://github.com/PAlejandroQ/calculador
 
 2. ¿Utilizarías la replicación de datos en un sistema basado en microservicios?¿En qué áreas?¿Cómo lo implementarías?
 
+   Si lo utilizaría, en la área de las bases de datos a las que los microservicios acceden. De manera que cada servicio tiene una copia parcial de la base de datos principal donde usara únicamente lo que necesita. Puede aplicarse en diversas áreas, agrupando servicios semejantes, para que trabajen con  sus respectivas bases de datos duplicadas parciales
+
 ## Pregunta 3 
 
 ![image-20221222105126064](PC4.assets/image-20221222105126064.png)
 
+Se intento compilarlo directamente desde la terminal en entorno de linux, pero esto causaba multiples errores, por lo que se lo compilo con IntelliJ.
 
+![image-20221227114510653](PC4.assets/image-20221227114510653.png)
 
+Posteriormente se intento ejecutar el comando `vagrant up`  dentro del otro repositorio entregado, pero no identificaba la ruta para la ejecución.
 
+![image-20221227112256826](PC4.assets/image-20221227112256826.png)
+
+Siguiendo varios post semejantes de este problema, se hicieron las configuraciones respectivas en los archivos indicados, pero el problema persistió.
+
+![image-20221227112330722](PC4.assets/image-20221227112330722.png)
 
 ## Pregunta 4
 
 ### Completa las actividades 21 y 22 del curso. Muestra cada uno de los pasos seguidos.
 
-1. Un Hello World de varias etapas:
+1. Un Hello World de varias etapas introductorio.
 
    ![image-20221222092453772](PC4.assets/image-20221222092453772.png)
    
@@ -87,7 +95,7 @@ Ejecución de pipeline con comandos diversos para validar su funcionamiento.
 
 ![image-20221222095122179](PC4.assets/image-20221222095122179.png)
 
-Creación de un pipeline que consulta un repositorio creado específicamente para este propósito.
+Creación de un pipeline que consulta un repositorio creado específicamente para este propósito, cada vez que se haga el Build, el pipeline extraerá el código del repositorio localmente,
 
 ![image-20221222095041894](PC4.assets/image-20221222095041894.png)
 
@@ -95,21 +103,19 @@ Creación de un pipeline que consulta un repositorio creado específicamente par
 
 ### Creación de un proyecto Java Spring Boot![image-20221222100024199](PC4.assets/image-20221222100024199.png)
 
-Generación de la estructura básica del proyecto con gradle.
+Generación de la estructura básica del proyecto con gradle. Se tuvo que experimentar con todas las versiones, 17, 11 y 8 ya que en los pasos anteriores hubieron muchos problemas con la version de java inclusive usando la version 8. Por lo que los pasos posteriores fueron rehechos desde este paso almenos unas 4 veces. Al ver que no funcionaba, se cambio de docker Jenkins con uno con version de java 17.
 
 ![image-20221222100207045](PC4.assets/image-20221222100207045.png)
 
 Clonación del repositorio.
 
-
-
 ![image-20221225184209714](PC4.assets/image-20221225184209714.png)
 
-Compilación del proyecto de manera local.
+Compilación del proyecto de manera local mediante el `./gradlew`
 
 ![image-20221222101403908](PC4.assets/image-20221222101403908.png)
 
-Primer intento con Maiven.
+Primer intento con Maiven, ocurrieron multiples errores, tanto de versiones, como en la ejecución de los demas pasos, por lo que se cambio al uso de gradle.
 
 ![image-20221222101517569](PC4.assets/image-20221222101517569.png)
 
@@ -204,3 +210,33 @@ Especificación de los correos que recibiran las modificaciones.
 ![image-20221226224820102](PC4.assets/image-20221226224820102.png)
 
 Comprobación de correo recibido de compilación.
+
+
+
+![image-20221227084641443](PC4.assets/image-20221227084641443.png)
+
+Configuraciones de los mensajes enviados tanto por correo como al grupo de slack asignado
+
+![image-20221227084350513](PC4.assets/image-20221227084350513.png)
+
+Verificación que el jenkins esta conectado al grupo y puede informar de reportes de errores.
+
+![image-20221227085702167](PC4.assets/image-20221227085702167.png)
+
+
+
+Verificando que todo funcione bien con las nuevas actualizaciones.
+
+![image-20221227091808774](PC4.assets/image-20221227091808774.png)
+
+Añadiendo pipeline con gestor de ramas.
+
+![image-20221227091958724](PC4.assets/image-20221227091958724.png)
+
+
+
+Creando una nueva rama y subiendola al repositorio para verificar su funcionamiento.
+
+![image-20221227092218755](PC4.assets/image-20221227092218755.png)
+
+Verificando que el pipeline detecta las nuevas ramas automáticamente dentro de un intervalo de un minuto.
