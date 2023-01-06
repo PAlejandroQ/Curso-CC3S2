@@ -448,3 +448,5 @@ Al principio, elige el agente donde ejecutará el pipeline, y como inicialmente 
 ![image-20230106075953363](README.assets/image-20230106075953363.png)
 
 > Hubo problemas en el test de aceptacion pese a que si lee el puerto y la IP del nodoPort adecuadamente.
+
+![image-20230106080614254](README.assets/image-20230106080614254.png)
