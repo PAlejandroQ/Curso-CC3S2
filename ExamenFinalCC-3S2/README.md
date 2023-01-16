@@ -55,15 +55,15 @@ relacionadas a microservicios
 
   Para ello, lo más adecuado seria lanzar un bash a todos los microservicios para que busquen en los logs los registros relacionados al número de pedido especifico y lo guarden en el Docker Volume, y asi tenerlos a la mano todo junto para su analisis.
 
-  Otra opcion seria recrear el mismo
-
 * Si los usuarios finales comienzan a presentar casos de soporte relacionados con un tiempo de respuesta inaceptablemente largo,¿cómo podemos identificar qué microservicio en una cadena de llamadas está causando la demora?
+
+  Se podria recrear la solicitud hecha por el usuario, y luego buscar en los logs de los servicios la ruta de servicios que fueron usados para su llamada, y asi determinar por los tiempos de duración cual esta causando esa demora en el tiempo de respuesta.
 
 ## Parte 2
 
 1. (0.5 puntos ) Ejecuta CouchDB como un contenedor de Docker y publica su puerto, de la siguiente manera:
-  a. Ejecuta el contenedor.
-  b. Publica el puerto de CouchDB.
+    a. Ejecuta el contenedor.
+    b. Publica el puerto de CouchDB.
 
   ![image-20230115073335672](README.assets/image-20230115073335672.png)
 
@@ -72,63 +72,131 @@ relacionadas a microservicios
   ![image-20230115073430792](README.assets/image-20230115073430792.png)
 
 2. (1 punto) Crea una imagen de Docker con un servicio REST, respondiendo Hola Amigos CC-3S2 a
-  localhost:8080/hola. Utiliza el lenguaje y el framework que prefieras. Estos son los pasos que
-  debe seguir:
-  a. Crea una aplicación de servicio web.
+    localhost:8080/hola. Utiliza el lenguaje y el framework que prefieras. Estos son los pasos que
+    debe seguir:
+    a. Crea una aplicación de servicio web.
 
-  ![image-20230115082837943](README.assets/image-20230115082837943.png)
+  ![image-20230115083414327](README.assets/image-20230115083414327.png)
 
-  b. Crea un Dockerfile para instalar dependencias y librerías.
-  c. Construye la imagen.
+  b. Crea un Dockerfile para instalar dependencias y librerías. 
+
+ ![image-20230115092255663](README.assets/image-20230115092255663.png)
+
+ c. Construye la imagen.
+
+![image-20230115090143432](README.assets/image-20230115090143432.png)
+
   d. Ejecuta el contenedor que publica el puerto.
+
+![image-20230115092146926](README.assets/image-20230115092146926.png)
+
   e. Verifica que se esté ejecutando correctamente utilizando el navegador (o curl).
+
+![image-20230115092311271](README.assets/image-20230115092311271.png)
+
   La forma más fácil de crear un servicio REST es usar Python con Flask
   (https://flask.palletsprojects.com/). Ten en cuenta que muchos frameworks web, de forma predeterminada, inician una aplicación solo en la interfaz localhost. Para publicar un puerto, es necesario iniciarlo en todas las interfaces ( app.run(host='0.0.0.0') en el caso de Flask).
 
-3. (1 punto) Crea un master de Jenkins y imágenes de agentes Docker y úsalos para ejecutar una
-  infraestructura de Jenkins capaz de crear proyectos de Ruby:
-  a. Crea el Dockerfile del master de Jenkins, que instala automáticamente el complemento
-  de Docker.
-  b. Crea la imagen master y ejecuta la instancia de Jenkins.
-  c. Crea el Dockerfile del agente (adecuado para el aprovisionamiento dinámico del
-  agente), que instala el intérprete de Ruby.
-  d. Crea la imagen del agente.
-  e. Cambia la configuración en la instancia de Jenkins para usar la imagen del agente.
+3. (1 punto) Crea un master de Jenkins y imágenes de agentes Docker y úsalos para ejecutar una infraestructura de Jenkins capaz de crear proyectos de Ruby:
+       a. Crea el Dockerfile del master de Jenkins, que instala automáticamente el complemento de Docker.
+
+     Luego de realizar multiples intentos, inclusive siguiendo la documentacion encontrada, se configuro docker en jenkins manualmente. Aqui se presentan los intentos:
+
+     ![image-20230115160819808](README.assets/image-20230115160819808.png)
+
+     ![image-20230115160807072](README.assets/image-20230115160807072.png)
+
+     
+
+     ![image-20230115160402469](README.assets/image-20230115160402469.png)
+
+     ![image-20230115160502601](README.assets/image-20230115160502601.png)
+
+       b. Crea la imagen master y ejecuta la instancia de Jenkins.
+       c. Crea el Dockerfile del agente (adecuado para el aprovisionamiento dinámico del agente), que instala el intérprete de Ruby.
+
+     ![image-20230115163853277](README.assets/image-20230115163853277.png)
+
+       d. Crea la imagen del agente.
+
+     ![image-20230115163834916](README.assets/image-20230115163834916.png)  e. Cambia la configuración en la instancia de Jenkins para usar la imagen del agente.
+
+     ![image-20230115172507944](README.assets/image-20230115172507944.png)
 
 4. (1 punto) Crea un pipeline que ejecuta un script de Ruby que imprima Hola Mundo desde Ruby:
-  a. Crea un nuevo pipeline.
-  b. Utiliza el siguiente comando de shell para crear el script hola.rb sobre la marcha:
-  sh "echo \"puts 'Hola Mundo en Ruby'\" > hola.rb"
-  c. Agregue el comando para ejecutar hola.rb , utilizando el intérprete de Ruby.
 
-d. Ejecuta la construcción y observa la salida de la consola.
-5. (1 punto) Crea un programa de Python que multiplique, sume, reste, divida dos números
-pasados como parámetros de línea de comandos. Agrega pruebas unitarias y publica el proyecto
-en GitHub:
-a. Crea dos archivos:calculador.py y test_calculador.py.
-b. Puedes usar la biblioteca unittest en https://docs.python.org/3/library/unittest.html.
-c. Ejecuta el programa y la prueba unitaria.
-6. (1 punto) Crea el pipeline de integración continua para el proyecto de calculadora de Python:
-a. Usa Jenkinsfile para especificar el pipeline.
-b. Configura el trigger para que el pipeline se ejecute automáticamente en caso de que se
-haga commit en el repositorio.
-c. El pipeline no necesita el paso Compile ya que Python es un lenguaje interpretable.
-d. Ejecuta el pipeline y observa los resultados.
-e. Intenta hacer commit el código que rompe la construcción del pipeline y observa cómo
-se visualiza en Jenkins.
+     Link del repositorio creado y usado:
 
-7. (0.5 puntos) Ejecuta una aplicación Hola Amigos CC-3S2 en el clúster de Kubernetes:
-a. La aplicación Hola Amigos CC-3S2 puede verse exactamente igualmente al ejercicio 2
-b. Implementa la aplicación con tres réplicas.
-c. Exponga la aplicación con el servicio NodePort.
-d. Realiza una solicitud (usando curl ) a la aplicación.
-8. (1 punto) Implementa una nueva función, Nos vemos!, e implementa mediante una actualización
-continua
-1
-:
-a. Esta característica se puede agregar como un nuevo punto final, /bye , que siempre
-devuelve Nos vemos!.
-b. Reconstruye una imagen de Docker con una nueva etiqueta de versión.
-c. Usa la estrategia RollingUpdate y readinessProbe
-d. Observa el procedimiento de actualización continua.
-e. Realiza una solicitud (usando curl) a la aplicación.
+     https://github.com/PAlejandroQ/jenkinsRuby
+
+5. a. Crea un nuevo pipeline.
+
+     ![image-20230115174939616](README.assets/image-20230115174939616.png)
+
+     b. Utiliza el siguiente comando de shell para crear el script hola.rb sobre la marcha:
+       sh "echo \"puts 'Hola Mundo en Ruby'\" > hola.rb"
+       c. Agregue el comando para ejecutar hola.rb , utilizando el intérprete de Ruby.
+
+     ![image-20230115174908924](README.assets/image-20230115174908924.png)
+
+     ​	d. Ejecuta la construcción y observa la salida de la consola.
+
+     ![image-20230115175133829](README.assets/image-20230115175133829.png)
+
+     ![image-20230115175200720](README.assets/image-20230115175200720.png)
+
+     5. (1 punto) Crea un programa de Python que multiplique, sume, reste, divida dos números pasados como parámetros de línea de comandos. Agrega pruebas unitarias y publica el proyecto
+       en GitHub:
+
+       Link del repositorio creado y usado:
+
+       https://github.com/PAlejandroQ/calculadoraPython
+
+       a. Crea dos archivos:calculador.py y test_calculador.py.
+
+       ![image-20230115181312770](README.assets/image-20230115181312770.png)
+
+       b. Puedes usar la biblioteca unittest en https://docs.python.org/3/library/unittest.html.
+
+       ![image-20230115182915463](README.assets/image-20230115182915463.png)
+
+       c. Ejecuta el programa y la prueba unitaria.
+
+       ![image-20230115183018194](README.assets/image-20230115183018194.png)
+
+       ![image-20230115183028545](README.assets/image-20230115183028545.png)
+
+       ![image-20230115184921671](README.assets/image-20230115184921671.png)
+
+5. (1 punto) Crea el pipeline de integración continua para el proyecto de calculadora de Python:
+  a. Usa Jenkinsfile para especificar el pipeline.
+
+  ![image-20230115191150522](README.assets/image-20230115191150522.png)
+
+  b. Configura el trigger para que el pipeline se ejecute automáticamente en caso de que se haga commit en el repositorio. (hecho previamente)
+  c. El pipeline no necesita el paso Compile ya que Python es un lenguaje interpretable.
+  d. Ejecuta el pipeline y observa los resultados.
+
+  ![image-20230115191219160](README.assets/image-20230115191219160.png)
+
+  e. Intenta hacer commit el código que rompe la construcción del pipeline y observa cómo se visualiza en Jenkins.
+
+6. (0.5 puntos) Ejecuta una aplicación Hola Amigos CC-3S2 en el clúster de Kubernetes:
+  a. La aplicación Hola Amigos CC-3S2 puede verse exactamente igualmente al ejercicio 2
+
+  ![image-20230115193134188](README.assets/image-20230115193134188.png)
+
+  b. Implementa la aplicación con tres réplicas.
+
+  ![image-20230115193119589](README.assets/image-20230115193119589.png)
+
+  ![image-20230115195029863](README.assets/image-20230115195029863.png)
+
+  c. Exponga la aplicación con el servicio NodePort.
+
+  ![image-20230115193226256](README.assets/image-20230115193226256.png)
+
+  
+
+
+
